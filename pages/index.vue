@@ -23,7 +23,7 @@
   </section>
 </template>
 
-<style>
+<style lang="postcss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
