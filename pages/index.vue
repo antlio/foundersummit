@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <logo />
       <h1 class="title">
         foundersummit
       </h1>
@@ -23,15 +22,6 @@
     </div>
   </section>
 </template>
-
-<script>
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
 
 <style>
 .container {
