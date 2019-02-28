@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --color-red: #fd1015;
+  --color-lightred: #ffe9e7;
+  --color-yellow: #ffc96b;
+  --color-lightyellow: #fdf5e7;
+  --color-blue: #62ddf5;
+  --color-lightblue: #e8fafe;
+  --color-green: #1edd88;
+  --color-lightgreen: #e4fff3;
+  --color-black: #0e0000;
+  --color-grey: #a6a4a4;
+
+  /* Base font size */
+  --font-base: 16px;
+
+  /* Spacings */
+  --spacing-base: 120px;
+
+  /* Fonts families */
+  --font-head-regular: 'CircularStd Book', 'Helvetica', sans-serif;
+  --font-head-black: 'CircularStd Black', 'Helvetica', sans-serif;
+  --font-head-medium: 'CircularStd Medium', 'Helvetica', sans-serif;
+  --font-content-regular: 'Graphik Regular', 'Helvetica', sans-serif;
+  --font-content-medium: 'Graphik Medium', 'Helvetica', sans-serif;
+
+  /* Shadows */
+  --shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
