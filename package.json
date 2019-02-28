@@ -9,7 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
@@ -32,6 +32,26 @@
     "eslint-plugin-vue": "^5.0.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "2.6.2",
-    "prettier": "1.14.3"
+    "prettier": "1.14.3",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.3",
+    "postcss-custom-media": "^7.0.7",
+    "postcss-loader": "^3.0.0",
+    "postcss-nested": "^4.1.1"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md,css,yaml,yml}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
