@@ -1,5 +1,18 @@
 <template>
   <div id="home">
+    <div class="background-icons">
+      <div class="triangle triangle-one"></div>
+      <div class="triangle triangle-two"></div>
+      <div class="triangle triangle-three"></div>
+      <div class="triangle triangle-four"></div>
+      <div class="triangle triangle-five"></div>
+      <div class="circle circle-one"></div>
+      <div class="circle circle-two"></div>
+      <div class="circle circle-two"></div>
+      <div class="circle circle-three"></div>
+      <div class="circle circle-four"></div>
+      <div class="circle circle-five"></div>
+    </div>
     <section class="banner">
       <div class="banner__background">
         <img src="../assets/images/background-banner.png" alt="" width="950px">
@@ -55,7 +68,6 @@ export default {
   },
   methods: {
     countDown() {
-      console.log('hello')
       const countDownDate = new Date('Apr 4, 2019 12:00:00').getTime()
       const self = this
       const x = setInterval(function() {
