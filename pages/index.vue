@@ -144,7 +144,7 @@ export default {
   grid-template-columns: 1.2fr 1fr;
   height: 800px;
   align-content: center;
-  padding: 50px var(--spacing-base) 0 var(--spacing-base);
+  padding-top: 50px;
   &__background {
     position: absolute;
     top: 0;
@@ -253,15 +253,10 @@ export default {
   height: 450px;
   position: relative;
   margin-top: 250px;
-  padding: 0 var(--spacing-base);
   &__images {
     &--image {
       border-radius: 3px;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-      &:nth-child(2),
-      &:last-child {
-        left: 120px;
-      }
       &:first-child {
         width: 377px;
         height: 283px;
@@ -344,6 +339,9 @@ export default {
   margin-top: 150px;
   position: relative;
   padding: 150px var(--spacing-base);
+  position: absolute;
+  width: 100%;
+  left: 0;
   &:before {
     content: '';
     position: absolute;

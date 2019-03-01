@@ -21,6 +21,7 @@ html {
   font-family: 'Graphik Regular', 'Helvetica', sans-serif;
   font-size: var(--font-base);
   letter-spacing: 0.5px;
+  padding: 0 var(--spacing-base);
 }
 
 *,
