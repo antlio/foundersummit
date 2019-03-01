@@ -1,19 +1,21 @@
 <template>
   <div id="home">
     <div class="background-icons">
-      <div class="triangle triangle-one"></div>
-      <div class="triangle triangle-two"></div>
-      <div class="triangle triangle-three"></div>
-      <div class="triangle triangle-four"></div>
-      <div class="triangle triangle-five"></div>
-      <div class="triangle triangle-six"></div>
-      <div class="circle circle-one"></div>
-      <div class="circle circle-two"></div>
-      <div class="circle circle-two"></div>
-      <div class="circle circle-three"></div>
-      <div class="circle circle-four"></div>
-      <div class="circle circle-five"></div>
-      <div class="circle circle-six"></div>
+      <div class="triangle triangle-1"></div>
+      <div class="triangle triangle-2"></div>
+      <div class="triangle triangle-3"></div>
+      <div class="triangle triangle-4"></div>
+      <div class="triangle triangle-5"></div>
+      <div class="triangle triangle-6"></div>
+      <div class="triangle triangle-7"></div>
+      <div class="triangle triangle-8"></div>
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+      <div class="circle circle-3"></div>
+      <div class="circle circle-4"></div>
+      <div class="circle circle-5"></div>
+      <div class="circle circle-6"></div>
+      <div class="circle circle-7"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -70,6 +72,16 @@
         <div class="btn btn-red">S'inscrire</div>
       </div>
     </section>
+    <section class="conduct">
+      <h2>Le <span class="tag tag-red">déroulement</span></h2>
+      <div class="conduct__cards">
+        <div v-for="(card, index) in cards" :key="index" class="conduct__cards--card">
+          <span class="step">{{ index + 1 }}</span>
+          <h4>{{ card.title }}</h4>
+          <p class="content">{{ card.content }}</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -81,7 +93,24 @@ export default {
       hours: null,
       minutes: null,
       seconds: null,
-      timeLeft: null
+      timeLeft: null,
+      cards: [
+        {
+          title: "Selection d'un intervenant",
+          content:
+            'Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication.'
+        },
+        {
+          title: "Rencontre avec l'expert",
+          content:
+            'Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires.'
+        },
+        {
+          title: "Gain d'expérience",
+          content:
+            'Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins.'
+        }
+      ]
     }
   },
   methods: {
@@ -113,9 +142,9 @@ export default {
 .banner {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  height: 100vh;
+  height: 800px;
   align-content: center;
-  padding-top: 50px;
+  padding: 50px var(--spacing-base) 0 var(--spacing-base);
   &__background {
     position: absolute;
     top: 0;
@@ -224,10 +253,15 @@ export default {
   height: 450px;
   position: relative;
   margin-top: 250px;
+  padding: 0 var(--spacing-base);
   &__images {
     &--image {
       border-radius: 3px;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      &:nth-child(2),
+      &:last-child {
+        left: 120px;
+      }
       &:first-child {
         width: 377px;
         height: 283px;
@@ -301,6 +335,86 @@ export default {
         &:hover:before {
           height: 20px;
         }
+      }
+    }
+  }
+}
+.conduct {
+  text-align: center;
+  margin-top: 150px;
+  position: relative;
+  padding: 150px var(--spacing-base);
+  &:before {
+    content: '';
+    position: absolute;
+    background: url(../assets/images/conduct-background-1.svg) no-repeat center;
+    background-size: cover;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    background: url(../assets/images/conduct-background-2.svg) no-repeat center;
+    background-size: cover;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    &:before {
+      content: '';
+      position: absolute;
+      background: url(../assets/images/conduct-line-1.svg) no-repeat center;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 228px;
+    }
+    &--card {
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      grid-gap: 20px;
+      margin-top: 40px;
+      &:first-child {
+        justify-self: start;
+      }
+      &:nth-child(2) {
+        .step {
+          padding-top: 40px;
+        }
+      }
+      &:last-child {
+        justify-self: end;
+      }
+      &:first-child,
+      &:last-child {
+        .step {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+      }
+      .step {
+        font-family: var(--font-head-black);
+        color: white;
+        font-size: 9.375em;
+        height: 270px;
+      }
+      .content {
+        padding: 0 25px;
       }
     }
   }
