@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  box-shadow: var(--shadow);
+  height: 52px;
+  width: 151px;
+  font-family: 'CircularStd Medium', 'Helvetica', sans-serif;
+  font-size: 1.125em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(126, 87, 88, 0.1), 0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-white {
+  color: var(--color-red);
+  background-color: white;
+}
+
+.btn-red {
+  color: white;
+  background-color: var(--color-red);
+}
