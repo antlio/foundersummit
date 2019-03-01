@@ -10,11 +10,17 @@ module.exports = {
     htmlAttrs: {
       lang: 'fr'
     },
-    title: pkg.name,
+    title: 'Founder Summit 2019',
+    titleTemplate: '%s - Le Wagon Lyon',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
