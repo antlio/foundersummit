@@ -9,7 +9,7 @@
   font-family: 'CircularStd Medium', 'Helvetica', sans-serif;
   font-size: 1.125em;
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all 0.2s ease;
 }
 
 .btn:hover {
