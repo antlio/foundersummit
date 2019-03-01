@@ -22,6 +22,11 @@
   background-color: white;
 }
 
+.btn-white:visited {
+  color: var(--color-red);
+  background-color: white;
+}
+
 .btn-red {
   color: white;
   background-color: var(--color-red);
