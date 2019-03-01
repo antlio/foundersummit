@@ -54,7 +54,7 @@ header {
     color: white;
     &--underline {
       &:after {
-        border-bottom: 1px solid white;
+        border-bottom: 1.5px solid white;
         content: '';
         display: block;
         margin: 0.25em auto 0;
