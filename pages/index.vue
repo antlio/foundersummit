@@ -159,7 +159,7 @@ export default {
       font-family: var(--font-head-medium);
       color: var(--color-red);
       box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.1);
-      animation: ping 1.8s ease-in-out infinite both;
+      animation: ping 2s ease-in-out infinite both;
     }
     &--time {
       width: 100%;
@@ -204,7 +204,7 @@ export default {
     box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.15);
   }
   50% {
-    box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.1);
+    box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.05);
   }
   100% {
     box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.15);
