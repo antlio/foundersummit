@@ -1,0 +1,24 @@
+.tag {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.tag-red {
+  color: var(--color-red);
+  background-color: var(--color-lightred);
+}
+
+.tag-yellow {
+  color: var(--color-yellow);
+  background-color: var(--color-lightyellow);
+}
+
+.tag-blue {
+  color: var(--color-blue);
+  background-color: var(--color-lightblue);
+}
+
+.tag-green {
+  color: var(--color-green);
+  background-color: var(--color-lightgreen);
+}
