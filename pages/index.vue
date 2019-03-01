@@ -98,43 +98,43 @@ export default {
         {
           title: "Selection d'un intervenant",
           content:
-            'Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication.'
+            "Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication."
         },
         {
           title: "Rencontre avec l'expert",
           content:
-            'Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires.'
+            "Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires."
         },
         {
           title: "Gain d'expérience",
           content:
-            'Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins.'
+            "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
         }
       ]
-    }
+    };
   },
   methods: {
     countDown() {
-      const countDownDate = new Date('Apr 4, 2019 12:00:00').getTime()
-      const self = this
+      const countDownDate = new Date("Apr 4, 2019 12:00:00").getTime();
+      const self = this;
       const x = setInterval(function() {
-        const now = new Date().getTime()
-        const distance = countDownDate - now
-        self.timeLeft = distance
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+        self.timeLeft = distance;
 
-        self.days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        self.days = Math.floor(distance / (1000 * 60 * 60 * 24));
         self.hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        )
-        self.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-        self.seconds = Math.floor((distance % (1000 * 60)) / 1000)
-      }, 0)
+        );
+        self.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        self.seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      }, 0);
     }
   },
   mounted() {
-    this.countDown()
+    this.countDown();
   }
-}
+};
 </script>
 
 
@@ -314,7 +314,7 @@ export default {
         padding: 0 2px;
         position: relative;
         &:before {
-          content: '';
+          content: "";
           display: inline-block;
           position: absolute;
           bottom: -2px;
@@ -343,7 +343,7 @@ export default {
   width: 100%;
   left: 0;
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     background: url(../assets/images/conduct-background-1.svg) no-repeat center;
     background-size: cover;
@@ -355,7 +355,7 @@ export default {
     z-index: -1;
   }
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     background: url(../assets/images/conduct-background-2.svg) no-repeat center;
     background-size: cover;
@@ -370,9 +370,9 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     &:before {
-      content: '';
+      content: "";
       position: absolute;
-      background: url(../assets/images/conduct-line-1.svg) no-repeat center;
+      background: url(../assets/images/conduct-line.svg) no-repeat center;
       background-size: contain;
       transform: translate(-50%, -50%);
       top: 50%;
