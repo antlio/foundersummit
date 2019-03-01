@@ -20,6 +20,7 @@ header {
   align-items: center;
   margin-top: 45px;
   z-index: 10;
+  padding: 0 var(--spacing-base);
   .__logo {
     display: flex;
     align-items: center;
