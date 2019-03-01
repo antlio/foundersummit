@@ -6,12 +6,14 @@
       <div class="triangle triangle-three"></div>
       <div class="triangle triangle-four"></div>
       <div class="triangle triangle-five"></div>
+      <div class="triangle triangle-six"></div>
       <div class="circle circle-one"></div>
       <div class="circle circle-two"></div>
       <div class="circle circle-two"></div>
       <div class="circle circle-three"></div>
       <div class="circle circle-four"></div>
       <div class="circle circle-five"></div>
+      <div class="circle circle-six"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -50,6 +52,22 @@
           <div class="btn btn-red">S'inscrire</div>
           <div class="btn btn-white">En savoir plus</div>
         </div>
+      </div>
+    </section>
+    <section class="description">
+      <div class="description__images">
+        <div class="description__images--image"></div>
+        <div class="description__images--image"></div>
+        <div class="description__images--image"></div>
+      </div>
+      <div class="description__content">
+        <h3>Bienvenue au Founder Summit</h3>
+        <p class="description__content--text">Vous souhaitez créer votre entreprise mais vous n’avez pas encore toutes les cartes en main pour le faire ?<br /><br />
+          Vous êtes intéressé par le monde de l’entrepreneuriat en général et souhaitez en apprendre plus sur la création d’entreprise ?<br /><br />
+          Le <a href="#">Founder Summit</a> vous apportera les réponses dont vous avez besoin.<br /><br />
+          Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
+        </p>
+        <div class="btn btn-red">S'inscrire</div>
       </div>
     </section>
   </div>
@@ -195,6 +213,94 @@ export default {
       width: 100%;
       .btn-white {
         width: 169px;
+      }
+    }
+  }
+}
+.description {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  height: 450px;
+  position: relative;
+  margin-top: 250px;
+  &__images {
+    &--image {
+      border-radius: 3px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      &:first-child {
+        width: 377px;
+        height: 283px;
+        background: linear-gradient(
+            rgba(253, 16, 21, 0.1),
+            rgba(253, 16, 21, 0.1)
+          ),
+          url(../assets/images/le-wagon-talk-1.jpg) no-repeat center;
+        background-size: cover;
+        margin: 0 auto;
+      }
+      &:nth-child(2) {
+        width: 225px;
+        height: 150px;
+        background: linear-gradient(
+            rgba(253, 16, 21, 0.2),
+            rgba(253, 16, 21, 0.2)
+          ),
+          url(../assets/images/le-wagon-talk-2.jpg) no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        opacity: 0.4;
+      }
+      &:last-child {
+        width: 245px;
+        height: 163px;
+        background: linear-gradient(
+            rgba(253, 16, 21, 0.2),
+            rgba(253, 16, 21, 0.2)
+          ),
+          url(../assets/images/le-wagon-talk-3.jpg) no-repeat center;
+        background-size: cover;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0.4;
+      }
+    }
+  }
+  &__content {
+    width: 591px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    &--text {
+      line-height: 20px;
+      a {
+        color: var(--color-red);
+      }
+      strong {
+        padding: 0 2px;
+        position: relative;
+        &:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          bottom: -2px;
+          transform: translateX(50%);
+          left: -50%;
+          width: 100%;
+          height: 9px;
+          background-color: var(--color-lightyellow);
+          border-radius: 2px;
+          z-index: -1;
+          transition: height 0.15s ease;
+        }
+        &:hover:before {
+          height: 20px;
+        }
       }
     }
   }
