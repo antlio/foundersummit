@@ -1,0 +1,88 @@
+.triangle {
+  background: url(../../icons/triangle.svg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.triangle-one {
+  width: 39px;
+  height: 33px;
+  left: 593.83px;
+  top: 178.96px;
+  transform: rotate(104.04deg);
+}
+
+.triangle-two {
+  width: 33.82px;
+  height: 28.77px;
+  left: 314.12px;
+  top: 276px;
+  transform: rotate(24.91deg);
+}
+
+.triangle-three {
+  width: 52.73px;
+  height: 44.86px;
+  left: 261.09px;
+  top: 739.65px;
+  transform: rotate(117.4deg);
+}
+
+.triangle-four {
+  width: 41.11px;
+  height: 34.98px;
+  left: 659.76px;
+  top: 864px;
+  transform: rotate(83.62deg);
+}
+
+.triangle-five {
+  width: 40.93px;
+  height: 34.82px;
+  left: 1224.71px;
+  top: 1137.75px;
+  transform: rotate(62.37deg);
+}
+
+.circle {
+  background: url(../../icons/circle.svg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.circle-one {
+  width: 28px;
+  height: 28px;
+  left: 164px;
+  top: 221px;
+}
+
+.circle-two {
+  width: 39px;
+  height: 39px;
+  left: 507px;
+  top: 326px;
+}
+
+.circle-three {
+  width: 23px;
+  height: 23px;
+  left: 515px;
+  top: 705px;
+}
+
+.circle-four {
+  width: 18px;
+  height: 18px;
+  left: 252px;
+  top: 896px;
+}
+
+.circle-five {
+  width: 39px;
+  height: 39px;
+  left: 455px;
+  top: 1049px;
+}
