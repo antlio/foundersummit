@@ -1,34 +1,34 @@
-const pkg = require('./package')
+const pkg = require("./package");
 
 module.exports = {
-  mode: 'universal',
+  mode: "universal",
 
   /*
   ** Headers of the page
   */
   head: {
     htmlAttrs: {
-      lang: 'fr'
+      lang: "fr"
     },
-    title: 'Founder Summit 2019',
-    titleTemplate: '%s - Le Wagon Lyon',
+    title: "Founder Summit 2019",
+    titleTemplate: "%s - Le Wagon Lyon",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        hid: 'description',
-        name: 'description',
+        hid: "description",
+        name: "description",
         content:
-          'L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.'
+          "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: "#fff" },
 
   /*
   ** Global CSS
@@ -43,13 +43,23 @@ module.exports = {
   /*
   ** Nuxt.js modules
   */
-  modules: ['@nuxtjs/pwa'],
+  modules: ["@nuxtjs/pwa"],
 
   /*
   ** Build configuration
   */
   build: {
-    extractCSS: true
+    extractCSS: true,
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/
+        });
+      }
+    }
   },
-  css: ['~/assets/stylesheets/application.css']
-}
+  css: ["~/assets/stylesheets/application.css"]
+};
