@@ -6,19 +6,19 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
+import Header from "@/components/Header.vue";
 
 export default {
   components: {
-    'app-header': Header
+    "app-header": Header
   }
-}
+};
 </script>
 
 
 <style lang="postcss">
 html {
-  font-family: 'Graphik Regular', 'Helvetica', sans-serif;
+  font-family: "Graphik Regular", "Helvetica", sans-serif;
   font-size: var(--font-base);
   letter-spacing: 0.5px;
   padding: 0 var(--spacing-base);

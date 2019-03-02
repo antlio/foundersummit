@@ -25,7 +25,7 @@ header {
     align-items: center;
     position: relative;
     &:after {
-      content: '';
+      content: "";
       display: inline-block;
       position: absolute;
       right: -25px;
@@ -37,7 +37,7 @@ header {
     flex: 1;
     margin-left: 40px;
     &:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 15px;
       width: 8px;
@@ -54,7 +54,7 @@ header {
     &--underline {
       &:after {
         border-bottom: 1.5px solid white;
-        content: '';
+        content: "";
         display: block;
         margin: 0.25em auto 0;
         transition: width 250ms ease-in-out 0s;
