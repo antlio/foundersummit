@@ -67,7 +67,7 @@
 
 @for $i from 1 to 8 {
   .triangle-$(i) {
-    --random: random(0, 360) deg;
+    --random: random(0, 360)deg;
     --random-2: calc(var(--random) + 360deg);
     animation: spin-$(i) 15s linear infinite;
   }

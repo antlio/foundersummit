@@ -46,10 +46,6 @@
     "*.{js,vue}": [
       "eslint --fix",
       "git add"
-    ],
-    "*.{json,md,css,yaml,yml}": [
-      "prettier --write",
-      "git add"
     ]
   },
   "husky": {
