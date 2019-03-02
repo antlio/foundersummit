@@ -1,5 +1,3 @@
-const pkg = require("./package");
-
 module.exports = {
   mode: "universal",
 
@@ -33,7 +31,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ["~/assets/stylesheets/application.css"],
 
   /*
   ** Plugins to load before mounting the App
@@ -65,6 +63,5 @@ module.exports = {
         });
       }
     }
-  },
-  css: ["~/assets/stylesheets/application.css"]
+  }
 };
