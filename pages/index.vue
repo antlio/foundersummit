@@ -92,7 +92,7 @@
         </div>
       </div>
     </section>
-    <section class="slider">
+    <section id="intervenants" class="slider">
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
       <p class="slider__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
       <div class="slider__slides">
@@ -121,6 +121,9 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="planning">
+      <h2>Le <span class="tag tag-yellow">planning</span></h2>
     </section>
   </div>
 </template>
@@ -756,6 +759,10 @@ export default {
       }
     }
   }
+}
+.planning {
+  text-align: center;
+  margin-top: 150px;
 }
 @keyframes ping {
   0% {

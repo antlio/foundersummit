@@ -5,7 +5,7 @@
     </div>
     <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" class="__adress">20 rue des capucins, 69001 Lyon</a>
     <div class="__navigation">
-      <a class="__navigation--underline" href="#">Intervenants</a>
+      <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="#">Contact</a>
       <a class="btn btn-white" href="#">S'inscrire</a>
     </div>
