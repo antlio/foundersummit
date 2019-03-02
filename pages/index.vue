@@ -124,6 +124,57 @@
     </section>
     <section class="planning">
       <h2>Le <span class="tag tag-yellow">planning</span></h2>
+      <div class="planning__timeline">
+        <div class="planning__timeline--welcome shift">
+          <span class="shift--start">13:30</span>
+          🍰
+          <span class="shift--end">14:30</span>
+        </div>
+        <div class="planning__timeline--meeting shift">
+          <span class="shift--start">14:00</span>
+          🤝
+          <span  class="shift--end">17:00</span>
+        </div>
+        <div class="planning__timeline--talk shift">
+          <span class="shift--start">17:30</span>
+          🗣
+        </div>
+        <div class="planning__timeline--toast shift">
+          <span class="shift--start">18:30</span>
+          🍸
+          <span class="shift--end">19:30</span>
+        </div>
+      </div>
+      <div class="planning__cards">
+        <div id="welcome" class="planning__cards--card">
+          <div class="head">
+            <div class="tag tag-yellow">Accueil</div>
+            <div class="hours">12:30 - 13:30</div>
+          </div>
+          <p>Nous t’accueillons autour d’un petit buffet</p>
+        </div>
+        <div id="meeting" class="planning__cards--card">
+          <div class="head">
+            <div class="tag tag-green">Meeting</div>
+            <div class="hours">14:00 - 17:00</div>
+          </div>
+          <p>Début de l’événement et de l’animation des stands</p>
+        </div>
+        <div id="talk" class="planning__cards--card">
+          <div class="head">
+            <div class="tag tag-blue">Talk</div>
+            <div class="hours">17:30 - 18:30</div>
+          </div>
+          <p>Talk The Family : <br />Maxime Blondel</p>
+        </div>
+        <div id="toast" class="planning__cards--card">
+          <div class="head">
+            <div class="tag tag-red">Apéro</div>
+            <div class="hours">18:30 - 19:30</div>
+          </div>
+          <p>Apéro de <br />fin de journée</p>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -182,7 +233,7 @@ export default {
         {
           id: 3,
           full_name: "Romaric Gouedard",
-          title: "",
+          title: "CEO",
           activity: "CEO",
           company: "From Smash",
           link: "",
@@ -192,7 +243,7 @@ export default {
         {
           id: 4,
           full_name: "Romain Hetzel",
-          title: "",
+          title: "UX/UI Designer",
           activity: "UX/UI Designer",
           company: "",
           link: "",
@@ -202,7 +253,7 @@ export default {
         {
           id: 5,
           full_name: "Erwan Jarrand",
-          title: "",
+          title: "Comptable",
           activity: "Comptable",
           company: "Gonéo",
           link: "",
@@ -222,7 +273,7 @@ export default {
         {
           id: 7,
           full_name: "Marie Nguyen",
-          title: "",
+          title: "Fondatrice",
           activity: "Fondatrice",
           company: "We Dress Fair",
           link: "",
@@ -232,7 +283,7 @@ export default {
         {
           id: 8,
           full_name: "Emmanuel Cohen",
-          title: "",
+          title: "Avocat",
           activity: "Avocat",
           company: "Cohen avocat",
           link: "",
@@ -253,7 +304,7 @@ export default {
         {
           id: 10,
           full_name: "Pierre-Alban Toth",
-          title: "",
+          title: "Product Manager",
           activity: "Product Manager",
           company: "Clearwage",
           link: "",
@@ -263,7 +314,7 @@ export default {
         {
           id: 11,
           full_name: "Erwan Jarrand",
-          title: "",
+          title: "Comptable",
           activity: "Comptable",
           company: "",
           link: "",
@@ -273,7 +324,7 @@ export default {
         {
           id: 12,
           full_name: "Louis Delon",
-          title: "",
+          title: "Fondateur",
           activity: "Fondateur",
           company: "Holdies",
           link: "",
@@ -283,7 +334,7 @@ export default {
         {
           id: 13,
           full_name: "Vincent Mendes",
-          title: "",
+          title: "CEO",
           activity: "CEO",
           company: "Entrup",
           link: "",
@@ -667,7 +718,7 @@ export default {
       .content {
         display: grid;
         grid-template-columns: 0.8fr 1fr;
-        grid-template-rows: repeat(2, auto) repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
         text-align: left;
         &__title {
           padding: 10px 20px;
@@ -763,6 +814,108 @@ export default {
 .planning {
   text-align: center;
   margin-top: 150px;
+  padding: 0 var(--spacing-base);
+  &__timeline {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(229, 229, 229, 0.1);
+    padding: 0 22px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-column-gap: 1px;
+    align-items: center;
+    margin-top: 100px;
+    .shift {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 38px;
+      border-radius: 50px;
+      position: relative;
+      &:before {
+        content: "";
+        background: url(../assets/icons/hour-pin.svg) no-repeat left;
+        height: 73px;
+        width: 100%;
+        position: absolute;
+        left: -3px;
+        bottom: -11px;
+      }
+      &--start {
+        position: absolute;
+        top: -50px;
+        left: -20px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      &--end {
+        position: absolute;
+        top: -50px;
+        right: -25px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      &:after {
+        content: "";
+        background: url(../assets/icons/hour-pin.svg) no-repeat right;
+        height: 73px;
+        width: 100%;
+        position: absolute;
+        right: -3px;
+        bottom: -11px;
+      }
+    }
+    &--welcome {
+      grid-column: 1 / span 2;
+      background-color: var(--color-lightyellow);
+    }
+    &--meeting {
+      grid-column: 4 / span 6;
+      background-color: var(--color-lightgreen);
+    }
+    &--talk {
+      grid-column: 12 / span 2;
+      background-color: var(--color-lightblue);
+    }
+    &--toast {
+      grid-column: 14 / span 2;
+      background-color: var(--color-lightred);
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+    margin-top: 100px;
+    &--card {
+      background-color: white;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      height: 174px;
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .tag {
+          width: fit-content;
+          font-family: var(--font-head-medium);
+        }
+        .hours {
+          font-family: var(--font-head-regular);
+        }
+      }
+      p {
+        text-align: left;
+        font-size: 1.125em;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        line-height: 20px;
+      }
+    }
+  }
 }
 @keyframes ping {
   0% {
