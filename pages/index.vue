@@ -34,7 +34,12 @@
         </div>
         <div class="banner__countdown--badge">Commence dans</div>
         <div class="banner__countdown--time">
-          <div v-if="timeLeft > 0" class="value">
+          <app-skeleton 
+            v-if="loading" 
+            width="100%"
+            height="10px">
+          </app-skeleton>
+          <div v-else-if="!loading && timeLeft > 0" class="value">
             <div><span v-if="days < 10">0</span>{{ days }}</div>
             <div><span v-if="hours < 10">0</span>{{ hours }}</div>
             <div><span v-if="minutes < 10">0</span>{{ minutes }}</div>
@@ -43,7 +48,7 @@
           <div v-else class="value notimeleft">
             <span>L'évènement a commencé</span>
           </div>
-          <div v-if="timeLeft > 0" class="label">
+          <div v-if="!loading && timeLeft > 0" class="label">
             <span>j.</span>
             <span>h.</span>
             <span>m.</span>
@@ -86,6 +91,8 @@
 </template>
 
 <script>
+import SkeletonBox from "@/components/SkeletonBox.vue";
+
 export default {
   data() {
     return {
@@ -94,6 +101,7 @@ export default {
       minutes: null,
       seconds: null,
       timeLeft: null,
+      loading: true,
       cards: [
         {
           title: "Selection d'un intervenant",
@@ -112,6 +120,9 @@ export default {
         }
       ]
     };
+  },
+  components: {
+    "app-skeleton": SkeletonBox
   },
   methods: {
     countDown() {
@@ -133,6 +144,9 @@ export default {
   },
   mounted() {
     this.countDown();
+    this.$nextTick(() => {
+      setTimeout(() => (this.loading = false), 200);
+    });
   }
 };
 </script>
@@ -211,6 +225,8 @@ export default {
     &--time {
       width: 100%;
       font-family: var(--font-head-medium);
+      display: flex;
+      flex-flow: column;
       .value {
         display: grid;
         grid-template-columns: repeat(4, 55px);
