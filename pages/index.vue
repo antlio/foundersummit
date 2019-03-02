@@ -9,6 +9,9 @@
       <div class="triangle triangle-6"></div>
       <div class="triangle triangle-7"></div>
       <div class="triangle triangle-8"></div>
+      <div class="triangle triangle-9"></div>
+      <div class="triangle triangle-10"></div>
+      <div class="triangle triangle-11"></div>
       <div class="circle circle-1"></div>
       <div class="circle circle-2"></div>
       <div class="circle circle-3"></div>
@@ -16,6 +19,8 @@
       <div class="circle circle-5"></div>
       <div class="circle circle-6"></div>
       <div class="circle circle-7"></div>
+      <div class="circle circle-8"></div>
+      <div class="circle circle-9"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -89,6 +94,33 @@
     </section>
     <section class="slider">
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
+      <p class="slider__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <div class="slider__slides">
+        <div class="slider__slides--tabs">
+          <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
+            <span class="tab__name">{{ attendee.full_name }}</span>
+            <span class="tab__activity">{{ attendee.activity }}</span>
+          </div>
+        </div>
+        <div class="slider__slides--content">
+          <div class="content">
+            <span class="content__title">{{ currentTab.title }}</span>
+            <div class="content__photo">
+              <div class="content__photo--image">
+                <img :src="currentTab.photo" :alt="currentTab.full_name + ' photo'">
+              </div>
+            </div>
+            <span class="content__fullname">{{ currentTab.full_name }}</span>
+            <span class="content__activity">{{ currentTab.activity }}</span>
+            <div class="content__company">
+              <a :href="currentTab.link" target="_blank"><img class="content__company" :src="currentTab.company" alt="logo entreprise"></a>
+            </div>
+            <div class="content__description">
+              <span class="content__description--description">{{ currentTab.description }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -121,8 +153,150 @@ export default {
           content:
             "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
         }
-      ]
+      ],
+      attendees: [
+        {
+          id: 1,
+          full_name: "Tiphaine Frugier",
+          title: "",
+          activity: "Market/Com",
+          company: "Girlz in web",
+          link: "",
+          photo: "",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          id: 2,
+          full_name: "Alisson Grosdemange",
+          title: "",
+          activity: "1kubator",
+          company: "1kubator",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 3,
+          full_name: "Romaric Gouedard",
+          title: "",
+          activity: "CEO",
+          company: "From Smash",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 4,
+          full_name: "Romain Hetzel",
+          title: "",
+          activity: "UX/UI Designer",
+          company: "",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 5,
+          full_name: "Erwan Jarrand",
+          title: "",
+          activity: "Comptable",
+          company: "Gonéo",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 6,
+          full_name: "Mickael Rigard",
+          title: "",
+          activity: "Pitch",
+          company: "Attractive Labs",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 7,
+          full_name: "Marie Nguyen",
+          title: "",
+          activity: "Fondatrice",
+          company: "We Dress Fair",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 8,
+          full_name: "Emmanuel Cohen",
+          title: "",
+          activity: "Avocat",
+          company: "Cohen avocat",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 9,
+          full_name: "Kévin Chavanne",
+          title: "Développeur",
+          activity: "Senior Développeur Full-Stack",
+          company: require("@/assets/images/company/le-wagon-logo.png"),
+          link: "https://www.lewagon.com",
+          photo: require("@/assets/images/attendees/kevin-chavanne.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          id: 10,
+          full_name: "Pierre-Alban Toth",
+          title: "",
+          activity: "Product Manager",
+          company: "Clearwage",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 11,
+          full_name: "Erwan Jarrand",
+          title: "",
+          activity: "Comptable",
+          company: "",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 12,
+          full_name: "Louis Delon",
+          title: "",
+          activity: "Fondateur",
+          company: "Holdies",
+          link: "",
+          photo: "",
+          description: ""
+        },
+        {
+          id: 13,
+          full_name: "Vincent Mendes",
+          title: "",
+          activity: "CEO",
+          company: "Entrup",
+          link: "",
+          photo: "",
+          description: ""
+        }
+      ],
+      activeTab: 1
     };
+  },
+  computed: {
+    currentTab() {
+      return this.attendees.find(attendee => {
+        return attendee.id == this.activeTab;
+      });
+    }
   },
   components: {
     "app-skeleton": SkeletonBox
@@ -441,6 +615,147 @@ export default {
   }
 }
 .slider {
+  text-align: center;
+  margin-top: 160px;
+  padding: 0 var(--spacing-base);
+  &__subtitle {
+    margin-top: 30px;
+  }
+  &__slides {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-column-gap: 130px;
+    margin-top: 87px;
+    &--tabs {
+      height: 522px;
+      overflow-y: scroll;
+      display: grid;
+      grid-row-gap: 10px;
+      .tab {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: white;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        height: 67px;
+        padding-left: 30px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &__name {
+          font-family: var(--font-head-medium);
+          font-size: 1.25em;
+        }
+        &__activity {
+          font-family: var(--font-head-regular);
+          font-size: 0.875em;
+        }
+        &.active,
+        &:hover {
+          color: var(--color-red);
+          background-color: var(--color-lightyellow);
+          border: 0.5px solid transparent;
+        }
+      }
+    }
+    &--content {
+      .content {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        grid-template-rows: repeat(2, auto) repeat(2, 1fr);
+        text-align: left;
+        &__title {
+          padding: 10px 20px;
+          color: var(--color-blue);
+          background-color: var(--color-lightblue);
+          width: fit-content;
+          height: fit-content;
+          border-radius: 3px;
+          font-size: 1.125em;
+          font-family: var(--font-head-medium);
+          margin-bottom: 45px;
+        }
+        &__fullname {
+          font-family: var(--font-head-black);
+          font-size: 2em;
+        }
+        &__activity {
+          font-family: var(--font-head-regular);
+          font-size: 1.125em;
+          margin-top: 10px;
+        }
+        &__photo {
+          grid-column: 2;
+          grid-row: 1 / span 4;
+          justify-self: center;
+          background-image: url(../assets/icons/background-photo-dots.svg);
+          background-size: cover;
+          height: 335px;
+          width: 335px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 50px;
+          position: relative;
+          &:before {
+            content: "";
+            background-image: url(../assets/icons/rectangle.svg);
+            height: 82px;
+            width: 82px;
+            position: absolute;
+            z-index: -1;
+            left: -40px;
+            bottom: 33px;
+          }
+          &:after {
+            content: "";
+            background-image: url(../assets/icons/rectangle.svg);
+            height: 109px;
+            width: 109px;
+            position: absolute;
+            z-index: -1;
+            top: -14px;
+            right: -7px;
+          }
+          &--image {
+            height: 235px;
+            width: 235px;
+            border-radius: 50%;
+            background-color: var(--color-lightyellow);
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        &__company {
+          img {
+            filter: grayscale(100);
+            opacity: 0.7;
+            height: 45px;
+            transition: all 0.2s ease;
+            &:hover {
+              filter: grayscale(0);
+              opacity: 1;
+            }
+          }
+        }
+        &__description {
+          grid-column: span 2;
+          margin-top: 90px;
+          border-left: 2px dashed rgba(0, 0, 0, 0.2);
+          padding-left: 10px;
+          &--description {
+            line-height: 20px;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
 }
 @keyframes ping {
   0% {
