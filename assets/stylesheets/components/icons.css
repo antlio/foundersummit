@@ -65,7 +65,28 @@
   z-index: 0;
 }
 
-@for $i from 1 to 8 {
+.triangle-9 {
+  width: 43.86px;
+  height: 37.32px;
+  left: 316.68px;
+  top: 2629.55px;
+}
+
+.triangle-10 {
+  width: 41.11px;
+  height: 34.98px;
+  left: 1331.56px;
+  top: 3127.99px;
+}
+
+.triangle-11 {
+  width: 41.11px;
+  height: 34.98px;
+  left: 505.9px;
+  top: 3214.43px;
+}
+
+@for $i from 1 to 11 {
   .triangle-$(i) {
     --random: random(0, 360)deg;
     --random-2: calc(var(--random) + 360deg);
@@ -137,4 +158,18 @@
   left: 181px;
   top: 2430px;
   z-index: 0;
+}
+
+.circle-8 {
+  width: 26px;
+  height: 26px;
+  left: 1087px;
+  top: 2584px;
+}
+
+.circle-9 {
+  width: 20px;
+  height: 20px;
+  left: 486px;
+  top: 2825px;
 }
