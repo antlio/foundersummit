@@ -176,6 +176,49 @@
         </div>
       </div>
     </section>
+    <section class="informations">
+      <div class="information">
+        <div class="information__date">
+          <span class="information__date--day">04</span>
+          <div class="information__date--content">
+            <span class="month">avril 2019</span>
+            <span class="hours"> 09:00 - 18:00</span>
+          </div>
+
+        </div>
+        <div class="information__direction">
+          <img src="../assets/icons/map.svg" alt="map icon">
+          <div class="information__direction--content">
+            <span>Le wagon Lyon</span>
+            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank">S'y rendre</a>
+          </div>
+        </div>
+        <div class="information__social">
+          <a href="https://facebook.com/lewagonlyon/"><img src="../assets/icons/facebook.svg" alt="facebook icon" target="_blank"></a>
+          <a href="https://instagram.com/lewagonlyon/"><img src="../assets/icons/instagram.svg" alt="instagram icon" target="_blank"></a>
+          <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank"></a>
+          <a href="https://www.linkedin.com/school/le-wagon/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank"></a>
+        </div>
+        <a href="#" class="btn btn-white">Billeterie</a>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__images">
+        <img src="../assets/images/lewagon-lyon-logo.svg" alt="le wagon lyon logo">
+        <img src="../assets/images/smartup-logo.svg" alt="smart up logo">
+      </div>
+      <div class="footer__menu">
+        <a href="mailto:matthieu@lewagon.org">
+          <li>Contactez-nous</li>
+        </a>
+        <a href="https://www.lewagon.com" target="_blank">
+          <li>Programme</li>
+        </a>
+        <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank">
+          <li>Où nous trouver</li>
+        </a>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -893,6 +936,7 @@ export default {
       padding: 20px;
       display: flex;
       flex-flow: column;
+      position: relative;
       .head {
         display: flex;
         justify-content: space-between;
@@ -914,6 +958,133 @@ export default {
         margin-bottom: auto;
         line-height: 20px;
       }
+      &:last-child {
+        &:after {
+          content: "";
+          background: url(../assets/icons/dots-small.svg);
+          position: absolute;
+          height: 140px;
+          width: 154px;
+          top: -29px;
+          right: -35px;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+.informations {
+  margin: 250px 0;
+  padding: 0 var(--spacing-base);
+  .information {
+    background-color: var(--color-lightyellow);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0;
+    font-family: var(--font-head-medium);
+    color: var(--color-red);
+    position: relative;
+    &__date {
+      display: flex;
+      align-items: center;
+      position: relative;
+      &--day {
+        font-size: 3em;
+        margin-right: 10px;
+      }
+      &--content {
+        display: flex;
+        flex-flow: column;
+        line-height: 20px;
+        .month {
+          font-size: 1.125em;
+        }
+        .hours {
+          font-size: 0.75em;
+        }
+      }
+      &:after {
+        content: "";
+        border: 1px dashed white;
+        height: 91px;
+        position: absolute;
+        right: -70px;
+      }
+    }
+    &__direction {
+      display: flex;
+      align-items: center;
+      position: relative;
+      img {
+        margin-right: 20px;
+      }
+      &--content {
+        display: flex;
+        flex-flow: column;
+        line-height: 20px;
+        span {
+          font-size: 1.125em;
+        }
+        a {
+          font-size: 0.75em;
+          text-decoration: underline;
+        }
+      }
+      &:after {
+        content: "";
+        border: 1px dashed white;
+        height: 91px;
+        position: absolute;
+        right: -70px;
+      }
+    }
+    &__social {
+      display: flex;
+      justify-content: space-between;
+      width: 150px;
+      position: relative;
+      align-items: center;
+      &:after {
+        content: "";
+        border: 1px dashed white;
+        height: 91px;
+        position: absolute;
+        right: -70px;
+      }
+    }
+    a {
+      justify-self: end;
+    }
+    &:before {
+      content: "";
+      background: url(../assets/icons/dots-small.svg);
+      position: absolute;
+      height: 140px;
+      width: 154px;
+      bottom: -32px;
+      left: -35px;
+      z-index: -1;
+    }
+  }
+}
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .footer {
+    &__images {
+      display: flex;
+      justify-content: space-between;
+      width: 230px;
+    }
+    &__menu {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0;
+      width: 450px;
     }
   }
 }
