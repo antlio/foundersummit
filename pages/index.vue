@@ -1240,6 +1240,7 @@ footer {
           &__company {
             grid-column: 1;
             grid-row: 5;
+            align-self: center;
           }
           &__activity {
             grid-column: 1;
