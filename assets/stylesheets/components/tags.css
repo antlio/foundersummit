@@ -22,3 +22,13 @@
   color: var(--color-green);
   background-color: var(--color-lightgreen);
 }
+
+@media (--mobile) {
+  h2 > .tag {
+    margin: 0 auto;
+  }
+  .tag {
+    display: block;
+    width: fit-content;
+  }
+}
