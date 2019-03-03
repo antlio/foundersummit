@@ -17,6 +17,11 @@ export default {
 
 
 <style lang="postcss">
+#__layout {
+  position: relative;
+  overflow: hidden;
+}
+
 html {
   font-family: "Graphik Regular", "Helvetica", sans-serif;
   font-size: var(--font-base);
@@ -28,5 +33,11 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+@media (--mobile) {
+  #__layout {
+    overflow: hidden;
+  }
 }
 </style>
