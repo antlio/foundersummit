@@ -71,6 +71,9 @@ typings/
 # Nuxt generate
 dist
 
+# Netlify
+state.json
+
 # vuepress build output
 .vuepress/dist
 
