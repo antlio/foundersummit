@@ -62,11 +62,11 @@
         </div>
         <div class="banner__countdown--buttons">
           <div class="btn btn-red">S'inscrire</div>
-          <div class="btn btn-white">En savoir plus</div>
+          <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">En savoir plus</a>
         </div>
       </div>
     </section>
-    <section class="description">
+    <section id="description" class="description">
       <div class="description__images">
         <div class="description__images--image"></div>
         <div class="description__images--image"></div>
@@ -106,9 +106,11 @@
           <div class="content">
             <span class="content__title">{{ currentTab.title }}</span>
             <div class="content__photo">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab > 1" @click="activeTab--" class="content__photo--mobile left">
               <div class="content__photo--image">
                 <img :src="currentTab.photo" :alt="currentTab.full_name + ' photo'">
               </div>
+              <img src="../assets/icons/arrow.svg" v-if="activeTab < 13" @click="activeTab++" class="content__photo--mobile right">
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
@@ -255,10 +257,10 @@ export default {
         {
           id: 1,
           full_name: "Tiphaine Frugier",
-          title: "",
-          activity: "Market/Com",
-          company: "Girlz in web",
-          link: "",
+          title: "Consultante",
+          activity: "Vie présidente Girlz in Web Lyon",
+          company: require("@/assets/images/company/girlzinweb-logo.png"),
+          link: "http://girlzinweb.com/",
           photo: "",
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -266,22 +268,24 @@ export default {
         {
           id: 2,
           full_name: "Alisson Grosdemange",
-          title: "",
-          activity: "1kubator",
-          company: "1kubator",
-          link: "",
-          photo: "",
-          description: ""
+          title: "Manager",
+          activity: "Lead Startup Manager chez 1kubator",
+          company: require("@/assets/images/company/1kubator-logo.png"),
+          link: "https://1kubator.com",
+          photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 3,
           full_name: "Romaric Gouedard",
           title: "CEO",
           activity: "CEO",
-          company: "From Smash",
-          link: "",
+          company: require("@/assets/images/company/smash-logo.png"),
+          link: "https://fromsmash.com/",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 4,
@@ -291,47 +295,52 @@ export default {
           company: "",
           link: "",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 5,
           full_name: "Erwan Jarrand",
           title: "Comptable",
           activity: "Comptable",
-          company: "Gonéo",
-          link: "",
+          company: require("@/assets/images/company/goneo-logo.svg"),
+          link: "https://www.goneo-expertise.com/",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 6,
           full_name: "Mickael Rigard",
-          title: "",
-          activity: "Pitch",
-          company: "Attractive Labs",
-          link: "",
+          title: "Dirigeant",
+          activity: "Directeur Général chez Attractive Labs",
+          company: require("@/assets/images/company/attractivelabs-logo.png"),
+          link: "https://www.attractivelabs.com/",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 7,
           full_name: "Marie Nguyen",
           title: "Fondatrice",
           activity: "Fondatrice",
-          company: "We Dress Fair",
+          company: require("@/assets/images/company/wedressfair-logo.png"),
           link: "",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 8,
           full_name: "Emmanuel Cohen",
           title: "Avocat",
           activity: "Avocat",
-          company: "Cohen avocat",
-          link: "",
+          company: require("@/assets/images/company/cohenavocat-logo.png"),
+          link: "http://www.cohen-avocat.fr/",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 9,
@@ -349,10 +358,11 @@ export default {
           full_name: "Pierre-Alban Toth",
           title: "Product Manager",
           activity: "Product Manager",
-          company: "Clearwage",
-          link: "",
-          photo: "",
-          description: ""
+          company: require("../assets/images/company/clearwage-logo.svg"),
+          link: "https://www.clearwage.com",
+          photo: require("../assets/images/attendees/pierrealban-toth.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 11,
@@ -362,7 +372,8 @@ export default {
           company: "",
           link: "",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 12,
@@ -372,7 +383,8 @@ export default {
           company: "Holdies",
           link: "",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 13,
@@ -382,7 +394,8 @@ export default {
           company: "Entrup",
           link: "",
           photo: "",
-          description: ""
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       ],
       activeTab: 1
@@ -443,7 +456,7 @@ export default {
     margin-top: 50px;
     &--catchline {
       padding: 0 5px;
-      margin-top: 60px;
+      margin-top: 30px;
       line-height: 20px;
     }
   }
@@ -727,7 +740,7 @@ export default {
       height: 522px;
       overflow-y: scroll;
       display: grid;
-      grid-row-gap: 10px;
+      grid-row-gap: 8px;
       .tab {
         display: flex;
         flex-flow: column;
@@ -772,11 +785,11 @@ export default {
           border-radius: 3px;
           font-size: 1.125em;
           font-family: var(--font-head-medium);
-          margin-bottom: 45px;
         }
         &__fullname {
           font-family: var(--font-head-black);
           font-size: 2em;
+          align-self: end;
         }
         &__activity {
           font-family: var(--font-head-regular);
@@ -787,7 +800,8 @@ export default {
           grid-column: 2;
           grid-row: 1 / span 4;
           justify-self: center;
-          background-image: url(../assets/icons/background-photo-dots.svg);
+          background: url(../assets/icons/background-photo-dots.svg) center
+            no-repeat;
           background-size: cover;
           height: 335px;
           width: 335px;
@@ -804,7 +818,10 @@ export default {
             position: absolute;
             z-index: -1;
             left: -40px;
-            bottom: 33px;
+            bottom: 13px;
+          }
+          &--mobile {
+            display: none;
           }
           &:after {
             content: "";
@@ -829,10 +846,12 @@ export default {
           }
         }
         &__company {
+          height: 45px;
           img {
             filter: grayscale(100);
             opacity: 0.7;
-            height: 45px;
+            height: 100%;
+            width: auto;
             transition: all 0.2s ease;
             &:hover {
               filter: grayscale(0);
@@ -1070,9 +1089,8 @@ export default {
   }
 }
 footer {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
   .footer {
     &__images {
       display: flex;
@@ -1081,10 +1099,27 @@ footer {
     }
     &__menu {
       list-style: none;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 50px;
+      justify-items: center;
       margin: 50px 0;
-      width: 450px;
+      a {
+        &:after {
+          border-bottom: 1.5px solid var(--color-black);
+          content: "";
+          display: block;
+          margin: 0.25em auto 0;
+          transition: width 250ms ease-in-out 0s;
+          width: 0;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+            transition: width 100ms ease-in-out 0s;
+          }
+        }
+      }
     }
   }
 }
@@ -1097,6 +1132,182 @@ footer {
   }
   100% {
     box-shadow: 0px 4px 10px rgba(253, 16, 21, 0.15);
+  }
+}
+
+@media (--mobile) {
+  .banner {
+    padding: 0 20px;
+    grid-template-columns: 1fr;
+    &__background {
+      display: none;
+    }
+    &__title {
+      margin-top: 0;
+      h1 {
+        font-size: 2.5em;
+      }
+      &--catchline {
+        margin: 50px 0 120px 0;
+      }
+    }
+    &__countdown {
+      width: 100%;
+      padding: 30px;
+      &--buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        .btn {
+          width: 100%;
+        }
+      }
+      &--date {
+        height: fit-content;
+        width: fit-content;
+        padding: 15px 30px;
+        .content {
+          .date {
+            font-size: 2em;
+            &.day {
+              font-size: 3.5em;
+            }
+          }
+        }
+      }
+      &--badge {
+        margin-top: 40px;
+      }
+      &--time {
+        .value {
+          font-size: 2.5em;
+        }
+      }
+    }
+  }
+  .description {
+    padding: 0 20px;
+    margin-top: 25px;
+    &__content {
+      width: 100%;
+      display: grid;
+      grid-row-gap: 40px;
+    }
+    &__images {
+      display: none;
+    }
+  }
+  .slider {
+    margin-top: 50px;
+    padding: 0 20px;
+    &__slides {
+      grid-template-columns: 1fr;
+      grid-row-gap: 30px;
+      margin-top: 30px;
+      &--tabs {
+        display: none;
+      }
+      &--content {
+        .content {
+          grid-template-columns: 1fr;
+          grid-row-gap: 30px;
+          position: relative;
+          &__photo {
+            grid-column: 1;
+            grid-row: 2;
+            margin-right: 0;
+            &--mobile {
+              display: block;
+              position: absolute;
+              background-color: var(--color-lightyellow);
+              padding: 20px 2px 20px 7px;
+              &.left {
+                left: 0;
+              }
+              &.right {
+                right: 0;
+                transform: rotate(180deg);
+              }
+            }
+          }
+          &__title {
+            justify-self: center;
+          }
+          &__fullname {
+            grid-column: 1;
+            grid-row: 3;
+            font-size: 1.8em;
+          }
+          &__company {
+            grid-column: 1;
+            grid-row: 5;
+          }
+          &__activity {
+            grid-column: 1;
+            grid-row: 4;
+            margin-top: 0;
+          }
+          &__description {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .conduct {
+    padding: 100px 20px;
+    &__cards {
+      grid-template-columns: 1fr;
+      &:before {
+        display: none;
+      }
+      &--card {
+        &:nth-child(2) {
+          .step {
+            padding-top: 0;
+          }
+        }
+        .step {
+          height: auto;
+        }
+      }
+    }
+  }
+  .planning {
+    padding: 0 20px;
+    margin-top: 50px;
+    &__timeline {
+      display: none;
+    }
+    &__cards {
+      margin-top: 50px;
+      grid-template-columns: 1fr;
+      grid-row-gap: 50px;
+    }
+  }
+  .informations {
+    padding: 0 20px;
+    margin: 50px 0;
+    .information {
+      display: grid;
+      grid-row-gap: 50px;
+      justify-items: center;
+      a {
+        justify-self: center;
+      }
+    }
+  }
+  footer {
+    .footer {
+      &__images {
+        grid-row: 2;
+        margin-bottom: 50px;
+      }
+      &__menu {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+      }
+    }
   }
 }
 </style>
