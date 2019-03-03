@@ -9,9 +9,43 @@
       <a class="__navigation--underline" href="#">Contact</a>
       <a class="btn btn-white" href="#">S'inscrire</a>
     </div>
-
+    <div class="__mobile">
+      <div @click="menuClicked = !menuClicked" class="__mobile--btn">
+        <span v-if="!menuClicked">Menu</span>
+        <img
+          v-else
+          @click.stop="menuClicked = false"
+          src="../assets/icons/cross.svg"
+          alt="cross icon"
+          class="cross"
+        />
+      </div>
+      <nav v-if="menuClicked" class="__mobile--navigation">
+        <ul>
+          <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
+          <li>Contact</li>
+          <li>
+            <a href="https://apitail.typeform.com/to/rkhLq1" 
+              target="_blank"
+              class="btn btn-red"
+              >S'inscrire</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      menuClicked: false
+    };
+  }
+};
+</script>
+
 
 <style lang="postcss" scoped>
 header {
@@ -65,6 +99,66 @@ header {
         &:after {
           width: 100%;
           transition: width 100ms ease-in-out 0s;
+        }
+      }
+    }
+  }
+  .__mobile {
+    display: none;
+  }
+}
+
+@media (--mobile) {
+  header {
+    padding: 0 20px;
+    margin-top: 20px;
+    .__logo {
+      &:after {
+        display: none;
+      }
+      img {
+        height: 40px;
+      }
+    }
+    .__adress {
+      display: none;
+    }
+    .__navigation {
+      display: none;
+    }
+    .__mobile {
+      display: block;
+      &--btn {
+        .cross {
+          display: block;
+          width: 30px;
+        }
+      }
+      &--navigation {
+        display: block;
+        position: absolute;
+        background-color: white;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        border: 0.5px solid rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        ul {
+          display: grid;
+          gap: 50px;
+          padding: 20px 30px;
+          list-style: none;
+          li {
+            &:last-child {
+              color: white;
+              text-align: center;
+              a {
+                width: 100%;
+                padding: 20px 0;
+              }
+            }
+          }
         }
       }
     }
