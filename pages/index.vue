@@ -303,7 +303,7 @@ export default {
           full_name: "Erwan Jarrand",
           title: "Comptable",
           activity: "Comptable",
-          company: require("@/assets/images/company/goneo-logo.svg"),
+          company: require("@/assets/images/company/goneo-logo.png"),
           link: "https://www.goneo-expertise.com/",
           photo: "",
           description:
@@ -358,7 +358,7 @@ export default {
           full_name: "Pierre-Alban Toth",
           title: "Product Manager",
           activity: "Product Manager",
-          company: require("../assets/images/company/clearwage-logo.svg"),
+          company: require("../assets/images/company/clearwage-logo.png"),
           link: "https://www.clearwage.com",
           photo: require("../assets/images/attendees/pierrealban-toth.png"),
           description:
@@ -774,7 +774,7 @@ export default {
       .content {
         display: grid;
         grid-template-columns: 0.8fr 1fr;
-        grid-template-rows: repeat(3, auto);
+        grid-template-rows: repeat(3, auto) 45px;
         text-align: left;
         &__title {
           padding: 10px 20px;
@@ -846,11 +846,9 @@ export default {
           }
         }
         &__company {
-          height: 45px;
           img {
             filter: grayscale(100);
             opacity: 0.7;
-            height: 100%;
             width: auto;
             transition: all 0.2s ease;
             &:hover {
@@ -1210,6 +1208,7 @@ footer {
       &--content {
         .content {
           grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, auto) 45px;
           grid-row-gap: 30px;
           position: relative;
           &__photo {
