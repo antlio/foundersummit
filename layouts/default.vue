@@ -11,6 +11,17 @@ import Header from "@/components/Header.vue";
 export default {
   components: {
     "app-header": Header
+  },
+  mounted() {
+    console.log(
+      "%cFOUNDER SUMMIT 2019 🚀",
+      "color:#fd1015; font-size:20px; font-family: arial; font-weight: bold;"
+    );
+    console.log(
+      "%cINSCRIPTION 🔜 %chttps://eventbrite.fr",
+      "color:black; font-size:20px; font-family: arial; font-weight: bold;",
+      "color:blue; font-size:20px; font-family: arial; font-weight: bold;"
+    );
   }
 };
 </script>
