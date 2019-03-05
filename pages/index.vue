@@ -94,7 +94,7 @@
     </section>
     <section id="intervenants" class="slider">
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
-      <p class="slider__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <p class="slider__subtitle">Découvrez les différents experts métier de la tech présents pour vous lors de cet événement.</p>
       <div class="slider__slides">
         <div class="slider__slides--tabs">
           <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
