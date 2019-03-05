@@ -747,12 +747,12 @@ export default {
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 100%;
+        height: 20%;
         width: 100%;
         background-image: linear-gradient(
           to top,
           rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 20%
+          rgba(255, 255, 255, 0) 100%
         );
       }
       .tab {
