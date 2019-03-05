@@ -1308,6 +1308,21 @@ footer {
       a {
         justify-self: center;
       }
+      &__date {
+        &:after {
+          display: none;
+        }
+      }
+      &__direction {
+        &:after {
+          display: none;
+        }
+      }
+      &__social {
+        &:after {
+          display: none;
+        }
+      }
     }
   }
   footer {
