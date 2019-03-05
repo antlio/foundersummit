@@ -201,7 +201,7 @@
           <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank"></a>
           <a href="https://www.linkedin.com/school/le-wagon/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank"></a>
         </div>
-        <a href="#" class="btn btn-white">Billeterie</a>
+        <a href="#" class="btn btn-white">Inscription</a>
       </div>
     </section>
     <footer>
