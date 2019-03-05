@@ -736,11 +736,25 @@ export default {
     grid-template-columns: 0.4fr 1fr;
     grid-column-gap: 130px;
     margin-top: 87px;
+    position: relative;
     &--tabs {
       height: 522px;
       overflow-y: scroll;
       display: grid;
       grid-row-gap: 8px;
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+          to top,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0) 20%
+        );
+      }
       .tab {
         display: flex;
         flex-flow: column;
