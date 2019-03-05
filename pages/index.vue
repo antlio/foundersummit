@@ -893,7 +893,6 @@ export default {
     width: 100%;
     height: 60px;
     background-color: rgba(229, 229, 229, 0.1);
-    padding: 0 22px;
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-column-gap: 1px;
