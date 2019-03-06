@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <div class="background-icons">
-      <div class="triangle" v-for="i in 9" :key="i" :class="'triangle-' + i"></div>
-      <div class="circle" v-for="i in 9" :key="i" :class="'circle-' + i"></div>
+      <div class="triangle" v-for="triangleEl in 9" :key="triangleEl.id" :class="'triangle-' + triangleEl"></div>
+      <div class="circle" v-for="circleEl in 9" :key="circleEl.id" :class="'circle-' + circleEl"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -78,7 +78,7 @@
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
       <p class="slider__subtitle">Découvrez les différents experts métier de la tech présents pour vous lors de cet événement.</p>
       <div class="slider__slides">
-        <div class="slider__slides--tabs gradient" @scroll="handleScroll">
+        <div class="slider__slides--tabs" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
             <span class="tab__activity">{{ attendee.activity }}</span>
@@ -333,7 +333,7 @@ export default {
           link: "https://www.lewagon.com",
           photo: require("@/assets/images/attendees/kevin-chavanne.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Kevin a pendant 6 ans aider les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
         },
         {
           id: 10,
