@@ -1,26 +1,8 @@
 <template>
   <div id="home">
     <div class="background-icons">
-      <div class="triangle triangle-1"></div>
-      <div class="triangle triangle-2"></div>
-      <div class="triangle triangle-3"></div>
-      <div class="triangle triangle-4"></div>
-      <div class="triangle triangle-5"></div>
-      <div class="triangle triangle-6"></div>
-      <div class="triangle triangle-7"></div>
-      <div class="triangle triangle-8"></div>
-      <div class="triangle triangle-9"></div>
-      <div class="triangle triangle-10"></div>
-      <div class="triangle triangle-11"></div>
-      <div class="circle circle-1"></div>
-      <div class="circle circle-2"></div>
-      <div class="circle circle-3"></div>
-      <div class="circle circle-4"></div>
-      <div class="circle circle-5"></div>
-      <div class="circle circle-6"></div>
-      <div class="circle circle-7"></div>
-      <div class="circle circle-8"></div>
-      <div class="circle circle-9"></div>
+      <div class="triangle" v-for="i in 9" :key="i" :class="'triangle-' + i"></div>
+      <div class="circle" v-for="i in 9" :key="i" :class="'circle-' + i"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -96,7 +78,7 @@
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
       <p class="slider__subtitle">Découvrez les différents experts métier de la tech présents pour vous lors de cet événement.</p>
       <div class="slider__slides">
-        <div class="slider__slides--tabs">
+        <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
             <span class="tab__activity">{{ attendee.activity }}</span>
@@ -398,7 +380,8 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       ],
-      activeTab: 1
+      activeTab: 1,
+      tabScrolled: false
     };
   },
   computed: {
@@ -427,6 +410,15 @@ export default {
         self.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         self.seconds = Math.floor((distance % (1000 * 60)) / 1000);
       }, 0);
+    },
+    handleScroll: function(evt) {
+      let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
+      const tab = document.querySelector(".slider__slides--tabs");
+      if (bottom === 77) {
+        tab.classList.add("gradient");
+      } else {
+        tab.classList.remove("gradient");
+      }
     }
   },
   mounted() {
@@ -749,11 +741,17 @@ export default {
         left: 0;
         height: 20%;
         width: 100%;
+        opacity: 1;
         background-image: linear-gradient(
           to top,
           rgba(255, 255, 255, 1) 0%,
           rgba(255, 255, 255, 0) 100%
         );
+      }
+      &.gradient {
+        &:after {
+          opacity: 0;
+        }
       }
       .tab {
         display: flex;
