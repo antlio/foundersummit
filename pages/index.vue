@@ -56,10 +56,7 @@
       </div>
       <div class="description__content">
         <h3>Bienvenue au Founder Summit</h3>
-        <p class="description__content--text">Vous souhaitez créer votre entreprise mais vous n’avez pas encore toutes les cartes en main pour le faire ?<br /><br />
-          Vous êtes intéressé par le monde de l’entrepreneuriat en général et souhaitez en apprendre plus sur la création d’entreprise ?<br /><br />
-          Le <a href="#">Founder Summit</a> vous apportera les réponses dont vous avez besoin.<br /><br />
-          Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
+        <p class="description__content--text">Le <strong>Founder Summit</strong> vous apportera les réponses dont vous avez besoin à travers des entretiens individuels avec l’expert métier choisi en amont par vous-même. Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.
         </p>
         <div class="btn btn-red">S'inscrire</div>
       </div>
@@ -76,9 +73,9 @@
     </section>
     <section id="intervenants" class="slider">
       <h2>Les <span class="tag tag-yellow">intervenants</span></h2>
-      <p class="slider__subtitle">Découvrez les différents experts métier de la tech présents pour vous lors de cet événement.</p>
+      <p class="slider__subtitle">Venez parler aux différents experts métier de la tech présents pour vous lors de cet événement.</p>
       <div class="slider__slides">
-        <div class="slider__slides--tabs" @scroll="handleScroll">
+        <div class="slider__slides--tabs gradient" @scroll="handleScroll">
           <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
             <span class="tab__activity">{{ attendee.activity }}</span>
@@ -96,7 +93,7 @@
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
-            <div class="content__company">
+            <div v-if="currentTab.company" class="content__company">
               <a :href="currentTab.link" target="_blank"><img class="content__company" :src="currentTab.company" alt="logo entreprise"></a>
             </div>
             <div class="content__description">
@@ -109,52 +106,39 @@
     <section class="planning">
       <h2>Le <span class="tag tag-yellow">planning</span></h2>
       <div class="planning__timeline">
-        <div class="planning__timeline--welcome shift">
-          <span class="shift--start">13:30</span>
-          🍰
-          <span class="shift--end">14:30</span>
-        </div>
         <div class="planning__timeline--meeting shift">
           <span class="shift--start">14:00</span>
           🤝
-          <span  class="shift--end">17:00</span>
         </div>
         <div class="planning__timeline--talk shift">
-          <span class="shift--start">17:30</span>
+          <span class="shift--start">18:00</span>
           🗣
         </div>
         <div class="planning__timeline--toast shift">
-          <span class="shift--start">18:30</span>
+          <span class="shift--start">19:00</span>
           🍸
-          <span class="shift--end">19:30</span>
+          <span class="shift--end">20:00</span>
         </div>
       </div>
       <div class="planning__cards">
-        <div id="welcome" class="planning__cards--card">
-          <div class="head">
-            <div class="tag tag-yellow">Accueil</div>
-            <div class="hours">12:30 - 13:30</div>
-          </div>
-          <p>Nous t’accueillons autour d’un petit buffet</p>
-        </div>
         <div id="meeting" class="planning__cards--card">
           <div class="head">
             <div class="tag tag-green">Meeting</div>
-            <div class="hours">14:00 - 17:00</div>
+            <div class="hours">14:00 - 18:00</div>
           </div>
           <p>Début de l’événement et de l’animation des stands</p>
         </div>
         <div id="talk" class="planning__cards--card">
           <div class="head">
             <div class="tag tag-blue">Talk</div>
-            <div class="hours">17:30 - 18:30</div>
+            <div class="hours">18:00 - 19:00</div>
           </div>
-          <p>Talk The Family : <br />Maxime Blondel</p>
+          <p>Talk : <br />Sylvain Tillon</p>
         </div>
         <div id="toast" class="planning__cards--card">
           <div class="head">
             <div class="tag tag-red">Apéro</div>
-            <div class="hours">18:30 - 19:30</div>
+            <div class="hours">19:00 - 20:00</div>
           </div>
           <p>Apéro de <br />fin de journée</p>
         </div>
@@ -166,7 +150,7 @@
           <span class="information__date--day">04</span>
           <div class="information__date--content">
             <span class="month">avril 2019</span>
-            <span class="hours"> 09:00 - 18:00</span>
+            <span class="hours"> 14:00 - 20:00</span>
           </div>
 
         </div>
@@ -220,9 +204,9 @@ export default {
       loading: true,
       cards: [
         {
-          title: "Selection d'un intervenant",
+          title: "Sélection d'un intervenant",
           content:
-            "Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication."
+            "Des créneaux vous seront présentés en début d’événement. Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication."
         },
         {
           title: "Rencontre avec l'expert",
@@ -230,7 +214,7 @@ export default {
             "Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires."
         },
         {
-          title: "Gain d'expérience",
+          title: "Retour d’expérience",
           content:
             "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
         }
@@ -243,7 +227,7 @@ export default {
           activity: "Vie présidente Girlz in Web Lyon",
           company: require("@/assets/images/company/girlzinweb-logo.png"),
           link: "http://girlzinweb.com/",
-          photo: "",
+          photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
@@ -261,7 +245,7 @@ export default {
         {
           id: 3,
           full_name: "Romaric Gouedard",
-          title: "CEO",
+          title: "Entrepreunariat",
           activity: "CEO",
           company: require("@/assets/images/company/smash-logo.png"),
           link: "https://fromsmash.com/",
@@ -272,29 +256,29 @@ export default {
         {
           id: 4,
           full_name: "Romain Hetzel",
-          title: "UX/UI Designer",
+          title: "UX/UI Design",
           activity: "UX/UI Designer",
           company: "",
           link: "",
-          photo: "",
+          photo: require("@/assets/images/attendees/romain-hetzel.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Après un Master II au Celsa et à l’école des Mines, Romain occupe pendant 6 ans les fonctions de Développeur, Product Owner et UX Designer dans de grandes agences (Buzzman, Publicis, Sid Lee, DDB) ou il travaille sur des projets digitaux ambitieux (applications, E-commerce, site expérientiel, objets connectés, réalité virtuelle, réalité augmentée). Désormais Designer, avec une forte orientation UX, son rôle est de faciliter la conception d’un produit pour qu’il soit adapté au client et à l’utilisateur puis d’en suivre la bonne réalisation en collaborant avec toutes les ressources nécessaires."
         },
         {
           id: 5,
-          full_name: "Erwan Jarrand",
-          title: "Comptable",
-          activity: "Comptable",
+          full_name: "Julien Petit",
+          title: "Levée de fonds",
+          activity: "Finance",
           company: require("@/assets/images/company/goneo-logo.png"),
-          link: "https://www.goneo-expertise.com/",
+          link: "https://www.j99fundraising.com/",
           photo: "",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
         },
         {
           id: 6,
           full_name: "Mickael Rigard",
-          title: "Dirigeant",
+          title: "Entrepreunariat",
           activity: "Directeur Général chez Attractive Labs",
           company: require("@/assets/images/company/attractivelabs-logo.png"),
           link: "https://www.attractivelabs.com/",
@@ -305,18 +289,18 @@ export default {
         {
           id: 7,
           full_name: "Marie Nguyen",
-          title: "Fondatrice",
+          title: "Entrepreunariat",
           activity: "Fondatrice",
           company: require("@/assets/images/company/wedressfair-logo.png"),
           link: "",
-          photo: "",
+          photo: require("@/assets/images/attendees/marie-nguyen.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Co-fondatrice de WeDressFair, une marketplace de mode éthique créée en 2018, mais de formation ingénieure dans la recherche en cancérologie, Marie Nguyen jongle tous les jours avec les enjeux d’une start-up. Dans le vif du sujet depuis plus d’un an, elle saura répondre à vos interrogations sur la création d’entreprise, et toutes vos questions en e-commerce."
         },
         {
           id: 8,
           full_name: "Emmanuel Cohen",
-          title: "Avocat",
+          title: "Droit",
           activity: "Avocat",
           company: require("@/assets/images/company/cohenavocat-logo.png"),
           link: "http://www.cohen-avocat.fr/",
@@ -327,9 +311,9 @@ export default {
         {
           id: 9,
           full_name: "Kévin Chavanne",
-          title: "Développeur",
+          title: "Développement",
           activity: "Senior Développeur Full-Stack",
-          company: require("@/assets/images/company/le-wagon-logo.png"),
+          company: require("@/assets/images/company/le-wagon-logo.svg"),
           link: "https://www.lewagon.com",
           photo: require("@/assets/images/attendees/kevin-chavanne.png"),
           description:
@@ -338,9 +322,9 @@ export default {
         {
           id: 10,
           full_name: "Pierre-Alban Toth",
-          title: "Product Manager",
-          activity: "Product Manager",
-          company: require("../assets/images/company/clearwage-logo.png"),
+          title: "Entrepreunariat",
+          activity: "Co-fondateur Clearwage",
+          company: require("../assets/images/company/clearwage-logo.svg"),
           link: "https://www.clearwage.com",
           photo: require("../assets/images/attendees/pierrealban-toth.png"),
           description:
@@ -349,11 +333,11 @@ export default {
         {
           id: 11,
           full_name: "Erwan Jarrand",
-          title: "Comptable",
+          title: "Finance",
           activity: "Comptable",
-          company: "",
-          link: "",
-          photo: "",
+          company: require("@/assets/images/company/goneo-logo.svg"),
+          link: "https://www.goneo-expertise.com/",
+          photo: require("@/assets/images/attendees/erwan-jarrand.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
@@ -364,24 +348,25 @@ export default {
           activity: "Fondateur",
           company: "Holdies",
           link: "",
-          photo: "",
+          photo: require("@/assets/images/attendees/louis-delon.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
           id: 13,
           full_name: "Vincent Mendes",
-          title: "CEO",
+          title: "Entrepreunariat",
           activity: "CEO",
-          company: "Entrup",
-          link: "",
-          photo: "",
+          company: require("@/assets/images/company/entrup-logo.svg"),
+          link: "https://entrup.co",
+          photo: require("@/assets/images/attendees/vincent-mendes.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisée par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
         }
       ],
       activeTab: 1,
-      tabScrolled: false
+      tabScrolled: false,
+      active: false
     };
   },
   computed: {
@@ -414,10 +399,10 @@ export default {
     handleScroll: function(evt) {
       let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
       const tab = document.querySelector(".slider__slides--tabs");
-      if (bottom === 77) {
-        tab.classList.add("gradient");
-      } else {
+      if (bottom < 144) {
         tab.classList.remove("gradient");
+      } else {
+        tab.classList.add("gradient");
       }
     }
   },
@@ -623,7 +608,7 @@ export default {
           width: 100%;
           height: 9px;
           background-color: var(--color-lightyellow);
-          border-radius: 2px;
+          border-radius: 1px;
           z-index: -1;
           transition: height 0.15s ease;
         }
@@ -725,7 +710,7 @@ export default {
   }
   &__slides {
     display: grid;
-    grid-template-columns: 0.4fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-column-gap: 130px;
     margin-top: 87px;
     position: relative;
@@ -734,23 +719,20 @@ export default {
       overflow-y: scroll;
       display: grid;
       grid-row-gap: 8px;
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 20%;
-        width: 100%;
-        opacity: 1;
-        background-image: linear-gradient(
-          to top,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0) 100%
-        );
-      }
       &.gradient {
         &:after {
-          opacity: 0;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 20%;
+          width: 100%;
+          opacity: 1;
+          background-image: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
         }
       }
       .tab {
@@ -762,7 +744,8 @@ export default {
         border: 0.5px solid rgba(0, 0, 0, 0.1);
         border-radius: 3px;
         height: 67px;
-        padding-left: 30px;
+        padding: 0 15px;
+        text-align: left;
         line-height: 20px;
         cursor: pointer;
         transition: all 0.2s ease;
@@ -785,9 +768,10 @@ export default {
     &--content {
       .content {
         display: grid;
-        grid-template-columns: 0.8fr 1fr;
-        grid-template-rows: repeat(3, auto) 45px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: repeat(3, auto) 100px 1fr;
         text-align: left;
+        height: 100%;
         &__title {
           padding: 10px 20px;
           color: var(--color-blue);
@@ -858,22 +842,18 @@ export default {
           }
         }
         &__company {
+          align-self: center;
           img {
-            filter: grayscale(100);
-            opacity: 0.7;
             width: auto;
-            transition: all 0.2s ease;
-            &:hover {
-              filter: grayscale(0);
-              opacity: 1;
-            }
           }
         }
         &__description {
           grid-column: span 2;
-          margin-top: 90px;
           border-left: 2px dashed rgba(0, 0, 0, 0.2);
           padding-left: 10px;
+          align-self: start;
+          margin-top: 50px;
+          height: fit-content;
           &--description {
             line-height: 20px;
             position: relative;
@@ -892,7 +872,7 @@ export default {
     height: 60px;
     background-color: rgba(229, 229, 229, 0.1);
     display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 1px;
     align-items: center;
     margin-top: 100px;
@@ -934,26 +914,31 @@ export default {
         bottom: -11px;
       }
     }
-    &--welcome {
-      grid-column: 1 / span 2;
-      background-color: var(--color-lightyellow);
-    }
     &--meeting {
-      grid-column: 4 / span 6;
+      grid-column: 1 / span 8;
       background-color: var(--color-lightgreen);
+      &.active {
+        background-color: var(--color-green);
+      }
     }
     &--talk {
-      grid-column: 12 / span 2;
+      grid-column: 9 / span 2;
       background-color: var(--color-lightblue);
+      &.active {
+        background-color: var(--color-blue);
+      }
     }
     &--toast {
-      grid-column: 14 / span 2;
+      grid-column: 11 / span 2;
       background-color: var(--color-lightred);
+      &.active {
+        background-color: var(--color-red);
+      }
     }
   }
   &__cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
     margin-top: 100px;
     &--card {
