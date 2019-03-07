@@ -206,7 +206,7 @@ export default {
         {
           title: "Sélection d'un intervenant",
           content:
-            "Des créneaux vous seront présentés en début d’événement. Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication."
+            "Choisissez un ou plusieurs expert(s) métier selon le domaine qui vous intéresse, de la comptabilité à la communication, selon le créneau de votre choix."
         },
         {
           title: "Rencontre avec l'expert",
