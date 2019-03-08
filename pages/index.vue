@@ -56,7 +56,11 @@
       </div>
       <div class="description__content">
         <h3>Bienvenue au Founder Summit</h3>
-        <p class="description__content--text">Le <strong>Founder Summit</strong> vous apportera les réponses dont vous avez besoin à travers des entretiens individuels avec l’expert métier choisi en amont par vous-même. Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.
+        <p class="description__content--text">Vous souhaitez créer votre entreprise mais vous n’avez pas encore toutes les cartes en main pour le faire ?
+          Vous êtes intéressé par le monde de l’entrepreneuriat en général et souhaitez en apprendre plus sur la création d’entreprise ?<br /><br />
+          Le <strong>Founder Summit</strong> vous apportera les réponses dont vous avez besoin à travers des entretiens individuels avec l’expert métier choisi en amont par vous-même.<br />
+          Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
+          Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
         </p>
         <div class="btn btn-red">S'inscrire</div>
       </div>
@@ -106,36 +110,36 @@
     <section class="planning">
       <h2>Le <span class="tag tag-yellow">planning</span></h2>
       <div class="planning__timeline">
-        <div class="planning__timeline--meeting shift">
+        <div :class="['planning__timeline--meeting shift', active.greenShift ? 'active' : '']" @mouseenter="active.greenCard = true" @mouseleave="active.greenCard = false">
           <span class="shift--start">14:00</span>
           🤝
         </div>
-        <div class="planning__timeline--talk shift">
+        <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
           <span class="shift--start">18:00</span>
           🗣
         </div>
-        <div class="planning__timeline--toast shift">
+        <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
           <span class="shift--start">19:00</span>
           🍸
           <span class="shift--end">20:00</span>
         </div>
       </div>
       <div class="planning__cards">
-        <div id="meeting" class="planning__cards--card">
+        <div id="meeting" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
             <div class="tag tag-green">Meeting</div>
             <div class="hours">14:00 - 18:00</div>
           </div>
           <p>Début de l’événement et de l’animation des stands</p>
         </div>
-        <div id="talk" class="planning__cards--card">
+        <div id="talk" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
             <div class="tag tag-blue">Talk</div>
             <div class="hours">18:00 - 19:00</div>
           </div>
-          <p>Talk : <br />Sylvain Tillon</p>
+          <p>Talk : L'esprit entrepreneur avec<br />Sylvain Tillon</p>
         </div>
-        <div id="toast" class="planning__cards--card">
+        <div id="toast" :class="['planning__cards--card', active.redCard ? 'active' : '']" @mouseenter="active.redShift = true" @mouseleave="active.redShift = false">
           <div class="head">
             <div class="tag tag-red">Apéro</div>
             <div class="hours">19:00 - 20:00</div>
@@ -269,7 +273,7 @@ export default {
           full_name: "Julien Petit",
           title: "Levée de fonds",
           activity: "Finance",
-          company: require("@/assets/images/company/goneo-logo.png"),
+          company: "",
           link: "https://www.j99fundraising.com/",
           photo: "",
           description:
@@ -291,7 +295,7 @@ export default {
           full_name: "Marie Nguyen",
           title: "Entrepreunariat",
           activity: "Fondatrice",
-          company: require("@/assets/images/company/wedressfair-logo.png"),
+          company: require("@/assets/images/company/wedressfair-logo.svg"),
           link: "",
           photo: require("@/assets/images/attendees/marie-nguyen.png"),
           description:
@@ -304,7 +308,7 @@ export default {
           activity: "Avocat",
           company: require("@/assets/images/company/cohenavocat-logo.png"),
           link: "http://www.cohen-avocat.fr/",
-          photo: "",
+          photo: require("@/assets/images/attendees/emmanuel-cohen.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
@@ -366,7 +370,16 @@ export default {
       ],
       activeTab: 1,
       tabScrolled: false,
-      active: false
+      active: [
+        {
+          greenCard: false,
+          greenShift: false,
+          blueCard: false,
+          blueShirt: false,
+          blueShift: false,
+          redCard: false
+        }
+      ]
     };
   },
   computed: {
@@ -530,7 +543,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  height: 450px;
+  height: 500px;
   position: relative;
   margin-top: 250px;
   padding: 0 var(--spacing-base);
@@ -589,7 +602,6 @@ export default {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    padding: 20px 0;
     &--text {
       line-height: 20px;
       a {
@@ -768,7 +780,7 @@ export default {
     &--content {
       .content {
         display: grid;
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 0.8fr 1fr;
         grid-template-rows: repeat(3, auto) 100px 1fr;
         text-align: left;
         height: 100%;
@@ -883,6 +895,7 @@ export default {
       height: 38px;
       border-radius: 50px;
       position: relative;
+      transition: background-color 0.2s ease;
       &:before {
         content: "";
         background: url(../assets/icons/hour-pin.svg) no-repeat left;
@@ -918,21 +931,21 @@ export default {
       grid-column: 1 / span 8;
       background-color: var(--color-lightgreen);
       &.active {
-        background-color: var(--color-green);
+        background-color: #1edd8860;
       }
     }
     &--talk {
       grid-column: 9 / span 2;
       background-color: var(--color-lightblue);
       &.active {
-        background-color: var(--color-blue);
+        background-color: #62ddf560;
       }
     }
     &--toast {
       grid-column: 11 / span 2;
       background-color: var(--color-lightred);
       &.active {
-        background-color: var(--color-red);
+        background-color: #fd101560;
       }
     }
   }
@@ -941,6 +954,21 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
     margin-top: 100px;
+    #meeting {
+      &.active {
+        box-shadow: 0px 4px 15px #1edd8860;
+      }
+    }
+    #talk {
+      &.active {
+        box-shadow: 0px 4px 15px #62ddf560;
+      }
+    }
+    #toast {
+      &.active {
+        box-shadow: 0px 4px 15px #fd101560;
+      }
+    }
     &--card {
       background-color: white;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -950,6 +978,7 @@ export default {
       display: flex;
       flex-flow: column;
       position: relative;
+      transition: box-shadow 0.2s ease;
       .head {
         display: flex;
         justify-content: space-between;
