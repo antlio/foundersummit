@@ -665,6 +665,7 @@ export default {
   &__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
     &:before {
       content: "";
       position: absolute;
@@ -679,15 +680,17 @@ export default {
     &--card {
       display: grid;
       align-content: center;
-      justify-content: center;
       grid-gap: 20px;
       margin-top: 40px;
+      text-align: left;
       &:first-child {
         justify-self: start;
       }
       &:nth-child(2) {
+        padding-left: 25px;
         .step {
           padding-top: 40px;
+          text-align: center;
         }
       }
       &:last-child {
@@ -706,9 +709,10 @@ export default {
         color: white;
         font-size: 9.375em;
         height: 270px;
+        padding-right: 25px;
       }
       .content {
-        padding: 0 25px;
+        text-align: left;
       }
     }
   }
@@ -1192,9 +1196,9 @@ footer {
         }
       }
       &--date {
-        height: fit-content;
-        width: fit-content;
-        padding: 15px 30px;
+        width: 200px;
+        height: auto;
+        padding: 15px 0;
         .content {
           .date {
             font-size: 2em;
