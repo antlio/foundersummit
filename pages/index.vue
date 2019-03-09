@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <div class="background-icons">
-      <div class="triangle" v-for="triangleEl in 9" :key="triangleEl.id" :class="'triangle-' + triangleEl"></div>
-      <div class="circle" v-for="circleEl in 9" :key="circleEl.id" :class="'circle-' + circleEl"></div>
+      <div class="triangle" v-for="triangleEl in 16" :key="triangleEl.id" :class="'triangle-' + triangleEl"></div>
+      <div class="circle" v-for="circleEl in 18" :key="circleEl.id" :class="'circle-' + circleEl"></div>
     </div>
     <section class="banner">
       <div class="banner__background">
@@ -98,12 +98,27 @@
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
             <div v-if="currentTab.company" class="content__company">
-              <a :href="currentTab.link" target="_blank"><img class="content__company" :src="currentTab.company" alt="logo entreprise"></a>
+              <a :href="currentTab.link" target="_blank"><img class="content__company" :src="currentTab.company" :alt="currentTab.full_name + ' logo'"></a>
             </div>
             <div class="content__description">
               <span class="content__description--description">{{ currentTab.description }}</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="talk">
+      <h2>Le <span class="tag tag-red">Talk</span></h2>
+      <div class="talk__content">
+        <div class="talk__content--image">
+          <img src="../assets/images/sylvain-tillon.png" alt="Sylvain Tillon">
+        </div>
+        <div class="talk__content--text">
+          <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
         </div>
       </div>
     </section>
@@ -137,7 +152,7 @@
             <div class="tag tag-blue">Talk</div>
             <div class="hours">18:00 - 19:00</div>
           </div>
-          <p>Talk : L'esprit entrepreneur avec<br />Sylvain Tillon</p>
+          <p>L'esprit entrepreneur avec<br />Sylvain Tillon</p>
         </div>
         <div id="toast" :class="['planning__cards--card', active.redCard ? 'active' : '']" @mouseenter="active.redShift = true" @mouseleave="active.redShift = false">
           <div class="head">
@@ -229,7 +244,7 @@ export default {
           full_name: "Romain Hetzel",
           title: "UX/UI Design",
           activity: "UX/UI Designer",
-          company: "",
+          company: require("@/assets/images/company/romainhetzel-logo.svg"),
           link: "https://romainhetzel.com",
           photo: require("@/assets/images/attendees/romain-hetzel.png"),
           description:
@@ -881,9 +896,33 @@ export default {
     }
   }
 }
+.talk {
+  margin-top: 200px;
+  text-align: center;
+  padding: 0 var(--spacing-base);
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    grid-column-gap: 70px;
+    margin-top: 100px;
+    &--image {
+      img {
+        width: 100%;
+      }
+    }
+    &--text {
+      text-align: left;
+      p {
+        margin-top: 45px;
+        line-height: 20px;
+      }
+    }
+  }
+}
 .planning {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 200px;
   padding: 0 var(--spacing-base);
   &__timeline {
     width: 100%;
@@ -1172,6 +1211,12 @@ footer {
     line-height: 1.5em;
     text-align: left;
   }
+  h3 {
+    font-size: 1.8em;
+  }
+  .background-icons {
+    display: none;
+  }
   .banner {
     padding: 0 20px;
     grid-template-columns: 1fr;
@@ -1179,7 +1224,7 @@ footer {
       display: none;
     }
     &__title {
-      margin-top: 0;
+      margin: 0;
       h1 {
         font-size: 2.5em;
       }
@@ -1233,6 +1278,32 @@ footer {
       display: none;
     }
   }
+  .conduct {
+    padding: 130px 20px 100px 20px;
+    &__cards {
+      grid-template-columns: 1fr;
+      &:before {
+        display: none;
+      }
+      &--card {
+        h4,
+        .content {
+          text-align: left;
+          padding: 0;
+        }
+        &:nth-child(2) {
+          padding: 0;
+          .step {
+            padding-top: 0;
+          }
+        }
+        .step {
+          padding: 0;
+          height: auto;
+        }
+      }
+    }
+  }
   .slider {
     margin-top: 50px;
     padding: 0 20px;
@@ -1249,7 +1320,7 @@ footer {
       &--content {
         .content {
           grid-template-columns: 1fr;
-          grid-template-rows: repeat(6, auto);
+          grid-template-rows: repeat(4, auto) 45px auto;
           grid-row-gap: 30px;
           position: relative;
           &__photo {
@@ -1296,35 +1367,20 @@ footer {
       }
     }
   }
-  .conduct {
-    padding: 100px 20px;
-    &__cards {
+  .talk {
+    padding: 0 20px;
+    margin-top: 50px;
+    &__content {
       grid-template-columns: 1fr;
-      &:before {
-        display: none;
-      }
-      &--card {
-        h4,
-        .content {
-          text-align: left;
-          padding: 0;
-        }
-        &:nth-child(2) {
-          padding: 0;
-          .step {
-            padding-top: 0;
-          }
-        }
-        .step {
-          padding: 0;
-          height: auto;
-        }
+      margin-top: 50px;
+      &--text {
+        margin-top: 50px;
       }
     }
   }
   .planning {
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 80px;
     &__timeline {
       display: none;
     }
