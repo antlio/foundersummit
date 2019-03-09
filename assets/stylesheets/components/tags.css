@@ -28,7 +28,7 @@
     margin: 0 auto;
   }
   .tag {
-    display: block;
+    display: inline;
     width: fit-content;
   }
 }
