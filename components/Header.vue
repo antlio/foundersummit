@@ -87,10 +87,12 @@ header {
     width: 400px;
     color: white;
     &--underline {
+      position: relative;
       &:after {
         border-bottom: 1.5px solid white;
         content: "";
         display: block;
+        position: absolute;
         margin: 0.25em auto 0;
         transition: width 250ms ease-in-out 0s;
         width: 0;

@@ -435,7 +435,7 @@ export default {
   grid-template-columns: 1.2fr 1fr;
   height: 800px;
   align-content: center;
-  padding: 50px var(--spacing-base) 0 var(--spacing-base);
+  padding: 0 var(--spacing-base);
   &__background {
     position: absolute;
     top: 0;
@@ -443,7 +443,8 @@ export default {
     z-index: -1;
   }
   &__title {
-    margin-top: 50px;
+    margin-bottom: 50px;
+    align-self: center;
     &--catchline {
       padding: 0 5px;
       margin-top: 30px;
@@ -1133,10 +1134,12 @@ footer {
       justify-items: center;
       margin: 50px 0;
       a {
+        position: relative;
         &:after {
           border-bottom: 1.5px solid var(--color-black);
           content: "";
           display: block;
+          position: absolute;
           margin: 0.25em auto 0;
           transition: width 250ms ease-in-out 0s;
           width: 0;
@@ -1307,11 +1310,13 @@ footer {
           padding: 0;
         }
         &:nth-child(2) {
+          padding: 0;
           .step {
             padding-top: 0;
           }
         }
         .step {
+          padding: 0;
           height: auto;
         }
       }
