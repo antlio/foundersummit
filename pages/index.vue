@@ -226,83 +226,50 @@ export default {
       attendees: [
         {
           id: 1,
-          full_name: "Tiphaine Frugier",
-          title: "Consultante",
-          activity: "Vie présidente Girlz in Web Lyon",
-          company: require("@/assets/images/company/girlzinweb-logo.png"),
-          link: "http://girlzinweb.com/",
-          photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-          id: 2,
-          full_name: "Alisson Grosdemange",
-          title: "Manager",
-          activity: "Lead Startup Manager chez 1kubator",
-          company: require("@/assets/images/company/1kubator-logo.png"),
-          link: "https://1kubator.com",
-          photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-          id: 3,
-          full_name: "Romaric Gouedard",
-          title: "Entrepreunariat",
-          activity: "CEO",
-          company: require("@/assets/images/company/smash-logo.png"),
-          link: "https://fromsmash.com/",
-          photo: require("@/assets/images/attendees/romaric-gouedard.png"),
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-          id: 4,
           full_name: "Romain Hetzel",
           title: "UX/UI Design",
           activity: "UX/UI Designer",
           company: "",
-          link: "",
+          link: "https://romainhetzel.com",
           photo: require("@/assets/images/attendees/romain-hetzel.png"),
           description:
             "Après un Master II au Celsa et à l’école des Mines, Romain occupe pendant 6 ans les fonctions de Développeur, Product Owner et UX Designer dans de grandes agences (Buzzman, Publicis, Sid Lee, DDB) ou il travaille sur des projets digitaux ambitieux (applications, E-commerce, site expérientiel, objets connectés, réalité virtuelle, réalité augmentée). Désormais Designer, avec une forte orientation UX, son rôle est de faciliter la conception d’un produit pour qu’il soit adapté au client et à l’utilisateur puis d’en suivre la bonne réalisation en collaborant avec toutes les ressources nécessaires."
         },
         {
-          id: 5,
-          full_name: "Julien Petit",
-          title: "Levée de fonds",
-          activity: "Finance",
-          company: "",
-          link: "https://www.j99fundraising.com/",
-          photo: "",
-          description:
-            "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
-        },
-        {
-          id: 6,
-          full_name: "Mickael Rigard",
-          title: "Entrepreunariat",
-          activity: "Directeur Général chez Attractive Labs",
-          company: require("@/assets/images/company/attractivelabs-logo.png"),
-          link: "https://www.attractivelabs.com/",
-          photo: "",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        },
-        {
-          id: 7,
+          id: 2,
           full_name: "Marie Nguyen",
           title: "Entrepreunariat",
           activity: "Fondatrice",
           company: require("@/assets/images/company/wedressfair-logo.svg"),
-          link: "",
+          link: "https://www.wedressfair.fr/",
           photo: require("@/assets/images/attendees/marie-nguyen.png"),
           description:
             "Co-fondatrice de WeDressFair, une marketplace de mode éthique créée en 2018, mais de formation ingénieure dans la recherche en cancérologie, Marie Nguyen jongle tous les jours avec les enjeux d’une start-up. Dans le vif du sujet depuis plus d’un an, elle saura répondre à vos interrogations sur la création d’entreprise, et toutes vos questions en e-commerce."
         },
         {
-          id: 8,
+          id: 3,
+          full_name: "Julien Petit",
+          title: "Levée de fonds",
+          activity: "Finance",
+          company: require("@/assets/images/company/j99fundraising-logo.png"),
+          link: "https://www.j99fundraising.com/",
+          photo: require("@/assets/images/attendees/julien-petit.png"),
+          description:
+            "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
+        },
+        {
+          id: 4,
+          full_name: "Mickael Rigard",
+          title: "Entrepreunariat",
+          activity: "Directeur Général chez Attractive Labs",
+          company: require("@/assets/images/company/attractivelabs-logo.png"),
+          link: "https://www.attractivelabs.com/",
+          photo: require("@/assets/images/attendees/mickael-rigard.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          id: 5,
           full_name: "Emmanuel Cohen",
           title: "Droit",
           activity: "Avocat",
@@ -313,18 +280,7 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 9,
-          full_name: "Kévin Chavanne",
-          title: "Développement",
-          activity: "Senior Développeur Full-Stack",
-          company: require("@/assets/images/company/le-wagon-logo.svg"),
-          link: "https://www.lewagon.com",
-          photo: require("@/assets/images/attendees/kevin-chavanne.png"),
-          description:
-            "Kevin a pendant 6 ans aider les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
-        },
-        {
-          id: 10,
+          id: 6,
           full_name: "Pierre-Alban Toth",
           title: "Entrepreunariat",
           activity: "Co-fondateur Clearwage",
@@ -335,7 +291,18 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 11,
+          id: 7,
+          full_name: "Kévin Chavanne",
+          title: "Développement",
+          activity: "Senior Développeur Full-Stack",
+          company: require("@/assets/images/company/le-wagon-logo.svg"),
+          link: "https://www.lewagon.com",
+          photo: require("@/assets/images/attendees/kevin-chavanne.png"),
+          description:
+            "Kevin a pendant 6 ans aider les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
+        },
+        {
+          id: 8,
           full_name: "Erwan Jarrand",
           title: "Finance",
           activity: "Comptable",
@@ -346,7 +313,7 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 12,
+          id: 9,
           full_name: "Louis Delon",
           title: "Fondateur",
           activity: "Fondateur",
@@ -357,7 +324,7 @@ export default {
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 13,
+          id: 10,
           full_name: "Vincent Mendes",
           title: "Entrepreunariat",
           activity: "CEO",
@@ -366,6 +333,39 @@ export default {
           photo: require("@/assets/images/attendees/vincent-mendes.png"),
           description:
             "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisée par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
+        },
+        {
+          id: 11,
+          full_name: "Tiphaine Frugier",
+          title: "Consultante",
+          activity: "Vie présidente Girlz in Web Lyon",
+          company: require("@/assets/images/company/girlzinweb-logo.png"),
+          link: "http://girlzinweb.com/",
+          photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          id: 12,
+          full_name: "Romaric Gouedard",
+          title: "Entrepreunariat",
+          activity: "CEO",
+          company: require("@/assets/images/company/smash-logo.png"),
+          link: "https://fromsmash.com/",
+          photo: require("@/assets/images/attendees/romaric-gouedard.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        },
+        {
+          id: 13,
+          full_name: "Alisson Grosdemange",
+          title: "Manager",
+          activity: "Lead Startup Manager chez 1kubator",
+          company: require("@/assets/images/company/1kubator-logo.png"),
+          link: "https://1kubator.com",
+          photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       ],
       activeTab: 1,
@@ -812,7 +812,8 @@ export default {
             no-repeat;
           background-size: cover;
           height: 335px;
-          width: 335px;
+          width: 100%;
+          max-width: 335px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1159,6 +1160,11 @@ footer {
 }
 
 @media (--mobile) {
+  h2 {
+    font-size: 2.5em;
+    line-height: 1.5em;
+    text-align: left;
+  }
   .banner {
     padding: 0 20px;
     grid-template-columns: 1fr;
@@ -1223,6 +1229,9 @@ footer {
   .slider {
     margin-top: 50px;
     padding: 0 20px;
+    &__subtitle {
+      text-align: left;
+    }
     &__slides {
       grid-template-columns: 1fr;
       grid-row-gap: 30px;
@@ -1233,13 +1242,14 @@ footer {
       &--content {
         .content {
           grid-template-columns: 1fr;
-          grid-template-rows: repeat(4, auto) 45px;
+          grid-template-rows: repeat(6, auto);
           grid-row-gap: 30px;
           position: relative;
           &__photo {
             grid-column: 1;
             grid-row: 2;
             margin-right: 0;
+            width: 100%;
             &--mobile {
               display: block;
               position: absolute;
@@ -1287,6 +1297,11 @@ footer {
         display: none;
       }
       &--card {
+        h4,
+        .content {
+          text-align: left;
+          padding: 0;
+        }
         &:nth-child(2) {
           .step {
             padding-top: 0;
@@ -1346,6 +1361,7 @@ footer {
       &__menu {
         grid-template-columns: 1fr;
         grid-row-gap: 20px;
+        justify-items: start;
       }
     }
   }
