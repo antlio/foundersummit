@@ -75,18 +75,53 @@
 .triangle-10 {
   width: 41.11px;
   height: 34.98px;
-  left: 1331.56px;
-  top: 3127.99px;
+  left: 505.9px;
+  top: 3474.43px;
 }
 
 .triangle-11 {
-  width: 41.11px;
-  height: 34.98px;
-  left: 505.9px;
-  top: 3214.43px;
+  width: 31.76px;
+  height: 27.02px;
+  left: 1145.57px;
+  top: 3612.07px;
 }
 
-@for $i from 1 to 11 {
+.triangle-12 {
+  width: 44.73px;
+  height: 38.06px;
+  left: 804px;
+  bottom: 1451.73px;
+}
+
+.triangle-13 {
+  width: 42.28px;
+  height: 35.97px;
+  left: 1135.16px;
+  bottom: 791.73px;
+}
+
+.triangle-14 {
+  width: 31.76px;
+  height: 27.02px;
+  left: 247.83px;
+  bottom: 688.2px;
+}
+
+.triangle-15 {
+  width: 41.11px;
+  height: 34.98px;
+  left: 188.92px;
+  bottom: 206.77px;
+}
+
+.triangle-16 {
+  width: 41.11px;
+  height: 34.98px;
+  left: 1113.31px;
+  bottom: 78.57px;
+}
+
+@for $i from 1 to 16 {
   .triangle-$(i) {
     --random: random(0, 360)deg;
     --random-2: calc(var(--random) + 360deg);
@@ -172,4 +207,67 @@
   height: 20px;
   left: 486px;
   top: 2845px;
+}
+
+.circle-10 {
+  width: 28px;
+  height: 28px;
+  left: 1321px;
+  top: 3125px;
+}
+
+.circle-11 {
+  width: 33px;
+  height: 33px;
+  left: 209px;
+  bottom: 2132px;
+}
+
+.circle-12 {
+  width: 22px;
+  height: 22px;
+  left: 992px;
+  bottom: 2008px;
+}
+
+.circle-13 {
+  width: 21px;
+  height: 21px;
+  left: 298px;
+  bottom: 1342px;
+}
+
+.circle-14 {
+  width: 33px;
+  height: 33px;
+  left: 1198px;
+  bottom: 1330px;
+}
+
+.circle-15 {
+  width: 43px;
+  height: 43px;
+  left: 182px;
+  bottom: 980px;
+}
+
+.circle-16 {
+  width: 21px;
+  height: 21px;
+  left: 699px;
+  bottom: 731px;
+}
+
+.circle-17 {
+  width: 20px;
+  height: 20px;
+  left: 772px;
+  bottom: 254px;
+}
+
+.circle-18 {
+  width: 28px;
+  height: 28px;
+  left: 329px;
+  bottom: 92px;
 }
