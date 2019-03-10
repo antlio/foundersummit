@@ -17,12 +17,7 @@ module.exports = {
         content:
           "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
       },
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
-      }
+      { name: "keywords", content: "founder, summit, lewagon, lyon" }
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
