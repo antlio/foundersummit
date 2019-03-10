@@ -2,7 +2,10 @@
   font-family: 'CircularStd Book';
   font-weight: 400;
   font-style: normal;
-  src: url('~assets/fonts/CircularStd-Book.ttf') format('truetype');
+  src:  local('CircularStd Book'),
+        url('~assets/fonts/CircularStd-Book.woff2') format('woff2'),
+        url('~assets/fonts/CircularStd-Book.woff') format('woff'),
+        url('~assets/fonts/CircularStd-Book.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -10,7 +13,10 @@
   font-family: 'CircularStd Medium';
   font-weight: 600;
   font-style: normal;
-  src: url('~assets/fonts/CircularStd-Medium.ttf') format('truetype');
+  src:  local('CircularStd Medium'),
+        url('~assets/fonts/CircularStd-Medium.woff2') format('woff2'),
+        url('~assets/fonts/CircularStd-Medium.woff') format('woff'),
+        url('~assets/fonts/CircularStd-Medium.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -18,7 +24,10 @@
   font-family: 'CircularStd Black';
   font-weight: 800;
   font-style: normal;
-  src: url('~assets/fonts/CircularStd-Black.ttf') format('truetype');
+  src:  local('CircularStd Black'),
+        url('~assets/fonts/CircularStd-Black.woff2') format('woff2'),
+        url('~assets/fonts/CircularStd-Black.woff') format('woff'),
+        url('~assets/fonts/CircularStd-Black.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -26,7 +35,10 @@
   font-family: 'Graphik Regular';
   font-weight: 400;
   font-style: normal;
-  src: url('~assets/fonts/Graphik-Regular.ttf') format('truetype');
+  src:  local('Graphik Regular'),
+        url('~assets/fonts/Graphik-Regular.woff2') format('woff2'),
+        url('~assets/fonts/Graphik-Regular.woff') format('woff'),
+        url('~assets/fonts/Graphik-Regular.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -34,7 +46,10 @@
   font-family: 'Graphik Medium';
   font-weight: 600;
   font-style: normal;
-  src: url('~assets/fonts/Graphik-Medium.ttf') format('truetype');
+  src:  local('Graphik Medium'),
+        url('~assets/fonts/Graphik-Medium.woff2') format('woff2'),
+        url('~assets/fonts/Graphik-Medium.woff') format('woff'),
+        url('~assets/fonts/Graphik-Medium.ttf') format('truetype');
   font-display: swap;
 }
 
