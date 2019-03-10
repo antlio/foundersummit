@@ -6,7 +6,7 @@
     <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener" class="__adress">20 rue des capucins, 69001 Lyon</a>
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
-      <a class="__navigation--underline" href="#">Contact</a>
+      <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
       <a class="btn btn-white" href="#">S'inscrire</a>
     </div>
     <div class="__mobile">
@@ -23,7 +23,7 @@
       <nav v-if="menuClicked" class="__mobile--navigation">
         <ul>
           <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
-          <li>Contact</li>
+          <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
             <a href="" 
               target="_blank"
