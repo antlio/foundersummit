@@ -14,7 +14,7 @@ module.exports = {
       { charset: "utf-8" },
       {
         name: "viewport",
-        content: "width=device-width, initial-scale=1.0, maximum-scale=1.0"
+        content: "width=device-width, initial-scale=1.0"
       },
       { name: "keywords", content: "founder, summit, lewagon, lyon" }
     ],
@@ -50,7 +50,7 @@ module.exports = {
   modules: [
     ["@nuxtjs/pwa"],
     ["@nuxtjs/google-analytics", { id: process.env.GA_ID, dev: false }],
-    ["nuxt-facebook-pixel-module", { pixelId: process.env.PIXEL_ID }]
+    ["nuxt-facebook-pixel-module", { pixelId: "12312412412" }]
   ],
 
   /*
@@ -61,7 +61,7 @@ module.exports = {
       push: true,
       pushAssets: (req, res, publicPath, preloadFiles) =>
         preloadFiles
-          .filter(f => f.asType === "script" && f.file === "runtime.js")
+          .filter(f => f.asType === "script" || f.asType === "+xml")
           .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
     }
   },
