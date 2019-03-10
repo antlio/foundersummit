@@ -1,36 +1,41 @@
 @font-face {
   font-family: 'CircularStd Book';
-  src: url('../../fonts/CircularStd-Book.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  src: url('~assets/fonts/CircularStd-Book.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'CircularStd Medium';
-  src: url('../../fonts/CircularStd-Medium.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  src: url('~assets/fonts/CircularStd-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'CircularStd Black';
-  src: url('../../fonts/CircularStd-Black.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
+  src: url('~assets/fonts/CircularStd-Black.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Graphik Regular';
-  src: url('../../fonts/Graphik-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  src: url('~assets/fonts/Graphik-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Graphik Medium';
-  src: url('../../fonts/Graphik-Medium.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
+  src: url('~assets/fonts/Graphik-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 h1,
