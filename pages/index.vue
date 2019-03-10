@@ -407,6 +407,58 @@ export default {
   components: {
     "app-skeleton": SkeletonBox
   },
+  head() {
+    return {
+      title: "Founder Summit 2019",
+      meta: [
+        {
+          name: "description",
+          hid: "description",
+          content:
+            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
+        },
+        // Open Graph
+        {
+          name: "og:title",
+          hid: "og:title",
+          content: "Founder Summit 2019"
+        },
+        {
+          name: "og:description",
+          hid: "og:description",
+          content:
+            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
+        },
+        { name: "og:url", content: "https://foundersummit.tech" },
+        {
+          name: "og:site_name",
+          hid: "og:site_name",
+          content: "Founder Summit"
+        },
+        {
+          name: "og:image",
+          content: "https://foundersummit.tech/thumbnail.png"
+        },
+        // Twitter Card
+        { name: "twitter:card", content: "summary" },
+        { name: "twitter:site", content: "Founder Summit" },
+        {
+          name: "twitter:title",
+          content: "Founder Summit 2019"
+        },
+        {
+          name: "twitter:description",
+          content:
+            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
+        },
+        {
+          name: "twitter:image",
+          content: "https://foundersummit.tech/thumbnail.png"
+        },
+        { name: "twitter:image:alt", content: "Founder Summit image" }
+      ]
+    };
+  },
   methods: {
     countDown() {
       const countDownDate = new Date("Apr 4, 2019 12:00:00").getTime();
