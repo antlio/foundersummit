@@ -53,7 +53,7 @@
       </div>
       <div class="description__content">
         <h3>Bienvenue au Founder Summit</h3>
-        <p class="description__content--text">Vous souhaitez créer votre entreprise mais vous n’avez pas encore toutes les cartes en main pour le faire ?
+        <p class="description__content--text">Vous souhaitez créer votre startup ou êtes en cours de création mais n’avez pas encore toutes les cartes en main pour le faire ?
           Vous êtes intéressé par le monde de l’entrepreneuriat en général et souhaitez en apprendre plus sur la création d’entreprise ?<br /><br />
           Le <strong>Founder Summit</strong> vous apportera les réponses dont vous avez besoin à travers des entretiens individuels avec l’expert métier choisi en amont par vous-même.<br />
           Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
@@ -128,34 +128,34 @@
           🤝
         </div>
         <div :class="['planning__timeline--talk shift', active.blueShift ? 'active' : '']" @mouseenter="active.blueCard = true" @mouseleave="active.blueCard = false">
-          <span class="shift--start">18:00</span>
+          <span class="shift--start">17:00</span>
           🗣
         </div>
         <div :class="['planning__timeline--toast shift', active.redShift ? 'active' : '']" @mouseenter="active.redCard = true" @mouseleave="active.redCard = false">
-          <span class="shift--start">19:00</span>
+          <span class="shift--start">17:30</span>
           🍸
-          <span class="shift--end">20:00</span>
+          <span class="shift--end">19:00</span>
         </div>
       </div>
       <div class="planning__cards">
         <div id="meeting" :class="['planning__cards--card', active.greenCard ? 'active' : '']" @mouseenter="active.greenShift = true" @mouseleave="active.greenShift = false">
           <div class="head">
             <div class="tag tag-green">Meeting</div>
-            <div class="hours">14:00 - 18:00</div>
+            <div class="hours">14:00 - 17:00</div>
           </div>
           <p>Début de l’événement et de l’animation des stands</p>
         </div>
         <div id="talk" :class="['planning__cards--card', active.blueCard ? 'active' : '']" @mouseenter="active.blueShift = true" @mouseleave="active.blueShift = false">
           <div class="head">
             <div class="tag tag-blue">Talk</div>
-            <div class="hours">18:00 - 19:00</div>
+            <div class="hours">17:00 - 17:30</div>
           </div>
           <p>L'esprit entrepreneur avec<br />Sylvain Tillon</p>
         </div>
         <div id="toast" :class="['planning__cards--card', active.redCard ? 'active' : '']" @mouseenter="active.redShift = true" @mouseleave="active.redShift = false">
           <div class="head">
-            <div class="tag tag-red">Apéro</div>
-            <div class="hours">19:00 - 20:00</div>
+            <div class="tag tag-red">Networking</div>
+            <div class="hours">17:30 - 19:00</div>
           </div>
           <p>Apéro de <br />fin de journée</p>
         </div>
@@ -167,7 +167,7 @@
           <span class="information__date--day">04</span>
           <div class="information__date--content">
             <span class="month">avril 2019</span>
-            <span class="hours"> 14:00 - 20:00</span>
+            <span class="hours"> 14:00 - 19:00</span>
           </div>
 
         </div>
@@ -985,7 +985,7 @@ export default {
     height: 60px;
     background-color: rgba(229, 229, 229, 0.1);
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(10, 1fr);
     grid-column-gap: 1px;
     align-items: center;
     margin-top: 100px;
@@ -1029,21 +1029,21 @@ export default {
       }
     }
     &--meeting {
-      grid-column: 1 / span 8;
+      grid-column: 1 / span 6;
       background-color: var(--color-lightgreen);
       &.active {
         background-color: #1edd8860;
       }
     }
     &--talk {
-      grid-column: 9 / span 2;
+      grid-column: 7 / span 1;
       background-color: var(--color-lightblue);
       &.active {
         background-color: #62ddf560;
       }
     }
     &--toast {
-      grid-column: 11 / span 2;
+      grid-column: 8 / span 3;
       background-color: var(--color-lightred);
       &.active {
         background-color: #fd101560;
