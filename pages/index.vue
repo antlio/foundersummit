@@ -491,8 +491,6 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-    this.$fb.enable();
-    this.$ga.enable();
   }
 };
 </script>
