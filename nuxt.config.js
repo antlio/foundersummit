@@ -37,20 +37,12 @@ module.exports = {
   plugins: [{ src: "~plugins/smooth-scroll", ssr: false }],
 
   /*
-  ** Env variable
-  */
-  env: {
-    PIXEL_ID: process.env.PIXEL_ID,
-    GA_ID: process.env.GA_ID
-  },
-
-  /*
   ** Nuxt.js modules
   */
   modules: [
     ["@nuxtjs/pwa"],
     ["@nuxtjs/google-analytics", { id: "UA-135962984-1", dev: false }],
-    ["nuxt-facebook-pixel-module", { pixelId: "12312412412" }]
+    ["nuxt-facebook-pixel-module", { pixelId: "1351265168355817" }]
   ],
 
   /*
