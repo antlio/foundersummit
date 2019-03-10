@@ -77,7 +77,7 @@
       <p class="slider__subtitle">Venez parler aux différents experts métier de la tech présents pour vous lors de cet événement.</p>
       <div class="slider__slides">
         <div class="slider__slides--tabs gradient" @scroll="handleScroll">
-          <div v-for="(attendee, index) in attendees" :key="index" @click="activeTab = index + 1" :class="['tab', activeTab === index + 1 ? 'active' : '']">
+          <div v-for="(attendee, index) in attendeesShuffled" :key="index" @click="activeTab = index" :class="['tab', activeTab === index ? 'active' : '']">
             <span class="tab__name">{{ attendee.full_name }}</span>
             <span class="tab__activity">{{ attendee.activity }}</span>
           </div>
@@ -238,7 +238,6 @@ export default {
       ],
       attendees: [
         {
-          id: 1,
           full_name: "Romain Hetzel",
           title: "UX/UI Design",
           activity: "UX/UI Designer",
@@ -249,7 +248,6 @@ export default {
             "Après un Master II au Celsa et à l’école des Mines, Romain occupe pendant 6 ans les fonctions de Développeur, Product Owner et UX Designer dans de grandes agences (Buzzman, Publicis, Sid Lee, DDB) ou il travaille sur des projets digitaux ambitieux (applications, E-commerce, site expérientiel, objets connectés, réalité virtuelle, réalité augmentée). Désormais Designer, avec une forte orientation UX, son rôle est de faciliter la conception d’un produit pour qu’il soit adapté au client et à l’utilisateur puis d’en suivre la bonne réalisation en collaborant avec toutes les ressources nécessaires."
         },
         {
-          id: 2,
           full_name: "Marie Nguyen",
           title: "Entrepreunariat",
           activity: "Co-fondatrice de WeDressFair",
@@ -260,40 +258,36 @@ export default {
             "Co-fondatrice de WeDressFair, une marketplace de mode éthique créée en 2018, mais de formation ingénieure dans la recherche en cancérologie, Marie Nguyen jongle tous les jours avec les enjeux d’une start-up. Dans le vif du sujet depuis plus d’un an, elle saura répondre à vos interrogations sur la création d’entreprise, et toutes vos questions en e-commerce."
         },
         {
-          id: 3,
           full_name: "Julien Petit",
           title: "Levée de fonds",
           activity: "Agent de startups chez J99undraising",
-          company: require("@/assets/images/company/j99fundraising-logo.png"),
+          company: require("@/assets/images/company/j99fundraising-logo.svg"),
           link: "https://www.j99fundraising.com/",
           photo: require("@/assets/images/attendees/julien-petit.png"),
           description:
             "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
         },
         {
-          id: 4,
           full_name: "Mickael Rigard",
           title: "Entrepreunariat",
           activity: "Co-fondateur d’Attractive Labs",
-          company: require("@/assets/images/company/attractivelabs-logo.png"),
+          company: require("@/assets/images/company/attractivelabs-logo.svg"),
           link: "https://www.attractivelabs.com/",
           photo: require("@/assets/images/attendees/mickael-rigard.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 5,
           full_name: "Emmanuel Cohen",
           title: "Droit",
           activity: "Avocat associé chez Cohen & Avocats",
-          company: require("@/assets/images/company/cohenavocat-logo.png"),
+          company: require("@/assets/images/company/cohenavocat-logo.svg"),
           link: "http://www.cohen-avocat.fr/",
           photo: require("@/assets/images/attendees/emmanuel-cohen.png"),
           description:
             "Emmanuel a exercé au sein de cabinets anglais et américain de premier rang en France et à l’étranger. Il prend régulièrement la parole sur le thème du pacte d’associés, de la levée de fonds, de la mésentente entre associés ou plus globalement sur le thème des relations entre associés. Il est notamment le est co-auteur de l’ouvrage « Levée de fonds : aspects pratiques et juridiques », Lamy, 2012."
         },
         {
-          id: 6,
           full_name: "Pierre-Alban Toth",
           title: "Entrepreunariat",
           activity: "Co-fondateur de Clearwage",
@@ -304,7 +298,6 @@ export default {
             "Après 4 ans passées chez Captain Train (Trainline) en tant que développeur iOS puis Product Manager, Pierre-Alban a lancé Clearwage avec pour objectif le développement d'un produit RH simplifiant la politique salariale des entreprises."
         },
         {
-          id: 7,
           full_name: "Kévin Chavanne",
           title: "Développement web",
           activity: "Senior Développeur Full-Stack",
@@ -315,7 +308,6 @@ export default {
             "Kevin a pendant 6 ans aidé les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
         },
         {
-          id: 8,
           full_name: "Erwan Jarrand",
           title: "Finance",
           activity: "Expert comptable chez Goneo",
@@ -326,18 +318,16 @@ export default {
             "Erwan accompagne des entrepreneurs, freelances et créateurs d'entreprise depuis 6 ans chez GONEO. GONEO est un cabinet d'expertise comptable dédié aux TPE/freelance qui propose l'ensemble des services d'un cabinet d'expertise comptable et met à disposition de ses clients des outils (Tiime) pour simplifier la comptabilité du chef d'entreprise."
         },
         {
-          id: 9,
           full_name: "Louis Delon",
           title: "Entrepreunariat",
           activity: "Fondateur de Holdies",
-          company: "Holdies",
-          link: "",
+          company: require("@/assets/images/company/holdies-logo.svg"),
+          link: "#",
           photo: require("@/assets/images/attendees/louis-delon.png"),
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         },
         {
-          id: 10,
           full_name: "Vincent Mendes",
           title: "Entrepreunariat",
           activity: "Co-fondateur de Entrup",
@@ -348,40 +338,48 @@ export default {
             "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisée par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
         },
         {
-          id: 11,
           full_name: "Tiphaine Frugier",
           title: "Communication",
           activity: "Co-fondatrice de Les Mordues du Web",
-          company: require("@/assets/images/company/lesmorduesduweb-logo.png"),
+          company: require("@/assets/images/company/lesmorduesduweb-logo.svg"),
           link: "https://lesmorduesduweb.fr/",
           photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
           description:
             "Après avoir travaillée pour La Cuisine du Web, ou encore organisée le BlendWebMix, Tiphaine fonde avec Barbara Cros Drewnowski Les Mordues du Web. Toutes les 2, elles accompagnent leurs clients depuis la stratégie jusqu’à la mise en œuvre opérationnelle. Elles créent leur fabrique pour accompagner TPE/PME, écoles et grandes groupes à trouver leur chemin grâce à des prestations sur mesure et complètes : conseil, stratégie, opérationnel et formation. Un véritable binôme d’expertes de la communication digitale."
         },
         {
-          id: 12,
           full_name: "Romaric Gouedard-Comte",
           title: "Entrepreunariat",
           activity: "Co-fondateur de Smash",
-          company: require("@/assets/images/company/smash-logo.png"),
+          company: require("@/assets/images/company/smash-logo.svg"),
           link: "https://fromsmash.com/",
           photo: require("@/assets/images/attendees/romaric-gouedard.png"),
           description:
             "Romaric est le co-créateur de la solution Smash, un service de transfert de fichiers. Sur le marché en très forte croissance des services de partage de contenus, Smash se positionne comme une véritable alternative aux acteurs actuelles, en proposant notamment un partage sans restriction et sans limite de taille."
         },
         {
-          id: 13,
           full_name: "Alisson Grosdemange",
           title: "Incubation",
           activity: "Lead Startup Manager chez 1kubator",
-          company: require("@/assets/images/company/1kubator-logo.png"),
+          company: require("@/assets/images/company/1kubator-logo.svg"),
           link: "https://1kubator.com",
           photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
           description:
             "Alisson est en charge de l'accompagnement des startups au sein d'1kubator, un incubateur spécialisé dans le digital. 1kubator soutient les entrepreuneurs à travers différents programmes, et jouît d'un réseau de plus de 280 mentors et intervenants, apportant expériences et conseils quotidiennement auprès des startups dans leur développement."
+        },
+        {
+          full_name: "Mehdi Lahmam",
+          title: "Développement web",
+          activity: "Senior Développeur Full-Stack",
+          company: require("@/assets/images/company/1kubator-logo.svg"),
+          link: "https://lahmam.com/",
+          photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
+          description:
+            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondée, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits."
         }
       ],
-      activeTab: 1,
+      attendeesShuffled: [],
+      activeTab: 0,
       tabScrolled: false,
       active: [
         {
@@ -392,14 +390,13 @@ export default {
           blueShift: false,
           redCard: false
         }
-      ]
+      ],
+      currentTab: []
     };
   },
-  computed: {
-    currentTab() {
-      return this.attendees.find(attendee => {
-        return attendee.id == this.activeTab;
-      });
+  watch: {
+    activeTab() {
+      return (this.currentTab = this.attendeesShuffled[this.activeTab]);
     }
   },
   components: {
@@ -474,7 +471,7 @@ export default {
         self.seconds = Math.floor((distance % (1000 * 60)) / 1000);
       }, 0);
     },
-    handleScroll: function(evt) {
+    handleScroll(evt) {
       let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
       const tab = document.querySelector(".slider__slides--tabs");
       if (bottom < 144) {
@@ -482,6 +479,20 @@ export default {
       } else {
         tab.classList.add("gradient");
       }
+    },
+    randomAttendeesList() {
+      const attendees = this.attendees;
+      let currentIndex = attendees.length,
+        temporaryValue,
+        randomIndex;
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = attendees[currentIndex];
+        attendees[currentIndex] = attendees[randomIndex];
+        attendees[randomIndex] = temporaryValue;
+      }
+      this.attendeesShuffled = attendees;
     }
   },
   mounted() {
@@ -490,6 +501,10 @@ export default {
       setTimeout(() => (this.loading = false), 200);
     });
     this.$fb.enable();
+    this.currentTab = this.attendeesShuffled[0];
+  },
+  beforeMount() {
+    this.randomAttendeesList();
   }
 };
 </script>
