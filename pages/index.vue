@@ -89,16 +89,16 @@
           <div class="content">
             <span class="content__title">{{ currentTab.title }}</span>
             <div class="content__photo">
-              <img src="../assets/icons/arrow.svg" v-if="activeTab > 1" @click="activeTab--" class="content__photo--mobile left">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab > 1" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
               <div class="content__photo--image">
                 <img :src="currentTab.photo" :alt="currentTab.full_name + ' photo'">
               </div>
-              <img src="../assets/icons/arrow.svg" v-if="activeTab < 13" @click="activeTab++" class="content__photo--mobile right">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab < 13" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
             <div v-if="currentTab.company" class="content__company">
-              <a :href="currentTab.link" target="_blank"><img class="content__company" :src="currentTab.company" :alt="currentTab.full_name + ' logo'"></a>
+              <a :href="currentTab.link" target="_blank" rel="noreferrer noopener"><img class="content__company" :src="currentTab.company" :alt="currentTab.full_name + ' logo'"></a>
             </div>
             <div class="content__description">
               <span class="content__description--description">{{ currentTab.description }}</span>
@@ -177,14 +177,14 @@
           <img src="../assets/icons/map.svg" alt="map icon">
           <div class="information__direction--content">
             <span>Le wagon Lyon</span>
-            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank">S'y rendre</a>
+            <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">S'y rendre</a>
           </div>
         </div>
         <div class="information__social">
-          <a href="https://facebook.com/lewagonlyon/"><img src="../assets/icons/facebook.svg" alt="facebook icon" target="_blank"></a>
-          <a href="https://instagram.com/lewagonlyon/"><img src="../assets/icons/instagram.svg" alt="instagram icon" target="_blank"></a>
-          <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank"></a>
-          <a href="https://www.linkedin.com/school/le-wagon/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank"></a>
+          <a href="https://facebook.com/lewagonlyon/"><img src="../assets/icons/facebook.svg" alt="facebook icon" target="_blank" rel="noreferrer noopener"></a>
+          <a href="https://instagram.com/lewagonlyon/"><img src="../assets/icons/instagram.svg" alt="instagram icon" target="_blank" rel="noreferrer noopener"></a>
+          <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
+          <a href="https://www.linkedin.com/school/le-wagon/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
         </div>
         <a href="#" class="btn btn-white">Inscription</a>
       </div>
@@ -196,13 +196,13 @@
       </div>
       <div class="footer__menu">
         <a href="mailto:matthieu@lewagon.org">
-          <li>Contactez-nous</li>
+          <span>Contactez-nous</span>
         </a>
-        <a href="https://www.lewagon.com" target="_blank">
-          <li>Programme</li>
+        <a href="https://www.lewagon.com" target="_blank" rel="noreferrer noopener">
+          <span>Programme</span>
         </a>
-        <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank">
-          <li>Où nous trouver</li>
+        <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">
+          <span>Où nous trouver</span>
         </a>
       </div>
     </footer>
@@ -254,7 +254,7 @@ export default {
           id: 2,
           full_name: "Marie Nguyen",
           title: "Entrepreunariat",
-          activity: "Fondatrice",
+          activity: "Co-fondatrice de WeDressFair",
           company: require("@/assets/images/company/wedressfair-logo.svg"),
           link: "https://www.wedressfair.fr/",
           photo: require("@/assets/images/attendees/marie-nguyen.png"),
@@ -265,7 +265,7 @@ export default {
           id: 3,
           full_name: "Julien Petit",
           title: "Levée de fonds",
-          activity: "Finance",
+          activity: "Agent de startups chez J99undraising",
           company: require("@/assets/images/company/j99fundraising-logo.png"),
           link: "https://www.j99fundraising.com/",
           photo: require("@/assets/images/attendees/julien-petit.png"),
@@ -276,7 +276,7 @@ export default {
           id: 4,
           full_name: "Mickael Rigard",
           title: "Entrepreunariat",
-          activity: "Directeur Général chez Attractive Labs",
+          activity: "Co-fondateur d’Attractive Labs",
           company: require("@/assets/images/company/attractivelabs-logo.png"),
           link: "https://www.attractivelabs.com/",
           photo: require("@/assets/images/attendees/mickael-rigard.png"),
@@ -287,51 +287,51 @@ export default {
           id: 5,
           full_name: "Emmanuel Cohen",
           title: "Droit",
-          activity: "Avocat",
+          activity: "Avocat associé chez Cohen & Avocats",
           company: require("@/assets/images/company/cohenavocat-logo.png"),
           link: "http://www.cohen-avocat.fr/",
           photo: require("@/assets/images/attendees/emmanuel-cohen.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Emmanuel a exercé au sein de cabinets anglais et américain de premier rang en France et à l’étranger. Il prend régulièrement la parole sur le thème du pacte d’associés, de la levée de fonds, de la mésentente entre associés ou plus globalement sur le thème des relations entre associés. Il est notamment le est co-auteur de l’ouvrage « Levée de fonds : aspects pratiques et juridiques », Lamy, 2012."
         },
         {
           id: 6,
           full_name: "Pierre-Alban Toth",
           title: "Entrepreunariat",
-          activity: "Co-fondateur Clearwage",
+          activity: "Co-fondateur de Clearwage",
           company: require("../assets/images/company/clearwage-logo.svg"),
           link: "https://www.clearwage.com",
           photo: require("../assets/images/attendees/pierrealban-toth.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Après 4 ans passées chez Captain Train (Trainline) en tant que développeur iOS puis Product Manager, Pierre-Alban a lancé Clearwage avec pour objectif le développement d'un produit RH simplifiant la politique salariale des entreprises."
         },
         {
           id: 7,
           full_name: "Kévin Chavanne",
-          title: "Développement",
+          title: "Développement web",
           activity: "Senior Développeur Full-Stack",
           company: require("@/assets/images/company/le-wagon-logo.svg"),
           link: "https://www.lewagon.com",
           photo: require("@/assets/images/attendees/kevin-chavanne.png"),
           description:
-            "Kevin a pendant 6 ans aider les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
+            "Kevin a pendant 6 ans aidé les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
         },
         {
           id: 8,
           full_name: "Erwan Jarrand",
           title: "Finance",
-          activity: "Comptable",
+          activity: "Expert comptable chez Goneo",
           company: require("@/assets/images/company/goneo-logo.svg"),
           link: "https://www.goneo-expertise.com/",
           photo: require("@/assets/images/attendees/erwan-jarrand.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Erwan accompagne des entrepreneurs, freelances et créateurs d'entreprise depuis 6 ans chez GONEO. GONEO est un cabinet d'expertise comptable dédié aux TPE/freelance qui propose l'ensemble des services d'un cabinet d'expertise comptable et met à disposition de ses clients des outils (Tiime) pour simplifier la comptabilité du chef d'entreprise."
         },
         {
           id: 9,
           full_name: "Louis Delon",
-          title: "Fondateur",
-          activity: "Fondateur",
+          title: "Entrepreunariat",
+          activity: "Fondateur de Holdies",
           company: "Holdies",
           link: "",
           photo: require("@/assets/images/attendees/louis-delon.png"),
@@ -342,7 +342,7 @@ export default {
           id: 10,
           full_name: "Vincent Mendes",
           title: "Entrepreunariat",
-          activity: "CEO",
+          activity: "Co-fondateur de Entrup",
           company: require("@/assets/images/company/entrup-logo.svg"),
           link: "https://entrup.co",
           photo: require("@/assets/images/attendees/vincent-mendes.png"),
@@ -352,35 +352,35 @@ export default {
         {
           id: 11,
           full_name: "Tiphaine Frugier",
-          title: "Consultante",
-          activity: "Vie présidente Girlz in Web Lyon",
+          title: "Communication",
+          activity: "Co-fondatrice de Les Mordues du Web",
           company: require("@/assets/images/company/girlzinweb-logo.png"),
-          link: "http://girlzinweb.com/",
+          link: "https://lesmorduesduweb.fr/",
           photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Après avoir travaillée pour La Cuisine du Web, ou encore organisée le BlendWebMix, Tiphaine fonde avec Barbara Cros Drewnowski Les Mordues du Web. Toutes les 2, elles accompagnent leurs clients depuis la stratégie jusqu’à la mise en œuvre opérationnelle. Elles créent leur fabrique pour accompagner TPE/PME, écoles et grandes groupes à trouver leur chemin grâce à des prestations sur mesure et complètes : conseil, stratégie, opérationnel et formation. Un véritable binôme d’expertes de la communication digitale."
         },
         {
           id: 12,
-          full_name: "Romaric Gouedard",
+          full_name: "Romaric Gouedard-Comte",
           title: "Entrepreunariat",
-          activity: "CEO",
+          activity: "Co-fondateur de Smash",
           company: require("@/assets/images/company/smash-logo.png"),
           link: "https://fromsmash.com/",
           photo: require("@/assets/images/attendees/romaric-gouedard.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Romaric est le co-créateur de la solution Smash, un service de transfert de fichiers. Sur le marché en très forte croissance des services de partage de contenus, Smash se positionne comme une véritable alternative aux acteurs actuelles, en proposant notamment un partage sans restriction et sans limite de taille."
         },
         {
           id: 13,
           full_name: "Alisson Grosdemange",
-          title: "Manager",
+          title: "Incubation",
           activity: "Lead Startup Manager chez 1kubator",
           company: require("@/assets/images/company/1kubator-logo.png"),
           link: "https://1kubator.com",
           photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Alisson est en charge de l'accompagnement des startups au sein d'1kubator, un incubateur spécialisé dans le digital. 1kubator soutient les entrepreuneurs à travers différents programmes, et jouît d'un réseau de plus de 280 mentors et intervenants, apportant expériences et conseils quotidiennement auprès des startups dans leur développement."
         }
       ],
       activeTab: 1,
