@@ -184,7 +184,7 @@
           <a href="https://facebook.com/lewagonlyon/"><img src="../assets/icons/facebook.svg" alt="facebook icon" target="_blank" rel="noreferrer noopener"></a>
           <a href="https://instagram.com/lewagonlyon/"><img src="../assets/icons/instagram.svg" alt="instagram icon" target="_blank" rel="noreferrer noopener"></a>
           <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
-          <a href="https://www.linkedin.com/school/le-wagon/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
+          <a href="https://www.linkedin.com/showcase/le-wagon-lyon/about/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
         </div>
         <a href="#" class="btn btn-white">Inscription</a>
       </div>
@@ -195,10 +195,10 @@
         <img src="../assets/images/smartup-logo.svg" alt="smart up logo">
       </div>
       <div class="footer__menu">
-        <a href="mailto:matthieu@lewagon.org">
+        <a href="mailto:lyon@lewagon.org">
           <span>Contactez-nous</span>
         </a>
-        <a href="https://www.lewagon.com" target="_blank" rel="noreferrer noopener">
+        <a href="https://www.lewagon.com/fr/lyon/" target="_blank" rel="noreferrer noopener">
           <span>Programme</span>
         </a>
         <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener">
@@ -354,7 +354,7 @@ export default {
           full_name: "Tiphaine Frugier",
           title: "Communication",
           activity: "Co-fondatrice de Les Mordues du Web",
-          company: require("@/assets/images/company/girlzinweb-logo.png"),
+          company: require("@/assets/images/company/lesmorduesduweb-logo.png"),
           link: "https://lesmorduesduweb.fr/",
           photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
           description:
