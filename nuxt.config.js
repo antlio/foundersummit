@@ -34,16 +34,24 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    { src: "~plugins/smooth-scroll", ssr: false },
-    { src: "~plugins/ga.js", ssr: false },
-    { src: "~plugins/fb.js", ssr: false }
-  ],
+  plugins: [{ src: "~plugins/smooth-scroll", ssr: false }],
+
+  /*
+  ** Env variable
+  */
+  env: {
+    PIXEL_ID: process.env.PIXEL_ID,
+    GA_ID: process.env.GA_ID
+  },
 
   /*
   ** Nuxt.js modules
   */
-  modules: [["@nuxtjs/pwa"]],
+  modules: [
+    ["@nuxtjs/pwa"],
+    ["@nuxtjs/google-analytics", { id: process.env.GA_ID, dev: false }],
+    ["nuxt-facebook-pixel-module", { pixelId: process.env.PIXEL_ID }]
+  ],
 
   /*
   ** Rendering
