@@ -38,10 +38,6 @@ module.exports = {
     {
       src: "~plugins/smooth-scroll",
       ssr: false
-    },
-    {
-      src: "~plugins/ga.js",
-      ssr: false
     }
   ],
 
