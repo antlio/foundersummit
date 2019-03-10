@@ -5,9 +5,6 @@
       <div class="circle" v-for="circleEl in 18" :key="circleEl.id" :class="'circle-' + circleEl"></div>
     </div>
     <section class="banner">
-      <div class="banner__background">
-        <img src="../assets/images/background-banner.png" alt="" width="950px">
-      </div>
       <div class="banner__title">
         <h1>Founder Summit 2019</h1>
         <p class="banner__title--catchline">L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.</p>
@@ -504,11 +501,16 @@ export default {
   height: 800px;
   align-content: center;
   padding: 0 var(--spacing-base);
-  &__background {
+  &:before {
+    content: "";
+    background: url(../assets/images/background-banner.png) no-repeat;
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
+    background-size: contain;
+    width: 930px;
+    height: 100%;
   }
   &__title {
     margin-bottom: 50px;
@@ -1273,7 +1275,7 @@ footer {
   .banner {
     padding: 0 20px;
     grid-template-columns: 1fr;
-    &__background {
+    &:before {
       display: none;
     }
     &__title {
