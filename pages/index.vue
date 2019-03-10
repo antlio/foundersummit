@@ -268,14 +268,14 @@ export default {
             "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
         },
         {
-          full_name: "Mickael Rigard",
+          full_name: "Mickaël Rigard",
           title: "Entrepreunariat",
           activity: "Co-fondateur d’Attractive Labs",
           company: require("@/assets/images/company/attractivelabs-logo.svg"),
           link: "https://www.attractivelabs.com/",
           photo: require("@/assets/images/attendees/mickael-rigard.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Mickaël est le créateur du Pitch Simulator, un camp d’entraînement éphémère permettant de se former à la prise de parole en suivant une méthode innovante. Enfant timide, Mickaël s’est soigné à l’adolescence en prenant le micro face à ses premiers publics. Entrepreneur dans l’âme, il lance sa startup dans le digital et découvre le pitch il y a deux ans."
         },
         {
           full_name: "Emmanuel Cohen",
@@ -325,7 +325,7 @@ export default {
           link: "#",
           photo: require("@/assets/images/attendees/louis-delon.png"),
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            "Louis à un parcours assez atypique. D'abord scientifique de formation (docteur en chimie) puis entrepreneur depuis une dizaine d’années, il a fondé 2 premières startups dans les domaines de la chimie et des biotechnologies. Après une vente et un exit, il décide de lancer Holdies, une marketplace pour collectionneurs de jeux vidéo et jouets vintages. Une incubation chez The Family et une levé de fonds plus tard, il nous livre son histoire."
         },
         {
           full_name: "Vincent Mendes",
@@ -371,7 +371,7 @@ export default {
           full_name: "Mehdi Lahmam",
           title: "Développement web",
           activity: "Senior Développeur Full-Stack",
-          company: require("@/assets/images/company/1kubator-logo.svg"),
+          company: require("@/assets/images/company/mehdi-lahmam-logo.svg"),
           link: "https://lahmam.com/",
           photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
           description:
