@@ -112,9 +112,10 @@
         </div>
         <div class="talk__content--text">
           <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <p>Sylvain Tillon, 35 ans, lorsqu’il présente son parcours, donne l’impression d’avoir vécu plusieurs vies. En l’espace d’une décennie à peine, il crée 4 sociétés (dont Sydo et Tilkee) et écrit plusieurs livres dont “100 conseils pratiques pour couler sa boîte”. 
+            Pour lui, il n’existe pas de recette magique pour créer son entreprise, seule la détermination et le soutien d’un entourage bienveillant suffisent. Et quand bien même le projet tomberait à l’eau, l’important est de savoir rebondir et apprendre de ses erreurs.
+            Sa devise : "Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles" (Sénèque).
+            Réelle personnalité de la tech lyonnaise, venez écouter son point de vue sur l’état d’esprit que doit avoir un entrepreneur.
           </p>
         </div>
       </div>
