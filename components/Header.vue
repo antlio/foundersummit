@@ -3,7 +3,7 @@
     <div class="__logo">
       <img src="../assets/images/le-wagon-smart-up-logo.svg" alt="Le wagon x Smart up logo">
     </div>
-    <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" class="__adress">20 rue des capucins, 69001 Lyon</a>
+    <a href="http://maps.google.com/maps?q=20+rue+des+capucins,+69001+lyon" target="_blank" rel="noreferrer noopener" class="__adress">20 rue des capucins, 69001 Lyon</a>
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="#">Contact</a>
@@ -25,8 +25,9 @@
           <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
           <li>Contact</li>
           <li>
-            <a href="https://apitail.typeform.com/to/rkhLq1" 
+            <a href="" 
               target="_blank"
+              rel="noreferrer noopener"
               class="btn btn-red"
               >S'inscrire</a>
           </li>
