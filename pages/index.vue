@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="banner__countdown--buttons">
-          <div class="btn btn-red">S'inscrire</div>
+          <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-red">S'inscrire</a>
           <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">En savoir plus</a>
         </div>
       </div>
@@ -59,7 +59,7 @@
           Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
           Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
         </p>
-        <div class="btn btn-red">S'inscrire</div>
+        <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-red">S'inscrire</a>
       </div>
     </section>
     <section class="conduct">
@@ -184,7 +184,7 @@
           <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
           <a href="https://www.linkedin.com/showcase/le-wagon-lyon/about/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
         </div>
-        <a href="#" class="btn btn-white">Inscription</a>
+        <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-white">Inscription</a>
       </div>
     </section>
     <footer>
@@ -620,6 +620,9 @@ export default {
       display: flex;
       justify-content: space-between;
       width: 100%;
+      .btn-red {
+        color: white;
+      }
       .btn-white {
         width: 169px;
       }
@@ -691,9 +694,9 @@ export default {
     justify-content: space-between;
     &--text {
       line-height: 20px;
-      a {
-        color: var(--color-red);
-      }
+    }
+    a {
+      color: white;
     }
   }
 }

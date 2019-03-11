@@ -7,7 +7,7 @@
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
-      <a class="btn btn-white" href="#">S'inscrire</a>
+      <a class="btn btn-white" href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427">S'inscrire</a>
     </div>
     <div class="__mobile">
       <div @click="menuClicked = !menuClicked" class="__mobile--btn">
@@ -25,7 +25,7 @@
           <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
           <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
-            <a href="" 
+            <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" 
               target="_blank"
               rel="noreferrer noopener"
               class="btn btn-red"
