@@ -238,6 +238,16 @@ export default {
       ],
       attendees: [
         {
+          full_name: "Ruben Lopez",
+          title: "Entrepreunariat",
+          activity: "Président de Grow Up",
+          company: require("@/assets/images/company/growup-logo.svg"),
+          link: "https://growup.tech/",
+          photo: require("@/assets/images/attendees/ruben-lopez.png"),
+          description:
+            "Créateur d’idées et renforceur de startups. Il connait les meilleurs filons pour vous faire grandir et financer les entreprises. Un vrai fertil’easer !"
+        },
+        {
           full_name: "Romain Hetzel",
           title: "UX/UI Design",
           activity: "UX/UI Designer",
