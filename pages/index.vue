@@ -531,13 +531,13 @@ export default {
   padding: 0 var(--spacing-base);
   &:before {
     content: "";
-    background: url(../assets/images/background-banner.png) no-repeat;
+    background: url(../assets/images/background-banner.svg) no-repeat;
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
     background-size: contain;
-    width: 930px;
+    width: 650px;
     height: 100%;
   }
   &__title {
