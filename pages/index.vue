@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="banner__countdown--buttons">
-          <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">S'inscrire</a>
+          <a id="number3-58542912427" class="btn btn-red" @click="getId($event)">Billeterie</a>
           <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">En savoir plus</a>
         </div>
       </div>
@@ -59,7 +59,7 @@
           Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
           Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
         </p>
-        <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">S'inscrire</a>
+        <a id="number4-58542912427" class="btn btn-red" @click="getId($event)">Billeterie</a>
       </div>
     </section>
     <section class="conduct">
@@ -188,7 +188,7 @@
           <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
           <a href="https://www.linkedin.com/showcase/le-wagon-lyon/about/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
         </div>
-        <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">S'inscrire</a>
+        <a id="number5-58542912427" class="btn btn-white" @click="getId($event)">Billeterie</a>
       </div>
     </section>
     <footer>
@@ -524,7 +524,7 @@ export default {
 .banner {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  height: 800px;
+  height: 750px;
   align-content: center;
   padding: 0 var(--spacing-base);
   &:before {
@@ -1432,7 +1432,7 @@ footer {
   }
   .talk {
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 80px;
     &__content {
       grid-template-columns: 1fr;
       margin-top: 50px;
