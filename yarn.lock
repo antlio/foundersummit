@@ -8437,6 +8437,13 @@ vue-analytics@^5.16.2:
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.3.tgz#99124fe2e64a804d56746af025c3f421cd197072"
   integrity sha512-1U6/AKm0plm1jxECfLKkBzMkNWdWkpc0O2/DsuOgk4PXaQ3FCTHQ+iWqwhtG2cTlF/lu3lRmYGGWhvHFyUZb/A==
 
+vue-cookieconsent-component@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-cookieconsent-component/-/vue-cookieconsent-component-1.2.0.tgz#cd6f5a37dd2301028360a169e2bee4817be18c3c"
+  integrity sha512-9vbbLSIIuLjtFuhJ2QJaY0Jt3xTmotWXsz5/rQyICK9kFgpcDd9dnDwwy753tMSoSLG0+gWKDugaHGuHMdUs2Q==
+  dependencies:
+    vue "^2.5.2"
+
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-5.0.0.tgz#00f4e4da94ec974b821a26ff0ed0f7a78402b8a1"
@@ -8524,6 +8531,11 @@ vue2-smooth-scroll@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/vue2-smooth-scroll/-/vue2-smooth-scroll-1.0.5.tgz#6e6f35094720ba781985560f45105c96ba4caccd"
   integrity sha512-3HP9ak4DW6p8w8qjylBv+aZzTc3t7IU5sfb2wsA7QoIMBc5QCuMS4KOwx+DNEtBfDCSnIoxVqSb+Sx1qJSYhfQ==
+
+vue@^2.5.2:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.8.tgz#f21cbc536bfc14f7d1d792a137bb12f69e60ea91"
+  integrity sha512-+vp9lEC2Kt3yom673pzg1J7T1NVGuGzO9j8Wxno+rQN2WYVBX2pyo/RGQ3fXCLh2Pk76Skw/laAPCuBuEQ4diw==
 
 vue@^2.5.22:
   version "2.6.7"
