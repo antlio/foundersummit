@@ -1,3 +1,5 @@
+const pkg = require("./package");
+
 module.exports = {
   mode: "universal",
 
@@ -11,18 +13,28 @@ module.exports = {
     title: "Founder Summit 2019",
     titleTemplate: "%s - Le Wagon Lyon",
     meta: [
-      { charset: "utf-8" },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1.0"
-      },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description },
       { name: "keywords", content: "founder, summit, lewagon, lyon" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      {
+        rel: "icon",
+        rel: "stylesheet",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      }
+    ],
     script: [
       { src: "https://www.eventbrite.com/static/widgets/eb_widgets.js" },
       { src: "https://embed.small.chat/TA72U2CCCGGU78RJ3W.js" }
     ]
+  },
+
+  manifest: {
+    name: "Founder Summit 2019",
+    lang: "fr",
+    start_url: "/"
   },
 
   /*
@@ -33,13 +45,13 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ["~/assets/stylesheets/application.css"],
+  css: ["~assets/stylesheets/application.css"],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: "~/plugins/cookie-consent", ssr: false },
+    { src: "~plugins/cookie-consent", ssr: false },
     { src: "~plugins/smooth-scroll", ssr: false }
   ],
 

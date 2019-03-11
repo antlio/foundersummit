@@ -1,7 +1,7 @@
 {
-  "name": "foundersummit",
+  "name": "fs19",
   "version": "1.0.0",
-  "description": "Founder Summit website",
+  "description": "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.",
   "author": "Ant Lio",
   "private": true,
   "scripts": {

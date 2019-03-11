@@ -420,12 +420,6 @@ export default {
     return {
       title: "Founder Summit 2019",
       meta: [
-        {
-          name: "description",
-          hid: "description",
-          content:
-            "L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets."
-        },
         // Open Graph
         {
           name: "og:title",
