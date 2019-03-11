@@ -269,7 +269,7 @@ export default {
         },
         {
           full_name: "Mickaël Rigard",
-          title: "Entrepreunariat",
+          title: "Pitch",
           activity: "Co-fondateur d’Attractive Labs",
           company: require("@/assets/images/company/attractivelabs-logo.svg"),
           link: "https://www.attractivelabs.com/",
@@ -369,13 +369,13 @@ export default {
         },
         {
           full_name: "Mehdi Lahmam",
-          title: "Développement web",
+          title: "CTO as a service",
           activity: "Senior Développeur Full-Stack",
           company: require("@/assets/images/company/mehdi-lahmam-logo.svg"),
           link: "https://lahmam.com/",
           photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
           description:
-            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondée, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits."
+            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondée, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits. Il intervient désormais en tant que consultant CTO dans de belles startups de la région telles que Meal Canteen, La Centrale du Sport."
         }
       ],
       attendeesShuffled: [],
