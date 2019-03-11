@@ -41,7 +41,7 @@ export default {
       "color:#fd1015; font-size:20px; font-family: arial; font-weight: bold;"
     );
     console.log(
-      "%cINSCRIPTION 🔜 %chttps://eventbrite.fr",
+      "%cINSCRIPTION 🎟 %chttp://bit.ly/lewagonfs2019",
       "color:black; font-size:20px; font-family: arial; font-weight: bold;",
       "color:blue; font-size:20px; font-family: arial; font-weight: bold;"
     );
