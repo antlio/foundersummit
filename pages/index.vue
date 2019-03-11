@@ -443,7 +443,7 @@ export default {
           content: "https://foundersummit.tech/thumbnail.png"
         },
         // Twitter Card
-        { name: "twitter:card", content: "summary" },
+        { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:site", content: "Founder Summit" },
         {
           name: "twitter:title",
