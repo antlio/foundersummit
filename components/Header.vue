@@ -7,7 +7,7 @@
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
-      <a class="btn btn-white" href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427">S'inscrire</a>
+      <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-white" type="button">Buy Tickets</a>
     </div>
     <div class="__mobile">
       <div @click="menuClicked = !menuClicked" class="__mobile--btn">
@@ -25,11 +25,11 @@
           <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
           <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
-            <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" 
-              target="_blank"
+            <button 
+              id="eventbrite-widget-modal-trigger-58542912427" 
               rel="noreferrer noopener"
               class="btn btn-red"
-              >S'inscrire</a>
+              >S'inscrire</button>
           </li>
         </ul>
       </nav>
@@ -43,6 +43,18 @@ export default {
     return {
       menuClicked: false
     };
+  },
+  mounted() {
+    var exampleCallback = function() {
+      console.log("Order complete!");
+    };
+    window.EBWidgets.createWidget({
+      widgetType: "checkout",
+      eventId: "58542912427",
+      modal: true,
+      modalTriggerElementId: "eventbrite-widget-modal-trigger-58542912427",
+      onOrderComplete: exampleCallback
+    });
   }
 };
 </script>
