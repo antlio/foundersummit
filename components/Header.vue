@@ -7,7 +7,7 @@
     <div class="__navigation">
       <a class="__navigation--underline" href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a>
       <a class="__navigation--underline" href="mailto:lyon@lewagon.org">Contact</a>
-      <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-white" type="button">Buy Tickets</a>
+      <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-white" type="button">S'inscrire</a>
     </div>
     <div class="__mobile">
       <div @click="menuClicked = !menuClicked" class="__mobile--btn">
@@ -25,11 +25,12 @@
           <li><a href="#intervenants" v-smooth-scroll="{ duration: 1000, offset: -50 }">Intervenants</a></li>
           <li><a href="mailto:lyon@lewagon.org">Contact</a></li>
           <li>
-            <button 
+            <a 
               id="eventbrite-widget-modal-trigger-58542912427" 
               rel="noreferrer noopener"
               class="btn btn-red"
-              >S'inscrire</button>
+              >S'inscrire
+            </a>
           </li>
         </ul>
       </nav>
@@ -43,18 +44,6 @@ export default {
     return {
       menuClicked: false
     };
-  },
-  mounted() {
-    var exampleCallback = function() {
-      console.log("Order complete!");
-    };
-    window.EBWidgets.createWidget({
-      widgetType: "checkout",
-      eventId: "58542912427",
-      modal: true,
-      modalTriggerElementId: "eventbrite-widget-modal-trigger-58542912427",
-      onOrderComplete: exampleCallback
-    });
   }
 };
 </script>

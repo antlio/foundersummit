@@ -30,7 +30,7 @@
             <div><span v-if="seconds < 10">0</span>{{ seconds }}</div>
           </div>
           <div v-else class="value notimeleft">
-            <span>L'évènement a commencé</span>
+            <span>L'événement a commencé</span>
           </div>
           <div v-if="!loading && timeLeft > 0" class="label">
             <span>j.</span>
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="banner__countdown--buttons">
-          <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-red">S'inscrire</a>
+          <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-red">S'inscrire</a>
           <a href="#description" class="btn btn-white" v-smooth-scroll="{ duration: 1000, offset: -150 }">En savoir plus</a>
         </div>
       </div>
@@ -59,7 +59,7 @@
           Vous disposerez de 10 minutes en tête-à-tête avec l’intervenant de votre choix pour exposer vos problématiques.<br /><br/>
           Inscrivez-vous à cette demi-journée d’incubation durant laquelle vous pourrez rencontrer des experts métiers de domaines divers, tels que la <strong>comptabilité</strong>, la <strong>levée de fonds</strong>, la <strong>communication</strong> ou encore le <strong>marketing</strong>.
         </p>
-        <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-red">S'inscrire</a>
+        <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-red">S'inscrire</a>
       </div>
     </section>
     <section class="conduct">
@@ -184,7 +184,7 @@
           <a href="https://twitter.com/lewagonlyon/"><img src="../assets/icons/twitter.svg" alt="twitter icon" target="_blank" rel="noreferrer noopener"></a>
           <a href="https://www.linkedin.com/showcase/le-wagon-lyon/about/"><img src="../assets/icons/linkedin.svg" alt="linkedin icon" target="_blank" rel="noreferrer noopener"></a>
         </div>
-        <a href="https://www.eventbrite.com/e/lyon-founder-summit-2019-tickets-58542912427" class="btn btn-white">Inscription</a>
+        <a id="eventbrite-widget-modal-trigger-58542912427" class="btn btn-white">S'inscrire</a>
       </div>
     </section>
     <footer>
