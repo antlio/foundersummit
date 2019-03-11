@@ -299,7 +299,7 @@ export default {
           link: "http://www.cohen-avocat.fr/",
           photo: require("@/assets/images/attendees/emmanuel-cohen.png"),
           description:
-            "Emmanuel a exercé au sein de cabinets anglais et américain de premier rang en France et à l’étranger. Il prend régulièrement la parole sur le thème du pacte d’associés, de la levée de fonds, de la mésentente entre associés ou plus globalement sur le thème des relations entre associés. Il est notamment le est co-auteur de l’ouvrage « Levée de fonds : aspects pratiques et juridiques », Lamy, 2012."
+            "Emmanuel a exercé au sein de cabinets anglais et américain de premier rang en France et à l’étranger. Il prend régulièrement la parole sur le thème du pacte d’associés, de la levée de fonds, de la mésentente entre associés ou plus globalement sur le thème des relations entre associés. Il est notamment le co-auteur de l’ouvrage « Levée de fonds : aspects pratiques et juridiques », Lamy, 2012."
         },
         {
           full_name: "Pierre-Alban Toth",
@@ -349,7 +349,7 @@ export default {
           link: "https://entrup.co",
           photo: require("@/assets/images/attendees/vincent-mendes.png"),
           description:
-            "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisée par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
+            "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisé par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
         },
         {
           full_name: "Tiphaine Frugier",
@@ -359,7 +359,7 @@ export default {
           link: "https://lesmorduesduweb.fr/",
           photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
           description:
-            "Après avoir travaillée pour La Cuisine du Web, ou encore organisée le BlendWebMix, Tiphaine fonde avec Barbara Cros Drewnowski Les Mordues du Web. Toutes les 2, elles accompagnent leurs clients depuis la stratégie jusqu’à la mise en œuvre opérationnelle. Elles créent leur fabrique pour accompagner TPE/PME, écoles et grandes groupes à trouver leur chemin grâce à des prestations sur mesure et complètes : conseil, stratégie, opérationnel et formation. Un véritable binôme d’expertes de la communication digitale."
+            "Après avoir travaillé pour La Cuisine du Web, ou encore organisé le BlendWebMix, Tiphaine fonde avec Barbara Cros Drewnowski Les Mordues du Web. Toutes les 2, elles accompagnent leurs clients depuis la stratégie jusqu’à la mise en œuvre opérationnelle. Elles créent leur fabrique pour accompagner TPE/PME, écoles et grandes groupes à trouver leur chemin grâce à des prestations sur mesure et complètes : conseil, stratégie, opérationnel et formation. Un véritable binôme d’expertes de la communication digitale."
         },
         {
           full_name: "Romaric Gouedard-Comte",
@@ -369,7 +369,7 @@ export default {
           link: "https://fromsmash.com/",
           photo: require("@/assets/images/attendees/romaric-gouedard.png"),
           description:
-            "Romaric est le co-créateur de la solution Smash, un service de transfert de fichiers. Sur le marché en très forte croissance des services de partage de contenus, Smash se positionne comme une véritable alternative aux acteurs actuelles, en proposant notamment un partage sans restriction et sans limite de taille."
+            "Romaric est le co-créateur de la solution Smash, un service de transfert de fichiers. Sur le marché en très forte croissance des services de partage de contenus, Smash se positionne comme une véritable alternative aux acteurs actuels, en proposant notamment un partage sans restriction et sans limite de taille."
         },
         {
           full_name: "Alisson Grosdemange",
@@ -379,7 +379,7 @@ export default {
           link: "https://1kubator.com",
           photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
           description:
-            "Alisson est en charge de l'accompagnement des startups au sein d'1kubator, un incubateur spécialisé dans le digital. 1kubator soutient les entrepreuneurs à travers différents programmes, et jouît d'un réseau de plus de 280 mentors et intervenants, apportant expériences et conseils quotidiennement auprès des startups dans leur développement."
+            "Alisson est en charge de l'accompagnement des startups au sein d'1kubator, un incubateur spécialisé dans le digital. 1kubator soutient les entrepreuneurs à travers différents programmes, et jouit d'un réseau de plus de 280 mentors et intervenants, apportant expériences et conseils quotidiennement auprès des startups dans leur développement."
         },
         {
           full_name: "Mehdi Lahmam",
@@ -389,7 +389,7 @@ export default {
           link: "https://lahmam.com/",
           photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
           description:
-            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondée, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits. Il intervient désormais en tant que consultant CTO dans de belles startups de la région telles que Meal Canteen, La Centrale du Sport."
+            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondé, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits. Il intervient désormais en tant que consultant CTO dans de belles startups de la région telles que Meal Canteen, La Centrale du Sport."
         }
       ],
       attendeesShuffled: [],
