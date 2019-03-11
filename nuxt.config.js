@@ -38,7 +38,10 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: "~plugins/smooth-scroll", ssr: false }],
+  plugins: [
+    { src: "~/plugins/cookie-consent", ssr: false },
+    { src: "~plugins/smooth-scroll", ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
