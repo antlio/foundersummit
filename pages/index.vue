@@ -369,8 +369,8 @@ export default {
         },
         {
           full_name: "Mehdi Lahmam",
-          title: "CTO as a service",
-          activity: "Senior Développeur Full-Stack",
+          title: "Développement web",
+          activity: "CTO as a service",
           company: require("@/assets/images/company/mehdi-lahmam-logo.svg"),
           link: "https://lahmam.com/",
           photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
@@ -500,7 +500,6 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-    this.$fb.enable();
     this.currentTab = this.attendeesShuffled[0];
   },
   beforeMount() {
