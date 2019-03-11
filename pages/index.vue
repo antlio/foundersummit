@@ -108,7 +108,11 @@
       <h2>Le <span class="tag tag-red">Talk</span></h2>
       <div class="talk__content">
         <div class="talk__content--image">
-          <img src="../assets/images/sylvain-tillon.png" alt="Sylvain Tillon">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/sylvain-tillon.webp">
+            <source type="image/png" srcset="../assets/images/sylvain-tillon.png">
+            <img src="../assets/images/sylvain-tillon.png" alt="Sylvain Tillon">
+          </picture>
         </div>
         <div class="talk__content--text">
           <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
