@@ -18,7 +18,11 @@ module.exports = {
       },
       { name: "keywords", content: "founder, summit, lewagon, lyon" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [
+      { src: "https://www.eventbrite.com/static/widgets/eb_widgets.js" },
+      { src: "https://embed.small.chat/TA72U2CCCGGU78RJ3W.js" }
+    ]
   },
 
   /*
@@ -51,7 +55,7 @@ module.exports = {
   render: {
     bundleRenderer: {
       shouldPreload: (file, type) => {
-        return ["script", "style", "font/woff2", "png"].includes(type);
+        return ["script", "style", "font"].includes(type);
       }
     },
     http2: {
