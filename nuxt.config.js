@@ -49,11 +49,13 @@ module.exports = {
   ** Rendering
   */
   render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ["script", "style", "font/woff2", "png"].includes(type);
+      }
+    },
     http2: {
-      pushAssets: (req, res, publicPath, preloadFiles) =>
-        preloadFiles
-          .filter(f => f.asType === "script" && f.file === "runtime.js")
-          .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+      push: true
     }
   },
 
