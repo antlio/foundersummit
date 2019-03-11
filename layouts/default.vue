@@ -22,16 +22,19 @@ export default {
       "color:black; font-size:20px; font-family: arial; font-weight: bold;",
       "color:blue; font-size:20px; font-family: arial; font-weight: bold;"
     );
-    var exampleCallback = function() {
-      console.log("Order complete!");
-    };
-    window.EBWidgets.createWidget({
-      widgetType: "checkout",
-      eventId: "58542912427",
-      modal: true,
-      modalTriggerElementId: "eventbrite-widget-modal-trigger-58542912427",
-      onOrderComplete: exampleCallback
+  },
+  created() {
+    this.$nuxt.$on("buttonId", id => {
+      window.EBWidgets.createWidget({
+        widgetType: "checkout",
+        eventId: "58542912427",
+        modal: true,
+        modalTriggerElementId: id
+      });
     });
+  },
+  beforeDestroy() {
+    this.$nuxt.$off("buttonId");
   }
 };
 </script>
