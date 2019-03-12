@@ -906,6 +906,7 @@ export default {
           &:before {
             content: "";
             background-image: url(../assets/icons/rectangle.svg);
+            background-size: cover;
             height: 82px;
             width: 82px;
             position: absolute;
