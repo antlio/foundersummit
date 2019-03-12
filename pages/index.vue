@@ -309,7 +309,7 @@ export default {
           link: "https://www.clearwage.com",
           photo: require("../assets/images/attendees/pierrealban-toth.png"),
           description:
-            "Après 4 ans passées chez Captain Train (Trainline) en tant que développeur iOS puis Product Manager, Pierre-Alban a lancé Clearwage avec pour objectif le développement d'un produit RH simplifiant la politique salariale des entreprises."
+            "Après 4 ans passées chez Captain Train (Trainline) en tant que développeur iOS puis Product Manager, Pierre-Alban a créé avec ses associés une société dans le domaine des ressources humaines. Son objectif ? Aider les entreprises à construire et à appliquer une politique de rémunération juste et équitable."
         },
         {
           full_name: "Kévin Chavanne",
@@ -545,6 +545,7 @@ export default {
       padding: 0 5px;
       margin-top: 30px;
       line-height: 20px;
+      font-size: 1.125em;
     }
   }
   &__countdown {
