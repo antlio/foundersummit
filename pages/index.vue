@@ -47,9 +47,27 @@
     </section>
     <section id="description" class="description">
       <div class="description__images">
-        <div class="description__images--image"></div>
-        <div class="description__images--image"></div>
-        <div class="description__images--image"></div>
+        <div class="description__images--image">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/le-wagon-talk-1.webp">
+            <source type="image/jpeg" srcset="../assets/images/le-wagon-talk-1.jpg">
+            <img src="../assets/images/le-wagon-talk-1.jpg" alt="conference image" />
+          </picture>
+        </div>
+        <div class="description__images--image">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/le-wagon-talk-2.webp">
+            <source type="image/jpeg" srcset="../assets/images/le-wagon-talk-2.jpg">
+            <img src="../assets/images/le-wagon-talk-2.jpg" alt="conference image" />
+          </picture>
+        </div>
+        <div class="description__images--image">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/le-wagon-talk-3.webp">
+            <source type="image/jpeg" srcset="../assets/images/le-wagon-talk-3.jpg">
+            <img src="../assets/images/le-wagon-talk-3.jpg" alt="conference image" />
+          </picture>
+        </div>
       </div>
       <div class="description__content">
         <h3>Bienvenue au Founder Summit</h3>
@@ -652,6 +670,14 @@ export default {
     &--image {
       border-radius: 3px;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 3px;
+      }
+      .gradient {
+      }
       &:nth-child(2),
       &:last-child {
         left: 120px;
@@ -659,41 +685,57 @@ export default {
       &:first-child {
         width: 377px;
         height: 283px;
-        background: linear-gradient(
+        margin: 0 auto;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          background: linear-gradient(
             rgba(253, 16, 21, 0.1),
             rgba(253, 16, 21, 0.1)
-          ),
-          url(../assets/images/le-wagon-talk-1.jpg) no-repeat center;
-        background-size: cover;
-        margin: 0 auto;
+          );
+        }
       }
       &:nth-child(2) {
         width: 225px;
         height: 150px;
-        background: linear-gradient(
-            rgba(253, 16, 21, 0.2),
-            rgba(253, 16, 21, 0.2)
-          ),
-          url(../assets/images/le-wagon-talk-2.jpg) no-repeat center;
-        background-size: cover;
         position: absolute;
         top: 0;
-        z-index: -1;
         opacity: 0.4;
+        z-index: -1;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          background: linear-gradient(
+            rgba(253, 16, 21, 0.2),
+            rgba(253, 16, 21, 0.2)
+          );
+        }
       }
       &:last-child {
         width: 245px;
         height: 163px;
-        background: linear-gradient(
-            rgba(253, 16, 21, 0.2),
-            rgba(253, 16, 21, 0.2)
-          ),
-          url(../assets/images/le-wagon-talk-3.jpg) no-repeat center;
-        background-size: cover;
         position: absolute;
         bottom: 0;
         z-index: -1;
         opacity: 0.4;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          background: linear-gradient(
+            rgba(253, 16, 21, 0.2),
+            rgba(253, 16, 21, 0.2)
+          );
+        }
       }
     }
   }
