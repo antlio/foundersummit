@@ -1295,6 +1295,7 @@ footer {
       }
       &--catchline {
         margin: 50px 0 120px 0;
+        font-size: 1em;
       }
     }
     &__countdown {
