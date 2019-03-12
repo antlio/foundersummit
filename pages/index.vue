@@ -7,7 +7,7 @@
     <section class="banner">
       <div class="banner__title">
         <h1>Founder Summit 2019</h1>
-        <p class="banner__title--catchline">L’événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.</p>
+        <p class="banner__title--catchline">L'événement qui rassemble les différents experts de la tech lyonnaise pour vous aider à créer ou à développer vos projets.</p>
       </div>
       <div class="banner__countdown">
         <div class="banner__countdown--date">
@@ -118,7 +118,7 @@
           <h3>L'esprit d'entreprendre avec Sylvain Tillon</h3>
           <p>Sylvain Tillon, 35 ans, lorsqu’il présente son parcours, donne l’impression d’avoir vécu plusieurs vies. En l’espace d’une décennie à peine, il crée 4 sociétés (dont <strong>Sydo</strong> et <strong>Tilkee</strong>) et écrit plusieurs livres dont “100 conseils pratiques pour couler sa boîte”. 
             Pour lui, il n’existe pas de recette magique pour créer son entreprise, seule la détermination et le soutien d’un entourage bienveillant suffisent. Et quand bien même le projet tomberait à l’eau, l’important est de savoir <strong>rebondir</strong> et <strong>apprendre</strong> de ses erreurs.
-            Sa devise : "Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles" (Sénèque).
+            Sa devise :"Ce n’est pas parce que les choses sont difficiles que nous n’osons pas, c’est parce que nous n’osons pas qu’elles sont difficiles" (Sénèque).
             Réelle personnalité de la tech lyonnaise, venez écouter son point de vue sur l’état d’esprit que doit avoir un <strong>entrepreneur</strong>.
           </p>
         </div>
@@ -235,7 +235,7 @@ export default {
             "Vous disposez de 10 minutes avec le fondateur choisi pour discuter de vos problématiques et lui poser toutes les questions nécessaires."
         },
         {
-          title: "Retour d’expérience",
+          title: "Retour d'expérience",
           content:
             "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
         }
@@ -1112,7 +1112,7 @@ export default {
       &:last-child {
         &:after {
           content: "";
-          background: url(../assets/icons/dots-small.svg);
+          background: url(../assets/icons/dots-small.svg) no-repeat;
           position: absolute;
           height: 140px;
           width: 154px;
@@ -1210,7 +1210,7 @@ export default {
     }
     &:before {
       content: "";
-      background: url(../assets/icons/dots-small.svg);
+      background: url(../assets/icons/dots-small.svg) no-repeat;
       position: absolute;
       height: 140px;
       width: 154px;
