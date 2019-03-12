@@ -41,7 +41,7 @@ export default {
       "color:#fd1015; font-size:20px; font-family: arial; font-weight: bold;"
     );
     console.log(
-      "%cINSCRIPTION 🎟 %chttp://bit.ly/lewagonfs2019",
+      "%cBILLETERIE 🎟 %chttp://bit.ly/lewagonfs2019",
       "color:black; font-size:20px; font-family: arial; font-weight: bold;",
       "color:blue; font-size:20px; font-family: arial; font-weight: bold;"
     );
@@ -90,7 +90,7 @@ html {
   position: fixed;
   bottom: 40px;
   background-color: white;
-  padding: 0 7px 0 15px;
+  padding: 0 7px;
   border-radius: 50px;
   font-size: 0.8em;
   font-weight: 300;
@@ -139,7 +139,7 @@ html {
     width: 90%;
     grid-auto-flow: row;
     justify-items: center;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
     height: auto;
     bottom: 60px;
