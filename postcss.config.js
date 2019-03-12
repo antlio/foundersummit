@@ -4,6 +4,7 @@ const postcssNested = require("postcss-nested");
 const postcssFor = require("postcss-for");
 const postcssRandom = require("postcss-random");
 const postcssCalc = require("postcss-calc");
+const purgecss = require("@fullhuman/postcss-purgecss");
 
 module.exports = {
   plugins: [
@@ -16,6 +17,9 @@ module.exports = {
     }),
     postcssNested({
       importFrom: "assets/stylesheets/application.css"
+    }),
+    purgecss({
+      content: ["./**/*.html"]
     })
   ]
 };
