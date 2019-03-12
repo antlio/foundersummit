@@ -86,11 +86,11 @@
           <div class="content">
             <span class="content__title">{{ currentTab.title }}</span>
             <div class="content__photo">
-              <img src="../assets/icons/arrow.svg" v-if="activeTab > 1" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
               <div class="content__photo--image">
                 <img :src="currentTab.photo" :alt="currentTab.full_name + ' photo'">
               </div>
-              <img src="../assets/icons/arrow.svg" v-if="activeTab < 13" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
