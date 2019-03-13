@@ -105,15 +105,17 @@
             <span class="content__title">{{ currentTab.title }}</span>
             <div class="content__photo">
               <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
-              <div class="content__photo--image">
-                <img :src="currentTab.photo" :alt="currentTab.full_name + ' photo'">
+              <div v-for="photo in currentTab.photo" :key="photo.id" class="content__photo--image">
+                <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
               </div>
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
             <span class="content__activity">{{ currentTab.activity }}</span>
             <div v-if="currentTab.company" class="content__company">
-              <a :href="currentTab.link" target="_blank" rel="noreferrer noopener"><img class="content__company" :src="currentTab.company" :alt="currentTab.full_name + ' logo'"></a>
+              <a v-for="photo in currentTab.company" :key="photo.id" :href="currentTab.link" target="_blank" rel="noreferrer noopener">
+                <img class="content__company" :src="photo.url" :alt="currentTab.full_name + ' logo'">
+              </a>
             </div>
             <div class="content__description">
               <span class="content__description--description">{{ currentTab.description }}</span>
@@ -258,158 +260,7 @@ export default {
             "Une fois les 10 minutes terminées, vous disposez des réponses à vos questions et pouvez passer à un autre intervenant selon vos besoins."
         }
       ],
-      attendees: [
-        {
-          full_name: "Ruben Lopez",
-          title: "Entrepreunariat",
-          activity: "Président de Grow Up",
-          company: require("@/assets/images/company/growup-logo.svg"),
-          link: "https://growup.tech/",
-          photo: require("@/assets/images/attendees/ruben-lopez.png"),
-          description:
-            "Créateur d’idées et renforceur de startups. Il connait les meilleurs filons pour vous faire grandir et financer les entreprises. Un vrai fertil’easer !"
-        },
-        {
-          full_name: "Romain Hetzel",
-          title: "UX/UI Design",
-          activity: "UX/UI Designer",
-          company: require("@/assets/images/company/romainhetzel-logo.svg"),
-          link: "https://romainhetzel.com",
-          photo: require("@/assets/images/attendees/romain-hetzel.png"),
-          description:
-            "Après un Master II au Celsa et à l’école des Mines, Romain occupe pendant 6 ans les fonctions de Développeur, Product Owner et UX Designer dans de grandes agences (Buzzman, Publicis, Sid Lee, DDB) ou il travaille sur des projets digitaux ambitieux (applications, E-commerce, site expérientiel, objets connectés, réalité virtuelle, réalité augmentée). Désormais Designer, avec une forte orientation UX, son rôle est de faciliter la conception d’un produit pour qu’il soit adapté au client et à l’utilisateur puis d’en suivre la bonne réalisation en collaborant avec toutes les ressources nécessaires."
-        },
-        {
-          full_name: "Marie Nguyen",
-          title: "Entrepreunariat",
-          activity: "Co-fondatrice de WeDressFair",
-          company: require("@/assets/images/company/wedressfair-logo.svg"),
-          link: "https://www.wedressfair.fr/",
-          photo: require("@/assets/images/attendees/marie-nguyen.png"),
-          description:
-            "Co-fondatrice de WeDressFair, une marketplace de mode éthique créée en 2018, mais de formation ingénieure dans la recherche en cancérologie, Marie Nguyen jongle tous les jours avec les enjeux d’une start-up. Dans le vif du sujet depuis plus d’un an, elle saura répondre à vos interrogations sur la création d’entreprise, et toutes vos questions en e-commerce."
-        },
-        {
-          full_name: "Julien Petit",
-          title: "Levée de fonds",
-          activity: "Agent de startups chez J99undraising",
-          company: require("@/assets/images/company/j99fundraising-logo.svg"),
-          link: "https://www.j99fundraising.com/",
-          photo: require("@/assets/images/attendees/julien-petit.png"),
-          description:
-            "Fondateur de J99 Fundraising, ambassadeur de la première heure du monde des startups et de la tech au sein de la Cuisine du Web, la Tour du Web, Blend Web Mix et de France Digitale et serial-entrepreneur lui-même, Julien Petit travaille spécifiquement avec une trentaine de Venture-Capital opérant en France et répondra à toutes vos questions sur la levée de fonds."
-        },
-        {
-          full_name: "Mickaël Rigard",
-          title: "Pitch",
-          activity: "Co-fondateur d’Attractive Labs",
-          company: require("@/assets/images/company/attractivelabs-logo.svg"),
-          link: "https://www.attractivelabs.com/",
-          photo: require("@/assets/images/attendees/mickael-rigard.png"),
-          description:
-            "Mickaël est le créateur du Pitch Simulator, un camp d’entraînement éphémère permettant de se former à la prise de parole en suivant une méthode innovante. Enfant timide, Mickaël s’est soigné à l’adolescence en prenant le micro face à ses premiers publics. Entrepreneur dans l’âme, il lance sa startup dans le digital et découvre le pitch il y a deux ans."
-        },
-        {
-          full_name: "Emmanuel Cohen",
-          title: "Droit",
-          activity: "Avocat associé chez Cohen & Avocats",
-          company: require("@/assets/images/company/cohenavocat-logo.svg"),
-          link: "http://www.cohen-avocat.fr/",
-          photo: require("@/assets/images/attendees/emmanuel-cohen.png"),
-          description:
-            "Emmanuel a exercé au sein de cabinets anglais et américain de premier rang en France et à l’étranger. Il prend régulièrement la parole sur le thème du pacte d’associés, de la levée de fonds, de la mésentente entre associés ou plus globalement sur le thème des relations entre associés. Il est notamment le co-auteur de l’ouvrage « Levée de fonds : aspects pratiques et juridiques », Lamy, 2012."
-        },
-        {
-          full_name: "Pierre-Alban Toth",
-          title: "Entrepreunariat",
-          activity: "Co-fondateur de Clearwage",
-          company: require("../assets/images/company/clearwage-logo.svg"),
-          link: "https://www.clearwage.com",
-          photo: require("../assets/images/attendees/pierrealban-toth.png"),
-          description:
-            "Après 4 ans passées chez Captain Train (Trainline) en tant que développeur iOS puis Product Manager, Pierre-Alban a créé avec ses associés une société dans le domaine des ressources humaines. Son objectif ? Aider les entreprises à construire et à appliquer une politique de rémunération juste et équitable."
-        },
-        {
-          full_name: "Kévin Chavanne",
-          title: "Développement web",
-          activity: "Senior Développeur Full-Stack",
-          company: require("@/assets/images/company/le-wagon-logo.svg"),
-          link: "https://www.lewagon.com",
-          photo: require("@/assets/images/attendees/kevin-chavanne.png"),
-          description:
-            "Kevin a pendant 6 ans aidé les startups à construire leur MVP. Désormais professeur principal au Wagon Lyon et développeur freelance accompli, il adore partager la culture du développement web et produit à toutes les personnes intéressées."
-        },
-        {
-          full_name: "Erwan Jarrand",
-          title: "Finance",
-          activity: "Expert comptable chez Goneo",
-          company: require("@/assets/images/company/goneo-logo.svg"),
-          link: "https://www.goneo-expertise.com/",
-          photo: require("@/assets/images/attendees/erwan-jarrand.png"),
-          description:
-            "Erwan accompagne des entrepreneurs, freelances et créateurs d'entreprise depuis 6 ans chez GONEO. GONEO est un cabinet d'expertise comptable dédié aux TPE/freelance qui propose l'ensemble des services d'un cabinet d'expertise comptable et met à disposition de ses clients des outils (Tiime) pour simplifier la comptabilité du chef d'entreprise."
-        },
-        {
-          full_name: "Louis Delon",
-          title: "Entrepreunariat",
-          activity: "Fondateur de Holdies",
-          company: require("@/assets/images/company/holdies-logo.svg"),
-          link: "#",
-          photo: require("@/assets/images/attendees/louis-delon.png"),
-          description:
-            "Louis à un parcours assez atypique. D'abord scientifique de formation (docteur en chimie) puis entrepreneur depuis une dizaine d’années, il a fondé 2 premières startups dans les domaines de la chimie et des biotechnologies. Après une vente et un exit, il décide de lancer Holdies, une marketplace pour collectionneurs de jeux vidéo et jouets vintages. Une incubation chez The Family et une levé de fonds plus tard, il nous livre son histoire."
-        },
-        {
-          full_name: "Vincent Mendes",
-          title: "Entrepreunariat",
-          activity: "Co-fondateur de Entrup",
-          company: require("@/assets/images/company/entrup-logo.svg"),
-          link: "https://entrup.co",
-          photo: require("@/assets/images/attendees/vincent-mendes.png"),
-          description:
-            "Vincent Mendes est CEO et cofondateur d'Entrup, une startup lyonnaise de 11 salariés qui aide les équipes à collaborer plus efficacement, en remettant l'humain au centre de celle-ci. Entrup a développé Aster, un smart assistant intégré à l'agenda qui rend les réunions plus efficaces en les préparant en amont et en automatisant les comptes-rendus. Aster est utilisé par une quinzaine de grands groupes comme la Société Générale, Michelin, Orange, Mazars, Eiffage, Microsoft ou encore Sanofi. Entrup est même depuis décembre dernier partenaire majeur de Microsoft."
-        },
-        {
-          full_name: "Tiphaine Frugier",
-          title: "Communication",
-          activity: "Co-fondatrice de Les Mordues du Web",
-          company: require("@/assets/images/company/lesmorduesduweb-logo.svg"),
-          link: "https://lesmorduesduweb.fr/",
-          photo: require("@/assets/images/attendees/tiphaine-frugier.png"),
-          description:
-            "Après avoir travaillé pour La Cuisine du Web, ou encore organisé le BlendWebMix, Tiphaine fonde avec Barbara Cros Drewnowski Les Mordues du Web. Toutes les 2, elles accompagnent leurs clients depuis la stratégie jusqu’à la mise en œuvre opérationnelle. Elles créent leur fabrique pour accompagner TPE/PME, écoles et grandes groupes à trouver leur chemin grâce à des prestations sur mesure et complètes : conseil, stratégie, opérationnel et formation. Un véritable binôme d’expertes de la communication digitale."
-        },
-        {
-          full_name: "Romaric Gouedard-Comte",
-          title: "Entrepreunariat",
-          activity: "Co-fondateur de Smash",
-          company: require("@/assets/images/company/smash-logo.svg"),
-          link: "https://fromsmash.com/",
-          photo: require("@/assets/images/attendees/romaric-gouedard.png"),
-          description:
-            "Romaric est le co-créateur de la solution Smash, un service de transfert de fichiers. Sur le marché en très forte croissance des services de partage de contenus, Smash se positionne comme une véritable alternative aux acteurs actuels, en proposant notamment un partage sans restriction et sans limite de taille."
-        },
-        {
-          full_name: "Alisson Grosdemange",
-          title: "Incubation",
-          activity: "Lead Startup Manager chez 1kubator",
-          company: require("@/assets/images/company/1kubator-logo.svg"),
-          link: "https://1kubator.com",
-          photo: require("@/assets/images/attendees/alisson-grosdemange.png"),
-          description:
-            "Alisson est en charge de l'accompagnement des startups au sein d'1kubator, un incubateur spécialisé dans le digital. 1kubator soutient les entrepreuneurs à travers différents programmes, et jouit d'un réseau de plus de 280 mentors et intervenants, apportant expériences et conseils quotidiennement auprès des startups dans leur développement."
-        },
-        {
-          full_name: "Mehdi Lahmam",
-          title: "Développement web",
-          activity: "CTO as a service",
-          company: require("@/assets/images/company/mehdi-lahmam-logo.svg"),
-          link: "https://lahmam.com/",
-          photo: require("@/assets/images/attendees/mehdi-lahmam.png"),
-          description:
-            "Mehdi travaillait récemment chez Captain Train (aujourd’hui Trainline) après avoir travaillé dans une agence web qu’il avait cofondé, où il a aidé pendant 7 ans plus de 40 startups à créer et développer leurs produits. Il intervient désormais en tant que consultant CTO dans de belles startups de la région telles que Meal Canteen, La Centrale du Sport."
-        }
-      ],
+      attendees: [],
       attendeesShuffled: [],
       activeTab: 0,
       tabScrolled: false,
@@ -506,6 +357,32 @@ export default {
         tab.classList.add("gradient");
       }
     },
+    fetchAttendees() {
+      const Airtable = require("airtable");
+      Airtable.configure({
+        endpointUrl: "https://api.airtable.com",
+        apiKey: process.env.airtableKey
+      });
+      const base = Airtable.base(process.env.airtableId);
+      this.attendees = [];
+      const self = this;
+      this.attendees = [];
+      base("List")
+        .select({
+          view: "Gallery"
+        })
+        .all()
+        .then(records => {
+          records.forEach(function(record) {
+            self.attendees.push(record.fields);
+          });
+          this.randomAttendeesList();
+          this.currentTab = this.attendeesShuffled[0];
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
     randomAttendeesList() {
       const attendees = this.attendees;
       let currentIndex = attendees.length,
@@ -529,10 +406,9 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-    this.currentTab = this.attendeesShuffled[0];
   },
-  beforeMount() {
-    this.randomAttendeesList();
+  created() {
+    this.fetchAttendees();
   }
 };
 </script>
