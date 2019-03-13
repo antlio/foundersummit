@@ -1,5 +1,7 @@
 const pkg = require("./package");
 
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
+
 module.exports = {
   mode: "universal",
 
@@ -63,6 +65,14 @@ module.exports = {
     ["@nuxtjs/google-analytics", { id: "UA-135962984-1", dev: false }],
     ["nuxt-facebook-pixel-module", { pixelId: "1351265168355817" }]
   ],
+
+  /*
+  ** Env
+  */
+  env: {
+    airtableId: process.env.AIRTABLE_ID,
+    airtableKey: process.env.AIRTABLE_KEY
+  },
 
   /*
   ** Build configuration
