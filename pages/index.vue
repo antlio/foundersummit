@@ -105,9 +105,11 @@
             <span class="content__title">{{ currentTab.title }}</span>
             <div class="content__photo">
               <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
-              <div v-for="photo in currentTab.photo" :key="photo.id" class="content__photo--image">
-                <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
-              </div>
+              <transition-group tag="div" class="content__photo--image" name="fade">
+                <div v-for="photo in currentTab.photo" :key="photo.url" class="content__photo--image">
+                  <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
+                </div>
+              </transition-group>
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
             <span class="content__fullname">{{ currentTab.full_name }}</span>
@@ -415,6 +417,19 @@ export default {
 
 
 <style lang="postcss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s ease;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  visibility: hidden;
+}
 .banner {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
