@@ -102,25 +102,25 @@
         </div>
         <div class="slider__slides--content">
           <div class="content">
-            <span class="content__title">{{ currentTab.title }}</span>
+            <span class="content__title animated fadeIn" :key="currentTab.title">{{ currentTab.title }}</span>
             <div class="content__photo">
               <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
-              <transition-group tag="div" class="content__photo--image" name="fade">
-                <div v-for="photo in currentTab.photo" :key="photo.url" class="content__photo--image">
+              <transition-group tag="div" class="content__photo--image" name="slide">
+                <div v-for="photo in currentTab.photo" :key="photo.url">
                   <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
                 </div>
               </transition-group>
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
-            <span class="content__fullname">{{ currentTab.full_name }}</span>
-            <span class="content__activity">{{ currentTab.activity }}</span>
+            <span class="content__fullname animated fadeIn" :key="currentTab.full_name">{{ currentTab.full_name }}</span>
+            <span class="content__activity animated fadeIn" :key="currentTab.activity">{{ currentTab.activity }}</span>
             <div v-if="currentTab.company" class="content__company">
               <a v-for="photo in currentTab.company" :key="photo.id" :href="currentTab.link" target="_blank" rel="noreferrer noopener">
-                <img class="content__company" :src="photo.url" :alt="currentTab.full_name + ' logo'">
+                <img class="content__company animated fadeIn" :src="photo.url" :alt="currentTab.full_name + ' logo'" :key="photo.id">
               </a>
             </div>
             <div class="content__description">
-              <span class="content__description--description">{{ currentTab.description }}</span>
+              <span class="content__description--description animated fadeIn" :key="currentTab.description">{{ currentTab.description }}</span>
             </div>
           </div>
         </div>
@@ -368,7 +368,6 @@ export default {
       const base = Airtable.base(process.env.airtableId);
       this.attendees = [];
       const self = this;
-      this.attendees = [];
       base("List")
         .select({
           view: "Gallery"
@@ -408,8 +407,6 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => (this.loading = false), 200);
     });
-  },
-  created() {
     this.fetchAttendees();
   }
 };
@@ -417,19 +414,6 @@ export default {
 
 
 <style lang="postcss" scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.8s ease;
-  overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  visibility: hidden;
-}
 .banner {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -801,6 +785,8 @@ export default {
         grid-template-rows: repeat(3, auto) 100px 1fr;
         text-align: left;
         height: 100%;
+        overflow: hidden;
+        position: relative;
         &__title {
           padding: 10px 20px;
           color: var(--color-blue);
@@ -810,16 +796,19 @@ export default {
           border-radius: 3px;
           font-size: 1.125em;
           font-family: var(--font-head-medium);
+          animation-delay: 0.1s;
         }
         &__fullname {
           font-family: var(--font-head-black);
           font-size: 2em;
           align-self: end;
+          animation-delay: 0.2s;
         }
         &__activity {
           font-family: var(--font-head-regular);
           font-size: 1.125em;
           margin-top: 10px;
+          animation-delay: 0.3s;
         }
         &__photo {
           grid-column: 2;
@@ -836,6 +825,7 @@ export default {
           align-items: center;
           margin-right: 50px;
           position: relative;
+          animation-delay: 0.8s;
           &:before {
             content: "";
             background-image: url(../assets/icons/rectangle.svg);
@@ -866,6 +856,7 @@ export default {
             border-radius: 50%;
             background-color: var(--color-lightyellow);
             overflow: hidden;
+            position: relative;
             img {
               width: 100%;
               height: 100%;
@@ -874,20 +865,20 @@ export default {
         }
         &__company {
           align-self: center;
+          position: absolute;
+          animation-delay: 0.4s;
           img {
             width: auto;
           }
         }
         &__description {
           grid-column: span 2;
-          border-left: 2px dashed rgba(0, 0, 0, 0.2);
-          padding-left: 10px;
           align-self: start;
           margin-top: 50px;
           height: fit-content;
           &--description {
             line-height: 20px;
-            position: relative;
+            animation-delay: 0.5s;
           }
         }
       }
