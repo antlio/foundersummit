@@ -865,7 +865,7 @@ export default {
         }
         &__company {
           align-self: center;
-          position: absolute;
+          position: relative;
           animation-delay: 0.4s;
           img {
             width: auto;
