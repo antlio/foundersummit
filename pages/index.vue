@@ -826,6 +826,7 @@ export default {
           margin-right: 50px;
           position: relative;
           animation-delay: 0.8s;
+          overflow: hidden;
           &:before {
             content: "";
             background-image: url(../assets/icons/rectangle.svg);
@@ -857,6 +858,7 @@ export default {
             background-color: var(--color-lightyellow);
             overflow: hidden;
             position: relative;
+            transform: translate3d(0, 0, 0);
             img {
               width: 100%;
               height: 100%;
