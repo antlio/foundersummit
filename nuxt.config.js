@@ -54,7 +54,8 @@ module.exports = {
   */
   plugins: [
     { src: "~plugins/cookie-consent", ssr: false },
-    { src: "~plugins/smooth-scroll", ssr: false }
+    { src: "~plugins/smooth-scroll", ssr: false },
+    { src: "~plugins/lazyload", ssr: false }
   ],
 
   /*
