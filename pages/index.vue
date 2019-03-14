@@ -107,7 +107,7 @@
               <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
               <transition-group tag="div" class="content__photo--image" name="slide">
                 <div v-for="photo in currentTab.photo" :key="photo.url">
-                  <img v-lazy="photo.url" :alt="currentTab.full_name + ' photo'">
+                  <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
                 </div>
               </transition-group>
               <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
@@ -826,7 +826,6 @@ export default {
           margin-right: 50px;
           position: relative;
           animation-delay: 0.8s;
-          overflow: hidden;
           &:before {
             content: "";
             background-image: url(../assets/icons/rectangle.svg);
