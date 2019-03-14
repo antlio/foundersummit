@@ -1319,6 +1319,11 @@ footer {
             grid-row: 2;
             margin-right: 0;
             width: 100%;
+            &--image > .slide-enter,
+            .slide-leave-to {
+              transform: none;
+              opacity: 0;
+            }
             &--mobile {
               display: block;
               position: absolute;
