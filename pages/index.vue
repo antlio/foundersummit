@@ -335,7 +335,7 @@ export default {
   },
   methods: {
     countDown() {
-      const countDownDate = new Date("Apr 4, 2019 12:00:00").getTime();
+      const countDownDate = new Date("Apr 4, 2019 14:00:00").getTime();
       const self = this;
       const x = setInterval(function() {
         const now = new Date().getTime();
