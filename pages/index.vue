@@ -785,7 +785,6 @@ export default {
         grid-template-rows: repeat(3, auto) 100px 1fr;
         text-align: left;
         height: 100%;
-        overflow: hidden;
         position: relative;
         &__title {
           padding: 10px 20px;
