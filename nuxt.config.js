@@ -35,6 +35,7 @@ module.exports = {
 
   manifest: {
     name: "Founder Summit 2019",
+    short_name: "FS19",
     lang: "fr",
     start_url: "/"
   },
