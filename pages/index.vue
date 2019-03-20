@@ -104,16 +104,20 @@
           <div class="content">
             <span class="content__title animated fadeIn" :key="currentTab.title">{{ currentTab.title }}</span>
             <div class="content__photo">
-              <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__photo--mobile left" alt="left arrow icon">
               <transition-group tag="div" class="content__photo--image" name="slide">
                 <div v-for="photo in currentTab.photo" :key="photo.url">
                   <img :src="photo.url" :alt="currentTab.full_name + ' photo'">
                 </div>
               </transition-group>
-              <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__photo--mobile right" alt="right arrow icon">
             </div>
-            <span class="content__fullname animated fadeIn" :key="currentTab.full_name">{{ currentTab.full_name }}</span>
-            <span class="content__activity animated fadeIn" :key="currentTab.activity">{{ currentTab.activity }}</span>
+            <span class="content__fullname" :key="currentTab.full_name">
+              <img src="../assets/icons/arrow.svg" v-if="activeTab > 0" @click="activeTab--" class="content__fullname--mobile left" alt="left arrow icon">
+              <span class="animated fadeIn">{{ currentTab.full_name }}</span>
+              <img src="../assets/icons/arrow.svg" v-if="activeTab < 14" @click="activeTab++" class="content__fullname--mobile right" alt="right arrow icon">
+            </span>
+            <span class="content__activity animated fadeIn" :key="currentTab.activity">
+              {{ currentTab.activity }}
+            </span>
             <div v-if="currentTab.company" class="content__company">
               <a v-for="photo in currentTab.company" :key="photo.id" :href="currentTab.link" target="_blank" rel="noreferrer noopener">
                 <img class="content__company animated fadeIn" :src="photo.url" :alt="currentTab.full_name + ' logo'" :key="photo.id">
@@ -802,12 +806,16 @@ export default {
           font-size: 2em;
           align-self: end;
           animation-delay: 0.2s;
+          &--mobile {
+            display: none;
+          }
         }
         &__activity {
           font-family: var(--font-head-regular);
           font-size: 1.125em;
           margin-top: 10px;
           animation-delay: 0.3s;
+          position: relative;
         }
         &__photo {
           grid-column: 2;
@@ -835,9 +843,6 @@ export default {
             z-index: -1;
             left: -40px;
             bottom: 13px;
-          }
-          &--mobile {
-            display: none;
           }
           &:after {
             content: "";
@@ -1323,6 +1328,23 @@ footer {
               transform: none;
               opacity: 0;
             }
+          }
+          &__title {
+            justify-self: center;
+          }
+          &__fullname {
+            position: relative;
+            grid-column: 1;
+            grid-row: 3;
+            font-size: 1.8em;
+            justify-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 85px;
+            padding: 0 50px;
             &--mobile {
               display: block;
               position: absolute;
@@ -1336,14 +1358,6 @@ footer {
                 transform: rotate(180deg);
               }
             }
-          }
-          &__title {
-            justify-self: center;
-          }
-          &__fullname {
-            grid-column: 1;
-            grid-row: 3;
-            font-size: 1.8em;
           }
           &__company {
             grid-column: 1;
