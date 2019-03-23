@@ -750,6 +750,7 @@ export default {
             rgba(255, 255, 255, 1) 0%,
             rgba(255, 255, 255, 0) 100%
           );
+          pointer-events: none;
         }
       }
       .tab {
