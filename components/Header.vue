@@ -171,6 +171,7 @@ header {
 
 @media (--tablet) {
   header {
+    padding: 0 40px;
     .__logo {
       &:after {
         display: none;

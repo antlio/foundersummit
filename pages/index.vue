@@ -1441,4 +1441,45 @@ footer {
     }
   }
 }
+
+@media (--tablet) {
+  .banner {
+    padding: 0 40px;
+    grid-column-gap: 40px;
+    &:before {
+      width: 550px;
+    }
+  }
+  .description {
+    padding: 0 40px;
+    grid-column-gap: 40px;
+    &__content {
+      width: auto;
+    }
+  }
+  .conduct {
+    padding: 150px 40px;
+    &__cards {
+      &:before {
+        top: 46%;
+        width: 1150px;
+      }
+    }
+  }
+  .slider {
+    padding: 0 40px;
+    &__slides {
+      grid-column-gap: 60px;
+    }
+  }
+  .talk {
+    padding: 0 40px;
+  }
+  .planning {
+    padding: 0 40px;
+  }
+  .informations {
+    padding: 0 40px;
+  }
+}
 </style>
