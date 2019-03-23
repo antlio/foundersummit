@@ -168,4 +168,17 @@ header {
     }
   }
 }
+
+@media (--tablet) {
+  header {
+    .__logo {
+      &:after {
+        display: none;
+      }
+    }
+    .__adress {
+      display: none;
+    }
+  }
+}
 </style>
