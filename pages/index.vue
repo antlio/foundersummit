@@ -356,8 +356,9 @@ export default {
     },
     handleScroll(evt) {
       let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
+      console.log(bottom);
       const tab = document.querySelector(".slider__slides--tabs");
-      if (bottom < 144) {
+      if (bottom < -295) {
         tab.classList.remove("gradient");
       } else {
         tab.classList.add("gradient");
