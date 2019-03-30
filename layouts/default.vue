@@ -129,9 +129,6 @@ html {
 }
 
 @media (--mobile), (--tablet) {
-  #Smallchat {
-    display: none;
-  }
   #__layout {
     overflow: hidden;
   }

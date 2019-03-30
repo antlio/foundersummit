@@ -31,8 +31,7 @@ module.exports = {
       {
         src: "https://www.eventbrite.com/static/widgets/eb_widgets.js",
         defer: true
-      },
-      { src: "https://embed.small.chat/TA72U2CCCGGU78RJ3W.js", defer: true }
+      }
     ]
   },
 
