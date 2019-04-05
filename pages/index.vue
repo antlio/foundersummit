@@ -1,8 +1,8 @@
 <template>
   <div id="home">
     <div class="background-icons">
-      <div class="triangle" v-for="triangleEl in 16" :key="triangleEl.id" :class="'triangle-' + triangleEl"></div>
-      <div class="circle" v-for="circleEl in 18" :key="circleEl.id" :class="'circle-' + circleEl"></div>
+      <div v-for="triangleEl in 16" :key="triangleEl.id" :class="['triangle triangle-' + triangleEl, timeLeft > 0 ? 'triangleEnd' : '']"></div>
+      <div v-for="circleEl in 18" :key="circleEl.id" :class="['circle circle-' + circleEl, timeLeft > 0 ? 'circleEnd' : '']"></div>
     </div>
     <section class="banner">
       <div class="banner__title">
@@ -16,7 +16,7 @@
             <span class="date">avril 2019</span>
           </div>
         </div>
-        <div class="banner__countdown--badge">Commence dans</div>
+        <div v-if="!loading && timeLeft > 0"  class="banner__countdown--badge">Commence dans</div>
         <div class="banner__countdown--time">
           <app-skeleton 
             v-if="loading" 
@@ -28,6 +28,9 @@
             <div><span v-if="hours < 10">0</span>{{ hours }}</div>
             <div><span v-if="minutes < 10">0</span>{{ minutes }}</div>
             <div><span v-if="seconds < 10">0</span>{{ seconds }}</div>
+          </div>
+          <div v-else-if="timeFinished" class="value notimeleft">
+            <span>L'événement est terminé</span>
           </div>
           <div v-else class="value notimeleft">
             <span>L'événement a commencé</span>
@@ -291,6 +294,13 @@ export default {
   components: {
     "app-skeleton": SkeletonBox
   },
+  computed: {
+    timeFinished() {
+      const timeNow = Date.now();
+      const timeEnded = new Date("Apr 4, 2019 19:00:00").getTime();
+      return timeNow > timeEnded;
+    }
+  },
   head() {
     return {
       title: "Founder Summit 2019",
@@ -357,7 +367,7 @@ export default {
     handleScroll(evt) {
       let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
       console.log(bottom);
-      const tab = document.querySelector(".slider__slides--tabs");
+      const tab = document.querySelectorAll(".slider__slides--tabs");
       if (bottom < -295) {
         tab.classList.remove("gradient");
       } else {
@@ -500,6 +510,8 @@ export default {
       font-family: var(--font-head-medium);
       display: flex;
       flex-flow: column;
+      justify-content: center;
+      height: 100%;
       .value {
         display: grid;
         grid-template-columns: repeat(4, 55px);
