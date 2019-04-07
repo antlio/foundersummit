@@ -398,4 +398,43 @@ export default {
     }
   }
 }
+
+@media (--mobile) {
+  .modal {
+    &__content {
+      &--body {
+        .body__text {
+          padding: 30px;
+          .metrics-container {
+            grid-gap: 20px;
+            &__element {
+              margin: 0;
+            }
+          }
+          .modal__footer {
+            flex-flow: column;
+            p {
+              margin-bottom: 30px;
+            }
+            span {
+              width: 100%;
+            }
+          }
+        }
+        .body__email {
+          padding: 10px 30px 30px 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (--mobile) and (orientation: landscape) {
+  .modal {
+    &__content {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  }
+}
 </style>
