@@ -74,7 +74,10 @@ module.exports = {
   */
   env: {
     airtableId: process.env.AIRTABLE_ID,
-    airtableKey: process.env.AIRTABLE_KEY
+    airtableKey: process.env.AIRTABLE_KEY,
+    trelloKey: process.env.TRELLO_KEY,
+    trelloToken: process.env.TRELLO_TOKEN,
+    trelloList: process.env.TRELLO_LIST
   },
 
   /*
