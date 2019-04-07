@@ -34,7 +34,7 @@
           <form @submit.prevent="createProspect">
             <input aria-label="text" v-model="full_name" type="text" placeholder="Prénom et Nom">
             <input aria-label="email" v-model="email" type="email" placeholder="Email">
-            <button class="btn btn-red" :disabled="!email">
+            <button class="btn btn-red" :disabled="!isEmailValid()">
               <svg v-if="loading" class="spinner" viewBox="0 0 50 50">
                 <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
               </svg>
@@ -60,11 +60,15 @@ export default {
       isVisible: true,
       full_name: "",
       email: "",
+      reg: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
       loading: false,
       subscribed: false
     };
   },
   methods: {
+    isEmailValid() {
+      return this.email == "" ? "" : this.reg.test(this.email);
+    },
     confettis() {
       var canvas = document.getElementById("confetti");
       var ctx = canvas.getContext("2d");
