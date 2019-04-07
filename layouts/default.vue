@@ -1,6 +1,7 @@
 <template>
   <div>
     <app-header></app-header>
+    <app-modal></app-modal>
     <nuxt />
     <no-ssr>
       <cookie-consent>
@@ -30,20 +31,17 @@
 
 <script>
 import Header from "@/components/Header.vue";
+import Modal from "@/components/Modal.vue";
 
 export default {
   components: {
-    "app-header": Header
+    "app-header": Header,
+    "app-modal": Modal
   },
   mounted() {
     console.log(
       "%cFOUNDER SUMMIT 2019 🚀",
       "color:#fd1015; font-size:20px; font-family: arial; font-weight: bold;"
-    );
-    console.log(
-      "%cBILLETTERIE 🎟 %chttp://bit.ly/lewagonfs2019",
-      "color:black; font-size:20px; font-family: arial; font-weight: bold;",
-      "color:blue; font-size:20px; font-family: arial; font-weight: bold;"
     );
   },
   created() {
