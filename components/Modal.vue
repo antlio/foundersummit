@@ -16,7 +16,7 @@
               <span>Intervenants</span>
             </div>
             <div class="metrics-container__element">
-              <span>35</span>
+              <span>45</span>
               <span>Participants</span>
             </div>
             <div class="metrics-container__element">
