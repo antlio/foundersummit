@@ -365,10 +365,11 @@ export default {
       }, 0);
     },
     handleScroll(evt) {
-      let bottom = evt.srcElement.clientHeight - evt.srcElement.scrollTop;
-      console.log(bottom);
-      const tab = document.querySelectorAll(".slider__slides--tabs");
-      if (bottom < -295) {
+      let elementHeight =
+        evt.srcElement.scrollTop + evt.srcElement.clientHeight + 67;
+      let fullHeight = evt.srcElement.scrollHeight;
+      const tab = document.querySelector(".slider__slides--tabs");
+      if (elementHeight > fullHeight) {
         tab.classList.remove("gradient");
       } else {
         tab.classList.add("gradient");
