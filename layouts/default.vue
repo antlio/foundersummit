@@ -3,7 +3,7 @@
     <app-header></app-header>
     <app-modal></app-modal>
     <nuxt />
-    <no-ssr>
+    <client-only>
       <cookie-consent>
         <template slot="message">
           <p>
@@ -25,7 +25,7 @@
           </button>
         </template>
       </cookie-consent>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 
