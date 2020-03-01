@@ -1,7 +1,6 @@
 <template>
   <div>
     <app-header></app-header>
-    <app-modal></app-modal>
     <nuxt />
     <client-only>
       <cookie-consent>
@@ -35,8 +34,7 @@ import Modal from "@/components/Modal.vue";
 
 export default {
   components: {
-    "app-header": Header,
-    "app-modal": Modal
+    "app-header": Header
   },
   mounted() {
     console.log(
