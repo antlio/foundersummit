@@ -22,6 +22,7 @@
     "cross-env": "^5.2.0",
     "dotenv": "^7.0.0",
     "nuxt": "^2.11.0",
+    "nuxt-compress": "^1.1.0",
     "nuxt-facebook-pixel-module": "^1.3.0",
     "punycode": "^2.1.1",
     "vue-cookieconsent-component": "^1.2.0",
